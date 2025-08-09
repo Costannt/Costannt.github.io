@@ -4,37 +4,6 @@
   
   
   <entry>
-    <title>离散数学-2</title>
-    <link href="/2025/12/09/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-2/"/>
-    <url>/2025/12/09/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-2/</url>
-    
-    <content type="html"><![CDATA[<blockquote><p>设 $a_1 &lt; a_2 &lt; \ldots &lt; a_n$ 是 $n$ 个实数，$A &#x3D; {a_1, \ldots, a_n}$，$\varphi$ 是 $A$ 到 $A$ 的可逆映射。如果 $a_1 + \varphi(a_1) &lt; a_2 + \varphi(a_2) &lt; \ldots &lt; \varphi(a_n) + a_n$，试证：$\varphi &#x3D; I_A$。</p></blockquote><p>[证] 设 $\varphi(a_1) \neq a_1$，则由 $\varphi$ 是可逆的，故为一一对应，从而必有 $j, j &gt; 1$，使 $\varphi(a_j) &#x3D; a_1$。</p><p>于是，对任何正整数 $i &lt; j$，有 $a_i + \varphi(a_i) &lt; a_j + \varphi(a_j)$。但由于 $a_i \geq a_1$，$\varphi(a_j) &#x3D; a_1$，所以</p><p>$$<br>a_1 + \varphi(a_1) \leq a_i + \varphi(a_i) &lt; \varphi(a_j) + a_j &#x3D; a_j + a_1,<br>$$</p><p>故 $\varphi(a_i) &lt; a_j$，从而 $\varphi(a_i) &#x3D; a_k, k &lt; j$。这表明当 $\varphi(a_1) &#x3D; a_p$ 时，$p &lt; j$。于是，对任意的 $i, i &lt; j$，$\varphi(a_i) \in {a_1, a_2, \ldots, a_{j-1}}$。</p><p>从而 $\varphi$ 限制在 ${a_1, a_2, \ldots, a_{j-1}}$ 上时，$\varphi$ 也是一个一一对应(若不是,则要么违反在整个定义域上的可逆性,要么违反上面的大小限制)，于是有 $i$，使 $\varphi(a_i) &#x3D; a_1$，矛盾。故 $\varphi(a_1) &#x3D; a_1$。</p><p>类似可证 $\varphi(a_2) &#x3D; a_2, \ldots, \varphi(a_n) &#x3D; a_n$，即 $\varphi &#x3D; I_A$。[证毕]</p><p>注意：如 $A$ 为无穷集，则命题不真，例如 $A &#x3D; \mathbb{N}$ 时，令 $\varphi(n) &#x3D; n + 1$，则</p><p>$$<br>1 + \varphi(1) &#x3D; 3 &lt; \varphi(2) + 2 &#x3D; 5 &lt; 3 + \varphi(3) &#x3D; 7 \ldots,\varphi \neq I_A<br>$$</p><blockquote><p>设 $u_1, u_2, \cdots, u_{mn+1}$ 是一个两两不相交的整数构成的数列，则必有长至少为 $n+1$ 的递增子序列或有长至少为 $m+1$ 的递减子序列。</p></blockquote><p>[证] 令 $A &#x3D; {u_1, u_2, \cdots, u_{mn+1}}$，则 $|A| &#x3D; mn + 1$。</p><p>设以 $u_i$ 为首项的最长递增子序列的长度为 $\ell^+_i$，</p><p>设以 $u_i$ 为首项的最长递减子序列的长度为 $\ell^-_i$。</p><p>反证法：假设题中结论不成立，则 $\ell^+_i \leq n, \ell^-_i \leq m, i&#x3D;1,2,3,\cdots,mn+1$。</p><p>令 $\varphi: A \to {1,2,\cdots,n} \times {1,2,\cdots,m}, \forall u_i \in A, \varphi(u_i) &#x3D; (\ell^+_i, \ell^-_i)$，则 $\varphi$ 是单射。</p><p>实际上，$\forall u_i, u_j \in A$ 且 $u_i \neq u_j (i &lt; j)$，则</p><p>若 $u_i &gt; u_j$，则 $\ell^-_i &gt; \ell^-_j$，所以 $(\ell^+_i, \ell^-_i) \neq (\ell^+_j, \ell^-_j)$；</p><p>即 $\varphi(u_i) \neq \varphi(u_j)$。</p><p>若 $u_i &lt; u_j$，则 $\ell^+_i &gt; \ell^+_j$，所以 $(\ell^+_i, \ell^-_i) \neq (\ell^+_j, \ell^-_j)$；</p><p>即 $\varphi(u_i) \neq \varphi(u_j)$。</p><p>故 $\varphi$ 为单射，从而就有 $mn + 1 \leq mn$ 矛盾。</p><blockquote><p>一些人组成的团体 $S$，试证可以把 $S$ 分为两组，使得每个人在其所在的组中的朋友数至多是他在团体 $S$ 中的朋友数的一半。</p></blockquote><p>[证] 对 $S$ 的任一二划分 ${A, A^c}$，令<br>$$<br>f(A, A^c) &#x3D; {(a, b) \mid (a, b) \in A \times A^c \text{ 且 } a \text{ 与 } b \text{ 互为朋友}}<br>$$</p><p>由于 $|S| &lt; \infty$，所以 $S$ 的 2-划分为有限个。所以，存在 $S$ 的一个 2-划分 ${B, B^c}$，使 $f(B, B^c)$ 最大。我们断言 $B$ 与 $B^c$ 即为所求。</p><p>实际上，$\forall a \in S$，若 $a \in B$ 且 $a$ 在 $B$ 中的朋友数 $d &gt; a$ 在 $B^c$ 中的朋友数 $d’$，则把 $a$ 调到 $B^c$ 中得分组 $B \setminus {a}$ 与 $B^c \cup {a}$，分别记为 $B’, B’^c$。于是</p><p>$$<br>f(B’, B’^c) &#x3D; f(B, B^c) + (d - d’) &gt; f(B, B^c)<br>$$</p><p>这与 $f(B, B^c)$ 为最大值的假设相矛盾。</p><blockquote><p>已知 $m$ 个整数 $a_1, a_2, \cdots, a_m$，试证：存在两个整数 $k, \ell$，$0 \leq k &lt; \ell \leq m$，使得 $a_{k+1} + a_{k+2} + \cdots + a_\ell$ 能被 $m$ 整除。</p></blockquote><p>【证】 考察下式：</p><p>$a_1$</p><p>$a_1 + a_2$</p><p>$a_1 + a_2 + a_3$</p><p>$\vdots$</p><p>$a_1 + a_2 + \cdots + a_m$</p><p>若第 $i$ 式能被 $m$ 整除，则显然成立，此时 $k &#x3D; 0, \ell &#x3D; i$；</p><p>若任一式都不能被 $m$ 整除，则考察各式被 $m$ 整除后的余数，如下式：</p><p>$a_1 &#x3D; q_1 m + r_1$</p><p>$a_1 + a_2 &#x3D; q_2 m + r_2$</p><p>$a_1 + a_2 + a_3 &#x3D; q_3 m + r_3$</p><p>$\vdots$</p><p>$a_1 + a_2 + \cdots + a_m &#x3D; q_m m + r_m$</p><p>由于每一个都不能被 $m$ 整除，故共有 $m$ 个余数—相当于 $m$ 个物体。而任意整数被 $m$ 除后的余数有 $m-1$ 种可能（即 $1, 2, \ldots, m-1$）—相当于 $m-1$ 个抽屉。</p><p>由抽屉原理，必有两个余数相等，设为 $r_i &#x3D; r_j$，其中 $i &lt; j$。</p><p>于是 $(a_1 + \cdots + a_j) - (a_1 + \cdots + a_i) &#x3D; a_{i+1} + \cdots + a_j$ 能被 $m$ 整除。</p><p>此时 $k &#x3D; i, \ell &#x3D; j$，结论成立。</p><blockquote><p>在一个半径为 16 的圆内任意放入 650 个点。给你一个形似垫圈的圆环，此圆环的外半径为 3, 内半径为 2。现在要求你用这个垫圈盖住这 650 个点中的至少 10 点，这可能吗？证明你的结论。</p></blockquote><p>[证]:</p><p>每个点可接触区面积:<br>$$<br>S&#x3D;\pi (3^2-2^2)&#x3D;5\pi<br>$$<br>可接触区的实际面积:<br>$$<br>S’&#x3D;\pi (16+3)^2&#x3D;361\pi<br>$$<br>可能接触的总面积:<br>$$<br>nS&#x3D;650*5\pi&#x3D;3250\pi<br>$$<br>平均一个位置接触的可接触区个数:<br>$$<br>\frac{3250\pi}{361\pi}\approx9.002 \gt 9<br>$$<br>故至少存在一个点接触10个可接触区(反证:若不然,则上面不可能大于9)</p><blockquote><p>设 $a_1 a_2 \cdots a_n$ 为 $1, 2, \cdots, n$ 的任一排列。如果 $n$ 是奇数且</p><p>$$<br>(a_1 - 1)(a_1 - 2) \cdots (a_n - n) \neq 0,<br>$$<br>则乘积为偶数</p></blockquote><p>[证] </p><p>反证法：若 $(a_1 - 1)(a_2 - 2) \cdots (a_n - n)$ 为奇数，则 $(a_i - i)$ 中的 $a_i$ 与 $i$ 必是一个为奇数，一个为偶数。而 $n$ 为奇数，故奇数个数为 $\left\lfloor \frac{n}{2} \right\rfloor + 1$ 比偶数 $\left\lfloor \frac{n}{2} \right\rfloor$ 多一个，这是不可能的。</p><p>证法 2：当 $n$ 为奇数时，$1, 2, \ldots, n$ 中有 $\frac{n-1}{2}$ 个偶数，$\frac{n+1}{2}$ 个奇数，奇数的个数比偶数的个数多一个。于是，$a_1, a_2, \ldots, a_n$，$1, 2, \ldots, n$ 中恰有 $n+1$ 个奇数。然而只有 $n$ 个因子（$n$ 个盒子），先把 $a_1, a_2, \ldots, a_n$ 依次放入 $n$ 个盒中，然后把 $1, 2, \ldots, n$ 依次放入 $n$ 个盒中，这样就把 $n+1$ 个奇数放入了 $n$ 个盒中。因此，有一个盒子 $i$ 中的两个数均为奇数，对应的因子 $a_i - i$ 就是偶数。</p><blockquote><p>珍珠 4 颗，有真有假。真珍珠重量相同且为 $p$，假珍珠重量相同且为 $q$，$p &gt; q$。用秤（而不是天平）仅称量 3 次查出真假，应该怎么做？</p></blockquote><p>【解】 先用 $&lt;1&gt;$、$&lt;2&gt;$、$&lt;3&gt;$、$&lt;4&gt;$ 为 4 个珍珠编号且代表其重量。$&lt;1&gt; + &lt;2&gt;$ 表示这两个珍珠放在一起称且代表其重量。其他类推。</p><p>称 $&lt;1&gt; + &lt;2&gt;$，$&lt;1&gt; + &lt;3&gt;$，$&lt;2&gt; + &lt;3&gt; + &lt;4&gt;$，得如下的方程组：</p><p>$$<br>\begin{align*}<br>&lt;1&gt; + &lt;2&gt; &amp;&#x3D; a_1 \<br>&lt;1&gt; + &lt;3&gt; &amp;&#x3D; b_1 \<br>&lt;2&gt; + &lt;3&gt; + &lt;4&gt; &amp;&#x3D; c_1<br>\end{align*}<br>$$</p><p>其中 $a_1, b_1, c_1$ 是在称量后得到的常数。显然，$a_1$ 为 $2p$ 或 $2q$ 或 $p+q$。令</p><p>$$<br>x &#x3D; \frac{&lt;1&gt; - q}{p - q}, \quad y &#x3D; \frac{&lt;2&gt; - q}{p - q}, \quad z &#x3D; \frac{&lt;3&gt; - q}{p - q}, \quad \omega &#x3D; \frac{&lt;4&gt; - q}{p - q},<br>$$</p><p>$$<br>a &#x3D; \frac{a_1 - 2q}{p - q}, \quad b &#x3D; \frac{b_1 - 2q}{p - q}, \quad c &#x3D; \frac{c_1 - 2q}{p - q},<br>$$</p><p>则我们有<br>$$<br>\begin{align*}<br>x + y &amp;&#x3D; a \<br>x + z &amp;&#x3D; b \<br>y + z + \omega &amp;&#x3D; c<br>\end{align*}<br>$$<br>其中 $x, y, z, \omega \in {0, 1}$，$a, b, c$ 为已知的常数。</p><p>由于<br>$$<br>2(x + y + z) + \omega &#x3D; a + b + c<br>$$<br>所以如果 $a + b + c$ 为偶数，则 $\omega &#x3D; 0$；如果 $a + b + c$ 为奇数，则 $\omega &#x3D; 1$。于是，根据 $a + b + c$ 的奇偶性决定方程组的解。再由算得的结果 $x, y, z, \omega$ 中是 1 的代表相应的珍珠为真，为 0 的代表相同的珍珠为假珍珠。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>学校课程</category>
-      
-      <category>离散数学</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习</tag>
-      
-      <tag>数学</tag>
-      
-      <tag>计算机</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>一些说明</title>
     <link href="/2025/08/09/%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E/"/>
     <url>/2025/08/09/%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E/</url>
@@ -114,6 +83,37 @@
       <tag>电路</tag>
       
       <tag>物理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>离散数学-2</title>
+    <link href="/2024/12/09/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-2/"/>
+    <url>/2024/12/09/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-2/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>设 $a_1 &lt; a_2 &lt; \ldots &lt; a_n$ 是 $n$ 个实数，$A &#x3D; {a_1, \ldots, a_n}$，$\varphi$ 是 $A$ 到 $A$ 的可逆映射。如果 $a_1 + \varphi(a_1) &lt; a_2 + \varphi(a_2) &lt; \ldots &lt; \varphi(a_n) + a_n$，试证：$\varphi &#x3D; I_A$。</p></blockquote><p>[证] 设 $\varphi(a_1) \neq a_1$，则由 $\varphi$ 是可逆的，故为一一对应，从而必有 $j, j &gt; 1$，使 $\varphi(a_j) &#x3D; a_1$。</p><p>于是，对任何正整数 $i &lt; j$，有 $a_i + \varphi(a_i) &lt; a_j + \varphi(a_j)$。但由于 $a_i \geq a_1$，$\varphi(a_j) &#x3D; a_1$，所以</p><p>$$<br>a_1 + \varphi(a_1) \leq a_i + \varphi(a_i) &lt; \varphi(a_j) + a_j &#x3D; a_j + a_1,<br>$$</p><p>故 $\varphi(a_i) &lt; a_j$，从而 $\varphi(a_i) &#x3D; a_k, k &lt; j$。这表明当 $\varphi(a_1) &#x3D; a_p$ 时，$p &lt; j$。于是，对任意的 $i, i &lt; j$，$\varphi(a_i) \in {a_1, a_2, \ldots, a_{j-1}}$。</p><p>从而 $\varphi$ 限制在 ${a_1, a_2, \ldots, a_{j-1}}$ 上时，$\varphi$ 也是一个一一对应(若不是,则要么违反在整个定义域上的可逆性,要么违反上面的大小限制)，于是有 $i$，使 $\varphi(a_i) &#x3D; a_1$，矛盾。故 $\varphi(a_1) &#x3D; a_1$。</p><p>类似可证 $\varphi(a_2) &#x3D; a_2, \ldots, \varphi(a_n) &#x3D; a_n$，即 $\varphi &#x3D; I_A$。[证毕]</p><p>注意：如 $A$ 为无穷集，则命题不真，例如 $A &#x3D; \mathbb{N}$ 时，令 $\varphi(n) &#x3D; n + 1$，则</p><p>$$<br>1 + \varphi(1) &#x3D; 3 &lt; \varphi(2) + 2 &#x3D; 5 &lt; 3 + \varphi(3) &#x3D; 7 \ldots,\varphi \neq I_A<br>$$</p><blockquote><p>设 $u_1, u_2, \cdots, u_{mn+1}$ 是一个两两不相交的整数构成的数列，则必有长至少为 $n+1$ 的递增子序列或有长至少为 $m+1$ 的递减子序列。</p></blockquote><p>[证] 令 $A &#x3D; {u_1, u_2, \cdots, u_{mn+1}}$，则 $|A| &#x3D; mn + 1$。</p><p>设以 $u_i$ 为首项的最长递增子序列的长度为 $\ell^+_i$，</p><p>设以 $u_i$ 为首项的最长递减子序列的长度为 $\ell^-_i$。</p><p>反证法：假设题中结论不成立，则 $\ell^+_i \leq n, \ell^-_i \leq m, i&#x3D;1,2,3,\cdots,mn+1$。</p><p>令 $\varphi: A \to {1,2,\cdots,n} \times {1,2,\cdots,m}, \forall u_i \in A, \varphi(u_i) &#x3D; (\ell^+_i, \ell^-_i)$，则 $\varphi$ 是单射。</p><p>实际上，$\forall u_i, u_j \in A$ 且 $u_i \neq u_j (i &lt; j)$，则</p><p>若 $u_i &gt; u_j$，则 $\ell^-_i &gt; \ell^-_j$，所以 $(\ell^+_i, \ell^-_i) \neq (\ell^+_j, \ell^-_j)$；</p><p>即 $\varphi(u_i) \neq \varphi(u_j)$。</p><p>若 $u_i &lt; u_j$，则 $\ell^+_i &gt; \ell^+_j$，所以 $(\ell^+_i, \ell^-_i) \neq (\ell^+_j, \ell^-_j)$；</p><p>即 $\varphi(u_i) \neq \varphi(u_j)$。</p><p>故 $\varphi$ 为单射，从而就有 $mn + 1 \leq mn$ 矛盾。</p><blockquote><p>一些人组成的团体 $S$，试证可以把 $S$ 分为两组，使得每个人在其所在的组中的朋友数至多是他在团体 $S$ 中的朋友数的一半。</p></blockquote><p>[证] 对 $S$ 的任一二划分 ${A, A^c}$，令<br>$$<br>f(A, A^c) &#x3D; {(a, b) \mid (a, b) \in A \times A^c \text{ 且 } a \text{ 与 } b \text{ 互为朋友}}<br>$$</p><p>由于 $|S| &lt; \infty$，所以 $S$ 的 2-划分为有限个。所以，存在 $S$ 的一个 2-划分 ${B, B^c}$，使 $f(B, B^c)$ 最大。我们断言 $B$ 与 $B^c$ 即为所求。</p><p>实际上，$\forall a \in S$，若 $a \in B$ 且 $a$ 在 $B$ 中的朋友数 $d &gt; a$ 在 $B^c$ 中的朋友数 $d’$，则把 $a$ 调到 $B^c$ 中得分组 $B \setminus {a}$ 与 $B^c \cup {a}$，分别记为 $B’, B’^c$。于是</p><p>$$<br>f(B’, B’^c) &#x3D; f(B, B^c) + (d - d’) &gt; f(B, B^c)<br>$$</p><p>这与 $f(B, B^c)$ 为最大值的假设相矛盾。</p><blockquote><p>已知 $m$ 个整数 $a_1, a_2, \cdots, a_m$，试证：存在两个整数 $k, \ell$，$0 \leq k &lt; \ell \leq m$，使得 $a_{k+1} + a_{k+2} + \cdots + a_\ell$ 能被 $m$ 整除。</p></blockquote><p>【证】 考察下式：</p><p>$a_1$</p><p>$a_1 + a_2$</p><p>$a_1 + a_2 + a_3$</p><p>$\vdots$</p><p>$a_1 + a_2 + \cdots + a_m$</p><p>若第 $i$ 式能被 $m$ 整除，则显然成立，此时 $k &#x3D; 0, \ell &#x3D; i$；</p><p>若任一式都不能被 $m$ 整除，则考察各式被 $m$ 整除后的余数，如下式：</p><p>$a_1 &#x3D; q_1 m + r_1$</p><p>$a_1 + a_2 &#x3D; q_2 m + r_2$</p><p>$a_1 + a_2 + a_3 &#x3D; q_3 m + r_3$</p><p>$\vdots$</p><p>$a_1 + a_2 + \cdots + a_m &#x3D; q_m m + r_m$</p><p>由于每一个都不能被 $m$ 整除，故共有 $m$ 个余数—相当于 $m$ 个物体。而任意整数被 $m$ 除后的余数有 $m-1$ 种可能（即 $1, 2, \ldots, m-1$）—相当于 $m-1$ 个抽屉。</p><p>由抽屉原理，必有两个余数相等，设为 $r_i &#x3D; r_j$，其中 $i &lt; j$。</p><p>于是 $(a_1 + \cdots + a_j) - (a_1 + \cdots + a_i) &#x3D; a_{i+1} + \cdots + a_j$ 能被 $m$ 整除。</p><p>此时 $k &#x3D; i, \ell &#x3D; j$，结论成立。</p><blockquote><p>在一个半径为 16 的圆内任意放入 650 个点。给你一个形似垫圈的圆环，此圆环的外半径为 3, 内半径为 2。现在要求你用这个垫圈盖住这 650 个点中的至少 10 点，这可能吗？证明你的结论。</p></blockquote><p>[证]:</p><p>每个点可接触区面积:<br>$$<br>S&#x3D;\pi (3^2-2^2)&#x3D;5\pi<br>$$<br>可接触区的实际面积:<br>$$<br>S’&#x3D;\pi (16+3)^2&#x3D;361\pi<br>$$<br>可能接触的总面积:<br>$$<br>nS&#x3D;650*5\pi&#x3D;3250\pi<br>$$<br>平均一个位置接触的可接触区个数:<br>$$<br>\frac{3250\pi}{361\pi}\approx9.002 \gt 9<br>$$<br>故至少存在一个点接触10个可接触区(反证:若不然,则上面不可能大于9)</p><blockquote><p>设 $a_1 a_2 \cdots a_n$ 为 $1, 2, \cdots, n$ 的任一排列。如果 $n$ 是奇数且</p><p>$$<br>(a_1 - 1)(a_1 - 2) \cdots (a_n - n) \neq 0,<br>$$<br>则乘积为偶数</p></blockquote><p>[证] </p><p>反证法：若 $(a_1 - 1)(a_2 - 2) \cdots (a_n - n)$ 为奇数，则 $(a_i - i)$ 中的 $a_i$ 与 $i$ 必是一个为奇数，一个为偶数。而 $n$ 为奇数，故奇数个数为 $\left\lfloor \frac{n}{2} \right\rfloor + 1$ 比偶数 $\left\lfloor \frac{n}{2} \right\rfloor$ 多一个，这是不可能的。</p><p>证法 2：当 $n$ 为奇数时，$1, 2, \ldots, n$ 中有 $\frac{n-1}{2}$ 个偶数，$\frac{n+1}{2}$ 个奇数，奇数的个数比偶数的个数多一个。于是，$a_1, a_2, \ldots, a_n$，$1, 2, \ldots, n$ 中恰有 $n+1$ 个奇数。然而只有 $n$ 个因子（$n$ 个盒子），先把 $a_1, a_2, \ldots, a_n$ 依次放入 $n$ 个盒中，然后把 $1, 2, \ldots, n$ 依次放入 $n$ 个盒中，这样就把 $n+1$ 个奇数放入了 $n$ 个盒中。因此，有一个盒子 $i$ 中的两个数均为奇数，对应的因子 $a_i - i$ 就是偶数。</p><blockquote><p>珍珠 4 颗，有真有假。真珍珠重量相同且为 $p$，假珍珠重量相同且为 $q$，$p &gt; q$。用秤（而不是天平）仅称量 3 次查出真假，应该怎么做？</p></blockquote><p>【解】 先用 $&lt;1&gt;$、$&lt;2&gt;$、$&lt;3&gt;$、$&lt;4&gt;$ 为 4 个珍珠编号且代表其重量。$&lt;1&gt; + &lt;2&gt;$ 表示这两个珍珠放在一起称且代表其重量。其他类推。</p><p>称 $&lt;1&gt; + &lt;2&gt;$，$&lt;1&gt; + &lt;3&gt;$，$&lt;2&gt; + &lt;3&gt; + &lt;4&gt;$，得如下的方程组：</p><p>$$<br>\begin{align*}<br>&lt;1&gt; + &lt;2&gt; &amp;&#x3D; a_1 \<br>&lt;1&gt; + &lt;3&gt; &amp;&#x3D; b_1 \<br>&lt;2&gt; + &lt;3&gt; + &lt;4&gt; &amp;&#x3D; c_1<br>\end{align*}<br>$$</p><p>其中 $a_1, b_1, c_1$ 是在称量后得到的常数。显然，$a_1$ 为 $2p$ 或 $2q$ 或 $p+q$。令</p><p>$$<br>x &#x3D; \frac{&lt;1&gt; - q}{p - q}, \quad y &#x3D; \frac{&lt;2&gt; - q}{p - q}, \quad z &#x3D; \frac{&lt;3&gt; - q}{p - q}, \quad \omega &#x3D; \frac{&lt;4&gt; - q}{p - q},<br>$$</p><p>$$<br>a &#x3D; \frac{a_1 - 2q}{p - q}, \quad b &#x3D; \frac{b_1 - 2q}{p - q}, \quad c &#x3D; \frac{c_1 - 2q}{p - q},<br>$$</p><p>则我们有<br>$$<br>\begin{align*}<br>x + y &amp;&#x3D; a \<br>x + z &amp;&#x3D; b \<br>y + z + \omega &amp;&#x3D; c<br>\end{align*}<br>$$<br>其中 $x, y, z, \omega \in {0, 1}$，$a, b, c$ 为已知的常数。</p><p>由于<br>$$<br>2(x + y + z) + \omega &#x3D; a + b + c<br>$$<br>所以如果 $a + b + c$ 为偶数，则 $\omega &#x3D; 0$；如果 $a + b + c$ 为奇数，则 $\omega &#x3D; 1$。于是，根据 $a + b + c$ 的奇偶性决定方程组的解。再由算得的结果 $x, y, z, \omega$ 中是 1 的代表相应的珍珠为真，为 0 的代表相同的珍珠为假珍珠。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学校课程</category>
+      
+      <category>离散数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>数学</tag>
+      
+      <tag>计算机</tag>
       
     </tags>
     
