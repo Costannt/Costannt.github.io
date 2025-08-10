@@ -27,7 +27,7 @@
 <meta property="og:description" content="记录了一些学习时感到困惑,甚至根本不理解的问题及其答案.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-09T12:46:53.000Z">
-<meta property="article:modified_time" content="2025-08-09T13:57:43.423Z">
+<meta property="article:modified_time" content="2025-08-10T09:51:26.675Z">
 <meta property="article:author" content="Costannt">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="数学">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          5.8k 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          16 分钟
+          49 分钟
         
       </span>
     
@@ -354,6 +354,254 @@
 <p>$$<br>a &#x3D; \frac{a_1 - 2q}{p - q}, \quad b &#x3D; \frac{b_1 - 2q}{p - q}, \quad c &#x3D; \frac{c_1 - 2q}{p - q},<br>$$</p>
 <p>则我们有<br>$$<br>\begin{align*}<br>x + y &amp;&#x3D; a \<br>x + z &amp;&#x3D; b \<br>y + z + \omega &amp;&#x3D; c<br>\end{align*}<br>$$<br>其中 $x, y, z, \omega \in {0, 1}$，$a, b, c$ 为已知的常数。</p>
 <p>由于<br>$$<br>2(x + y + z) + \omega &#x3D; a + b + c<br>$$<br>所以如果 $a + b + c$ 为偶数，则 $\omega &#x3D; 0$；如果 $a + b + c$ 为奇数，则 $\omega &#x3D; 1$。于是，根据 $a + b + c$ 的奇偶性决定方程组的解。再由算得的结果 $x, y, z, \omega$ 中是 1 的代表相应的珍珠为真，为 0 的代表相同的珍珠为假珍珠。</p>
+<blockquote>
+<p>设 $f: X \to Y$。证明：$f$ 是满的当且仅当 $\forall E \in 2^Y$ 有 $f(f^{-1}(E)) &#x3D; E$</p>
+</blockquote>
+<p>[证] </p>
+<p>$\Leftarrow$ if $\forall E \in 2^Y$ 有 $f(f^{-1}(E)) &#x3D; E$，往证 $f$ 是满的。假设 $f$ 不是满射，则 $\exists y_0 \in Y$ 使 $\forall x \in X, f(x) \neq y_0$。令 $E &#x3D; {y_0}$，则 $f^{-1}(E) &#x3D; \phi$，$\therefore \phi &#x3D; f(f^{-1}(E)) &#x3D; E &#x3D; {y_0}$，矛盾。所以，$f$ 是满的</p>
+<p>$\Rightarrow$ 显然，$f(f^{-1}(E)) \subseteq E$。设 $y \in E$，则由于 $f$ 是满的，所以 $\forall y \in E, \exists x \in X$ 使 $f(x) &#x3D; y$，故 $x \in f^{-1}(E)$ 且 $y \in f(f^{-1}(E))$。因此，$E \subseteq f(f^{-1}(E))$，故 $f(f^{-1}(E)) &#x3D; E$。</p>
+<blockquote>
+<p>设 $f: X \to Y$。证明：$f$ 是单射当且仅当 $\forall F \in 2^X$ 有 $f^{-1}(f(F)) &#x3D; F$</p>
+</blockquote>
+<p>[证] </p>
+<p>$\Leftarrow$ 若不然, $\exists x_1, x_2 \in X, x_1 \neq x_2$ 使 $f(x_1) &#x3D; f(x_2)$。令 $F &#x3D; {x_1}$ 则 $f(F) &#x3D; f({x_1}) &#x3D; {f(x_1)}, f^{-1}(f(F)) &#x3D; {x_1, x_2} \neq {x_1} &#x3D; F$，矛盾。</p>
+<p>$\Rightarrow$ 由单射的性质,显然。</p>
+<blockquote>
+<p>设 $f: X \to Y, A \subseteq X$，则 $(f(A))^c \subseteq f(A^c)$ 成立吗？</p>
+<p>提示:既不是满射,也不是单射</p>
+</blockquote>
+<p>[解]</p>
+<p>尝试举反例即可.</p>
+<p>反例：设 $X &#x3D; {1, 2, 3}, Y &#x3D; {a, b, c}$。</p>
+<p>$f: X \to Y, f(1) &#x3D; a, f(2) &#x3D; a, f(3) &#x3D; b$。</p>
+<p>令 $A &#x3D; {1, 2}$，则 $A^c &#x3D; {3}$。</p>
+<p>$f(A) &#x3D; {a}$，$(f((A))^c &#x3D; {b, c}$，但 $f(A^c) &#x3D; b$。</p>
+<blockquote>
+<p>设 $X$ 是一个无穷集合，$f: X \to Y$。证明：存在 $X$ 的一个真子集 $E$ 使得 $f(E) \subseteq E$</p>
+</blockquote>
+<p>[证] 取 $x_0 \in X$，</p>
+<p>令 $x_1 &#x3D; f(x_0), x_2 &#x3D; f(x_1), \cdots, x_n &#x3D; f(x_{n-1}), \cdots$。若到某一位与前面有重复项，设为第 $k$ 项，即 $f(x_k) &#x3D; x_i (i &lt; k)$。令 $E &#x3D; {x_0, x_1, x_2, \cdots, x_k} \subset X$，则 $f(E) \subseteq E$ 且 $E \subset X$。</p>
+<p>若 $x_i$ 互不相同，令 $E_1 &#x3D; X \setminus {x_0} \subset X$，则 $f(E_1) \subseteq E_1$。</p>
+<p>[不去掉 $x_0$ 有 $E_1 &#x3D; X$]</p>
+<blockquote>
+<p>设 $M$ 是一个非空集合，$\varphi: M \to M$，$N \subseteq M$。令 $\mathcal{A} &#x3D; {P | P \subseteq M \text{ 且 } N \subseteq P, \varphi(P) \subseteq P}$，$G &#x3D; \bigcap_{P \in \mathcal{A}} P$。</p>
+<p>试证：</p>
+<p>(1) $G \in \mathcal{A}$</p>
+<p>(2) $N \cup \varphi(G) &#x3D; G$</p>
+</blockquote>
+<p>[证] (1) $\forall P \in \mathcal{A}$，$G &#x3D; \bigcap_{P \in \mathcal{A}} P \subseteq P \subseteq M$；$\forall P \in \mathcal{A}$，$N \subseteq P$，所以 $N \subseteq G$；$\varphi(G) &#x3D; \varphi(\bigcap_{P \in \mathcal{A}} P) \subseteq \bigcap_{P \in \mathcal{A}} \varphi(P) \subseteq \bigcap_{P \in \mathcal{A}} P &#x3D; G$。因此 $G \in \mathcal{A}$。</p>
+<p>(2) 显然有 $N \cup \varphi(G) \subseteq G$。$N \cup \varphi(G) \subseteq M$，$N \subseteq N \cup \varphi(G)$，只要证明 $\varphi(N \cup \varphi(G)) \subseteq N \cup \varphi(G)$ 即可知 $N \cup \varphi(G) \in \mathcal{A}$</p>
+<p>从而有 $G \subseteq N \cup \varphi(G)$</p>
+<p>$\forall y \in \varphi(N \cup \varphi(G))$，$\exists x \in N \cup \varphi(G)$，使得 $y &#x3D; \varphi(x)$</p>
+<p>因为 $x$ 是 $N \cup \varphi(G)$ 中元素，则可分以下二种情况讨论</p>
+<ul>
+<li>(1) $x$ 的像在 $N$ 中，则 $\varphi(x) \in N \cup \varphi(G)$；</li>
+<li>(2) $x$ 的像不在 $N$ 中，又分三种情况：<ul>
+<li>① $\varphi(x) &#x3D; x$</li>
+<li>② $\varphi(x) &#x3D; y$ 时必有 $\varphi(y) &#x3D; x$</li>
+<li>③ $\varphi(x) &#x3D; y$ 且 $\varphi(y) &#x3D; z$ 时必有 $\varphi(x) &#x3D; z$（否则与 $\varphi(P) \subseteq P$ 矛盾）。</li>
+<li>这三种情况下均有 $\varphi(x) \in N \cup \varphi(G)$</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>设 $X, Y, Z$ 是三个非空集合，$|Z| \geq 2$。证明：$f: X \to Y$ 是满射当且仅当不存在从 $Y$ 到 $Z$ 的映射 $g_1$ 和 $g_2$，使得 $g_1 \neq g_2$，但$g_1 \circ f &#x3D; g_2 \circ f$。</p>
+</blockquote>
+<p>[证]</p>
+<p>$\Rightarrow$ 因 $f: X \to Y$ 且 $f$ 为满射，故 $\forall y \in Y, \exists x \in X$ ，使得 $f(x) &#x3D; y$。</p>
+<p>假设存在 $g_1, g_2, g_1 \neq g_2$，但 $g_1 \circ f &#x3D; g_2 \circ f$。因为 $g_1 \neq g_2$，所以 $\exists y_0 \in Y$，使得 $g_1(y_0) \neq g_2(y_0)$。对于上面的 $y_0$，$\exists x_0 \in X$（$f$ 是满射），使得 $g_1(f(x_0)) \neq g_2(f(x_0))$</p>
+<p>[$g_1(y_0) \neq g_2(y_0)$]，即 $g_1f(x_0) \neq g_2f(x_0)$。故 $g_1 \circ f \neq g_2 \circ f$ 与 $g_1 \circ f &#x3D; g_2 \circ f$，矛盾。所以假设不成立。</p>
+<p>证法 2:</p>
+<p>$f$ 满射 $\Leftrightarrow f$ 右可逆 $\Leftrightarrow \exists h: Y \to X$，使得 $f \circ h &#x3D; I_Y \Leftrightarrow$ 假设 $g_1 \circ f &#x3D; g_2 \circ f$ 得到 $g_1 &#x3D; g_2$，命题得证。</p>
+<p>$\Leftarrow$ $f: X \to Y$，假设 $f$ 不是满射，则 $\exists y_0 \in Y$，使得 $\forall x \in X, f(x) \neq y_0$。构造两个映射 $g_1, g_2: Y \to Z$，</p>
+<p>当 $y &#x3D; y_0$ 时，$g_1(y_0) \neq g_2(y_0)$；</p>
+<p>当 $y \neq y_0$ 时，$g_1(y) &#x3D; g_2(y)$。</p>
+<p>因为 $|Z| \geq 2$，故此时 $g_1 \neq g_2$，但</p>
+<p>$\forall x \in X, g_1 \circ f(x) &#x3D; g_1(y \neq y_0) &#x3D; g_2(y \neq y_0) &#x3D; g_2 \circ f(x)$</p>
+<p>即 $g_1 \circ f &#x3D; g_2 \circ f$，与假设不存在 $g_1 \neq g_2$，但 $g_1 \circ f &#x3D; g_2 \circ f$ 矛盾，故 $f$ 一定是满射。</p>
+<blockquote>
+<p>设 $X, Y, Z$ 是三个非空的集合，$|X| \geq 2$，证明：$f: X \to Y$ 是单射当且仅当不存在从 $Z$ 到 $X$ 的映射 $g_1, g_2$，使得 $g_1 \neq g_2$，但 $f \circ g_1 &#x3D; f \circ g_2$</p>
+</blockquote>
+<p>[证]</p>
+<p>$\Rightarrow$ $f$ 是单射，则 $\forall x_1, x_2, x_1 \neq x_2$，有 $f(x_1) \neq f(x_2)$。假设存在 $g_1$ 和 $g_2: Z \to X, g_1 \neq g_2$，因为 $|X| \geq 2$，于是 $\exists z_0 \in Z$，使得 $g_1(z_0) \neq g_2(z_0)$。</p>
+<p>而由于 $f$ 为单射，故 $f(g_1(z_0)) \neq f(g_2(z_0))$，即 $f \circ g_1(z_0) \neq f \circ g_2(z_0)$，故 $f \circ g_1 \neq f \circ g_2$ 矛盾。</p>
+<p>证法 2: $f$ 单射 $\Leftrightarrow f$ 左可逆的 $\Leftrightarrow \exists h$ 使得 $hf &#x3D; I_X \Rightarrow$ 由 $f \circ g_1 &#x3D; f \circ g_2 \Rightarrow g_1 &#x3D; g_2$ 得证。</p>
+<p>逆否命题：$g_1 \neq g_2 \Leftrightarrow fg_1 \neq fg_2$。</p>
+<p>$\Leftarrow$ 假设 $f$ 不是单射，则 $\exists x_1, x_2 \in X, x_1 \neq x_2$，但 $f(x_1) &#x3D; f(x_2)$。构造两个映射 $g_1$ 和 $g_2: Z \to X, \forall z \in Z$，令 $g_1(z) &#x3D; x_1, g_2(z) &#x3D; x_2$，由于 $|X| \geq 2$，故若 $x_1 \neq x_2$，则有 $g_1 \neq g_2$。但 $\forall z \in Z, f \circ g_1(z) &#x3D; f(x_1) &#x3D; f(x_2) &#x3D; f \circ g_2(z)$，于是有 $f \circ g_1 &#x3D; f \circ g_2$ 矛盾。</p>
+<blockquote>
+<p>设 $f: X \to Y$, $g: Y \to Z$，则 $g \circ f$ 是 $X$ 到 $Z$ 的映射。我们知道由 $f$ 和 $g$ 分别诱导出从 $2^X$ 到 $2^Y$ 与 $2^Y$ 到 $2^Z$ 的映射也记为 $f$ 和 $g$。问诱导映射 $f$ 与 $g$ 的合成 $g \circ f$ 是否是映射 $g \circ f$ 的诱导映射呢？</p>
+</blockquote>
+<p>[解]</p>
+<p>不是.</p>
+<p>举反例:</p>
+<p>考虑$X&#x3D;{1,2,3},Y&#x3D;{a,b,c},Z&#x3D;{\alpha,\beta,\gamma}$</p>
+<p>现在令<br>$$<br>f(1)&#x3D;a,f(2)&#x3D;a,f(3)&#x3D;b\<br>g(a)&#x3D;\alpha,g(b)&#x3D;\alpha,g(c)&#x3D;\beta<br>$$<br>记:$A&#x3D;{a,b}\subset Y,B&#x3D;{\alpha,\beta}\subset Z$</p>
+<p>有诱导映射:$f:2^{X}\rightarrow 2^{Y},f(X)&#x3D;A,g:2^{Y}\rightarrow 2^{Z},g(Y)&#x3D;B,$</p>
+<p>诱导映射$g \circ f(X)&#x3D;\empty$,然而$g \circ f(1)&#x3D;\alpha,g \circ f(2)&#x3D;\alpha,g \circ f(3)&#x3D;\alpha $,即$g \circ f(X)&#x3D;\alpha$才是其真正的诱导映射.</p>
+<blockquote>
+<p>设 $f: X \to Y$, $g: Y \to Z$, $A \subseteq Z$，证明：$(g \circ f)^{-1}(A) &#x3D; f^{-1}(g^{-1}(A))$</p>
+</blockquote>
+<p>[证]</p>
+<p>$\forall x\in (g \circ f)^{-1}(A),g \circ f(x)\in A,f(x)\in g^{-1}(A),x \in f^{-1}(g^{-1}(A))$</p>
+<p>即: $(g \circ f)^{-1}(A) \subseteq f^{-1}(g^{-1}(A))$</p>
+<p>类似地:</p>
+<p>$\forall x\in f^{-1}(g^{-1}(A)),f(x)\in g^{-1}(A),g \circ f(x)\in A, x\in (g \circ f)^{-1}(A)$</p>
+<p>即: $(g \circ f)^{-1}(A) \supseteq f^{-1}(g^{-1}(A))$</p>
+<p>为了简便,上面过程可以用$\iff$</p>
+<blockquote>
+<p>令 $f$ 与 $g$ 都是从集合 $A$ 到 $A$ 的映射。试证：<br>$$<br>|f\circ g(A)| \leq \min{|f(A)|, |g(A)|}<br>$$</p>
+</blockquote>
+<p>[证]</p>
+<p>采用反证法.</p>
+<p>假设$|f\circ g(A)|&#x3D;\min{|f(A)|, |g(A)|}+1$,$|f(A)|&#x3D;x,|g(A)|&#x3D;y$</p>
+<p>分情况讨论:</p>
+<ul>
+<li><p>$x \gt y$</p>
+<p>$|f\circ g(A)|&#x3D;\min{|f(A)|, |g(A)|}+1&#x3D;y+1$,这是不可能的,违反了映射的定义</p>
+</li>
+<li><p>$x&#x3D;y$</p>
+<p>$|f\circ g(A)|&#x3D;\min{|f(A)|, |g(A)|}+1&#x3D;x+1$,这是不可能的,违反了映射的定义</p>
+</li>
+<li><p>$x \lt y$</p>
+<p>$|f\circ g(A)|&#x3D;\min{|f(A)|, |g(A)|}+1&#x3D;x+1$,这是不可能的,违反了映射的定义</p>
+</li>
+</ul>
+<blockquote>
+<p>设 $f$ 和 $g$ 都是从集合 $A$ 到 $A$ 的映射。试证：一般地<br>$$<br>f \circ g(A) \not\subseteq f(A) \cap g(A)<br>$$<br>注意本题在书上的表述有误,可以很容易举出一个反例.</p>
+</blockquote>
+<p>本题笔者未完全理解. 若此处$f,g$全为恒等映射不能断定此命题错误吗?笔者猜测是某些文字中隐藏的条件未被使用.</p>
+<p>下面贴出老师参考答案:</p>
+<p>[证]</p>
+<p>如果 $g$ 是单射，则 $g$ 是双射，此时，<br>$$<br>fg(A) &#x3D; f(g(A)) &#x3D; f(A) &#x3D; f(A) \cap g(A)<br>$$<br>如果 $g$ 不是单射，则 $g$ 也不是满射，$\exists x \in A$ 使得 $\forall y \in A$ 均有 $g(y) \neq x$，此时<br>$$<br>fg(A) &#x3D; f(g(A)) \subseteq f(A) \setminus f(x)<br>$$</p>
+<p>$$<br>f(A) \cap g(A) \subseteq f(A) \setminus {x}<br>$$<br>一般情况下，$f(x) \neq x$，因此 $fg(A) \not\subseteq f(A) \cap g(A)$。</p>
+<blockquote>
+<p>设 $f &#x3D; u \circ g \circ v$，其中 $f, g, u, v$ 都是从集合 $A$ 到 $A$ 的映射。证明：<br>$$<br>|f(A)| \leq |g(A)|<br>$$</p>
+</blockquote>
+<p>[证]</p>
+<p>$f &#x3D; u \circ g \circ v$，则 $f(A) &#x3D; u(g(v(A)))$，则<br>$$<br>|f(A)| \leq |g(v(A))| \leq |g(A)|<br>$$</p>
+<blockquote>
+<p>设 $N &#x3D; {1, 2, 3, \cdots}$，试构造两个映射 $f$ 和 $g: N \to N$，使得</p>
+<ul>
+<li>(1) $fg &#x3D; I_N$，但 $gf \neq I_N$；</li>
+<li>(2) $gf &#x3D; I_N$，但 $fg \neq I_N$。</li>
+</ul>
+</blockquote>
+<p>[解] (1) $fg &#x3D; I_N$ 但 $gf \neq I_N$，故 $f$ 是满射，但 $f$ 不是单射。于是令：<br>$$<br>f: N \to N, f(1) &#x3D; 1, f(n) &#x3D; n - 1, n \geq 2,<br>$$</p>
+<p>$$<br>g: N \to N, \forall n \in N, g(n) &#x3D; n + 1,<br>$$</p>
+<p>则 $fg &#x3D; I_N$ 但 $gf \neq I_N$。事实上，当 $n &#x3D; 1$ 时，$gf(1) &#x3D; g(f(1)) &#x3D; g(1) &#x3D; 2$，故 $gf \neq I_N$。</p>
+<p>(2) 和(1)有什么区别?</p>
+<blockquote>
+<p>设 $f: X \to Y$ 则</p>
+<ul>
+<li>(1) 若存在唯一的一个映射 $g: Y \to X$，使得 $gf &#x3D; I_X$，则 $f$ 是可逆的吗？</li>
+<li>(2) 若存在唯一的一个映射 $g: Y \to X$，使得 $fg &#x3D; I_Y$，则 $f$ 是可逆的吗？</li>
+</ul>
+</blockquote>
+<p>[解] </p>
+<ul>
+<li>(1) $f$ 不一定可逆。<ul>
+<li>当 $|X| &#x3D; 1$ 时，$f$ 不一定可逆。</li>
+<li>当 $|X| \geq 2$ 时，$f$ 可逆。</li>
+</ul>
+</li>
+<li>(2) $f$ 一定可逆。</li>
+</ul>
+<p>​	[证] 由 $fg &#x3D; I_Y$，得 $f$ 是单射。假设 $f$ 不是满射，则 $g$ 不唯一，矛盾。</p>
+<blockquote>
+<p>设 $f: X \to Y, |X| &#x3D; m, |Y| &#x3D; n$，则</p>
+<ul>
+<li>(1) 若 $f$ 是左可逆的，则 $f$ 有多少个左逆映射？</li>
+<li>(2) 若 $f$ 是右可逆的，则 $f$ 有多少个右逆映射？</li>
+</ul>
+</blockquote>
+<p>[解] 令 $X &#x3D; (x_1, x_2, \cdots, x_m), Y &#x3D; (y_1, y_2, \cdots, y_n)$，则</p>
+<ul>
+<li>有 $m^{n-m}$；</li>
+<li>有 $\displaystyle \left| f^{-1}(y_1) \right| \times \left| f^{-1}(y_2) \right| \times \cdots \times \left| f^{-1}(y_n) \right|&#x3D;\Pi_{\xi \in Y}|f^{-1}(\xi)|$</li>
+</ul>
+<p>自行绘图结合定义即可.</p>
+<blockquote>
+<p>证明：每个 $n$ 次置换 $\sigma$ 都可分解成这样的一些置换的乘积：每个置换或为 $(1 \ 2)$ 或为 $(2 \ 3 \ \cdots \ n)$。</p>
+</blockquote>
+<p>[证] 只须证明，$\forall i \in {2, 3, \ldots, n}$ 有<br>$$<br>(1 \ i) &#x3D; \alpha^{x} \beta \alpha^{y}<br>$$<br>其中 $\alpha &#x3D; (2, 3, \ldots, n)$，$\beta &#x3D; (1 \ 2)$，这是因为:<br>$$<br>(i \ j) &#x3D; (1 \ i)(1 \ j)(1 \ i)<br>$$<br><em>此结论在教材中有证明</em></p>
+<p>$$<br>(1 \ i) &#x3D; \alpha^{x} \beta \alpha^{y}&#x3D;\begin{pmatrix}<br> i &amp; i+1 &amp; \cdots   \<br> 2 &amp;  3  &amp; \cdots<br>\end{pmatrix}(1,2)\begin{pmatrix}<br> 2 &amp; 3  &amp;\cdots \<br> i &amp;  i+1 &amp; \cdots<br>\end{pmatrix}<br>$$</p>
+<p>凑出$x,y$即可</p>
+<p>观察发现:<br>$$<br>\alpha^{x+y} &#x3D;\begin{pmatrix}<br> 2 &amp; 3  &amp;\cdots \<br> i &amp;  i+1 &amp; \cdots<br>\end{pmatrix}\begin{pmatrix}<br> i &amp; i+1 &amp; \cdots   \<br> 2 &amp;  3  &amp; \cdots<br>\end{pmatrix}&#x3D;\alpha<br>\<br>\Rightarrow x+y&#x3D;n-1 \<br>$$<br>凑出$y&#x3D;i-2$,进而有$x&#x3D;n+1-i$</p>
+<p>$$<br>(1 \ i) &#x3D; \alpha^{n+1-i} \beta \alpha^{i-2}<br>$$</p>
+<blockquote>
+<p>任一偶置换均可被分解成 $3-$ 循环置换 $(123)$，$(124) \ldots (12n)$ 中若干之乘积。</p>
+</blockquote>
+<p>[证] 证法 1：$\forall i, j, s, t \in {1, 2, \cdots, n}, i \neq j, s \neq t$<br>$$<br>(ij)(st) &#x3D; (1i)(1j)(1i)(2s)(2t)(2s) &#x3D; (1i)(1j)(2s)(1j)(2t)(2s)<br>$$</p>
+<p>$$<br>&#x3D; (1i)(2s)(1j)(2t)(1i)(2s)<br>$$</p>
+<p>$$<br>&#x3D; (1 \quad 2 \quad s)(1 \quad 2 \quad i)(1 \quad 2 \quad t)(1 \quad 2 \quad j)(1 \quad 2 \quad s)(1 \quad 2 \quad i)<br>$$</p>
+<p>因为 $(1 \quad 2 \quad s)(1 \quad 2 \quad i) &#x3D; \begin{pmatrix} 1 &amp; 2 &amp; s \ 2 &amp; s &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 &amp; i \ 2 &amp; i &amp; 1 \end{pmatrix} &#x3D; \begin{pmatrix} 1 &amp; 2 &amp; s &amp; i \ i &amp; s &amp; 2 &amp; 1 \end{pmatrix} &#x3D; (1i)(2s)$<br>$$<br>(12t)(12j) &#x3D; \begin{pmatrix} 1 &amp; 2 &amp; t \ 2 &amp; t &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 &amp; j \ 2 &amp; j &amp; 1 \end{pmatrix} &#x3D; \begin{pmatrix} 1 &amp; 2 &amp; t &amp; j \ j &amp; t &amp; 2 &amp; 1 \end{pmatrix} &#x3D; (1j)(2t)<br>$$<br>因此本题得证。</p>
+<p>证法 2：由 $(1 \ i)(1 \ j) &#x3D; (1 \ i \ j)$，$(1 \ i \ j) &#x3D; (12j)(12i)(12j)^2$ 即得证。</p>
+<blockquote>
+<ol start="6">
+<li>证明下列置换等式</li>
+</ol>
+<p>(1) $(ac_1 \cdots c_h bd_1 \cdots d_k)(ab) &#x3D; (ac_1 \cdots c_h)(bd_1 \cdots d_k)$</p>
+<p>(2) $(ac_1 \cdots c_h)(bd_1 \cdots d_k)(ab) &#x3D; (ac_1 \cdots c_h bd_1 \cdots d_k)$</p>
+</blockquote>
+<p>[证]</p>
+<p>(1)<br>$$<br>(ac_1 \cdots c_h bd_1 \cdots d_k)(ab) &#x3D; \begin{pmatrix} a &amp; c_1 &amp; c_2 &amp; \cdots &amp; c_h &amp; b &amp; d_1 &amp; \cdots &amp; d_k \ c_1 &amp; c_2 &amp; c_3 &amp; \cdots &amp; b &amp; d_1 &amp; d_2 &amp; \cdots &amp; a \end{pmatrix}(ab)<br>$$</p>
+<p>$$<br>&#x3D; \begin{pmatrix} a &amp; c_1 &amp; c_2 &amp; \cdots &amp; c_h &amp; b &amp; d_1 &amp; \cdots &amp; d_k \ c_1 &amp; c_2 &amp; c_3 &amp; \cdots &amp; a &amp; d_1 &amp; d_2 &amp; \cdots &amp; b \end{pmatrix}<br>$$</p>
+<p>$$<br>&#x3D; (ac_1 \cdots c_h)(bd_1 \cdots d_k)<br>$$<br>(2)<br>$$<br>(ac_1 \cdots c_h)(bd_1 \cdots d_k)(ab) &#x3D; \begin{pmatrix} a &amp; c_1 &amp; \cdots &amp; c_h &amp; b &amp; d_1 &amp; \cdots &amp; d_k \ c_1 &amp; c_2 &amp; \cdots &amp; a &amp; d_1 &amp; d_2 &amp; \cdots &amp; b \end{pmatrix}(ab)&#x3D; \begin{pmatrix} a &amp; c_1 &amp; \cdots &amp; c_h &amp; b &amp; d_1 &amp; \cdots &amp; d_k \ c_1 &amp; c_2 &amp; \cdots &amp; b &amp; d_1 &amp; d_2 &amp; \cdots &amp; a \end{pmatrix}&#x3D; (ac_1 \cdots c_h bd_1 \cdots d_k)<br>$$</p>
+<blockquote>
+<p>设 $\sigma$ 是任一置换，试证：$\sigma^{-1}(i_1 i_2 \cdots i_r)\sigma &#x3D; (i_1\sigma \ i_2\sigma \cdots i_r\sigma)$。</p>
+</blockquote>
+<p>[证] 令 $\alpha &#x3D; \sigma^{-1}(i_1 i_2 \cdots i_r)\sigma$，$\beta &#x3D; (i_1\sigma \ i_2\sigma \cdots i_r\sigma)$，$\forall i \in S$，分两种情况，</p>
+<p>(1) $i \notin {i_1\sigma, i_2\sigma, \cdots, i_r\sigma}$ 时，$i\alpha &#x3D; i\beta &#x3D; i$；</p>
+<p>(2) $i \in {i_1\sigma, i_2\sigma, \cdots, i_r\sigma}$ 时，又分两种情况，</p>
+<ul>
+<li>① $i &#x3D; i_k\sigma, k &lt; r$，$i\alpha &#x3D; i_k\sigma\sigma^{-1}(i_1 i_2 \cdots i_r)\sigma &#x3D; (i_k(i_1 i_2 \cdots i_r))\sigma &#x3D; (i_{k+1})\sigma &#x3D; i\beta$；</li>
+<li>② $i &#x3D; i_r\sigma$，$i\alpha &#x3D; i_r\sigma\sigma^{-1}(i_1 i_2 \cdots i_r)\sigma &#x3D; (i_r(i_1 i_2 \cdots i_r))\sigma &#x3D; (i_1)\sigma &#x3D; i\beta$。</li>
+</ul>
+<blockquote>
+<p>在所有的 $n$ 次置换中，有多少个 $n-$ 循环置换？</p>
+<p>提示:站在映射的角度看这个问题,绘图或许会给你一些帮助</p>
+</blockquote>
+<p>[解]<br>$$<br>(i_1, i_2, \cdots, i_n) &#x3D; \begin{pmatrix} i_1 &amp; i_2 &amp; \cdots &amp; i_n \ i_2 &amp; i_3 &amp; \cdots &amp; i_1 \end{pmatrix}<br>$$</p>
+<p>对 $i_1$，有 $n$ 种选择<br>对 $i_2$，有 $(n-1)$ 种选择<br>……<br>对 $i_n$ 有 $1$ 种选择  </p>
+<p>因此共有 $n!$ 种排列。<br>对每个 $n-$ 循环置换，均有 $n$ 种排列，因此 $n-$ 循环置换的个数为 $\frac{n!}{n} &#x3D; (n-1)!$ 个。</p>
+<blockquote>
+<p>设 $S(n, k)$ 表示 $S_n$ 中的恰有 $k$ 个循环（包括 $1-$ 循环）的置换个数。证明：<br>$$<br>\sum_{k&#x3D;1}^{n} S(n, k) x^k &#x3D; x(x + 1)(x + 2)\cdots(x + n - 1)<br>$$<br>提示:如无必要能力精力,不建议花费时间在此.</p>
+</blockquote>
+<p>[证]</p>
+<p>考察 $S(n,k)$ 与 $S(n-1,k)$的关系.</p>
+<p>在 $n-1$ 个元素的基础上增加一个元素 $n$ 后的情况需要分类讨论:</p>
+<ul>
+<li>增加的 $n$ 自成循环,总循环数$+1$,要求前 $n-1$ 个元素形成 $ k-1$ 个循环,此时前 $n-1$ 个元素中有$S(n-1,k-1)$ 个置换</li>
+<li>增加的 $n$ 被加入前 $n-1$ 个元素形成的某个循环,要求前 $n-1$ 个元素形成 $ k$ 个循环,此时前 $n-1$ 个元素中有$S(n-1,k)$ 个置换, $n$ 可以被加入在 $n-1$ 个元素任何一个的前面,故有 $n-1$ 种加入方法</li>
+</ul>
+<p>根据上面的分析,结合乘法法则有:<br>$$<br>S(n,k)&#x3D;S(n-1,k-1)+(n-1)S(n-1,k) \tag{1}<br>$$<br><em>如果对这个结果感到困惑,请仔细阅读 $S(n,k)$ 的定义</em></p>
+<p>由定义可以给出:<br>$$<br>S(n,n)&#x3D;1,S(n,0)&#x3D;0<br>$$<br>观察题设形式,联想到数学归纳法,施归纳于n:</p>
+<ul>
+<li><p>当$n&#x3D;1$,$S(1,1)x&#x3D;x$</p>
+</li>
+<li><p>假设对 $n&#x3D;i$ 时结论成立,此时有:<br>$$<br>\sum_{k&#x3D;1}^{i} S(i, k) x^k &#x3D; x(x + 1)(x + 2)\cdots(x + i - 1)&#x3D;\prod ^{i-1}<em>{j&#x3D;0}(x+j)<br>$$<br>则当 $n&#x3D;i+1$时,使用(1)式:<br>$$<br>\begin{align}<br>\sum</em>{k&#x3D;1}^{i+1} S(i+1, k) x^k &#x3D;&amp; S(i+1, i+1) x^{i+1}+\sum_{k&#x3D;1}^{i} S(i+1, k) x^k&#x3D;\<br>&#x3D;&amp; x^{i+1}+\sum_{k&#x3D;1}^{i}[S(i,k-1)+iS(i,k) ]x^k \<br>&#x3D;&amp; x^{i+1}+x\sum_{k&#x3D;1}^{i}S(i,k-1)x^{k-1}+i\sum_{k&#x3D;1}^{i}S(i,k) x^k\<br>&#x3D;&amp; x^{i+1}+x\sum_{k&#x3D;2}^{i}S(i,k-1)x^{k-1}+i\prod ^{i-1}<em>{j&#x3D;0}(x+j)\<br>&#x3D;&amp; x^{i+1}+x\sum</em>{k&#x3D;1}^{i-1}S(i,k)x^{k}+i\prod ^{i-1}<em>{j&#x3D;0}(x+j)\<br>&#x3D;&amp; x^{i+1}+x[\prod ^{i-1}</em>{j&#x3D;0}(x+j)-x^{i}]+i\prod ^{i-1}<em>{j&#x3D;0}(x+j)\<br>&#x3D;&amp; (x+i)\prod ^{i-1}</em>{j&#x3D;0}(x+j)\<br>&#x3D;&amp; \prod ^{i}_{j&#x3D;0}(x+j)<br>\end{align}<br>$$<br>证毕</p>
+</li>
+</ul>
+<blockquote>
+<p>令 ${a_{n_k}}<em>{k&#x3D;1}^{\infty}$ 是 ${a_n}</em>{n&#x3D;1}^{\infty}$ 的子序列，证明：$\forall k \in \mathbb{N}, n_k \geq k$。</p>
+</blockquote>
+<p> [证]</p>
+<p>采用反证法</p>
+<p>假设 $\exist i \in \mathbb{N},n_i \lt i$,则 $n_i \le i-1$</p>
+<p>根据子序列定义2.7.2: $n_{i-1}&lt;n_i\le i -1$</p>
+<p>施归纳于 $i$ ,可得 $n_1 \lt 1$,又因为 $n_k \in \mathbb{N}$ 这是不可能的.</p>
+<blockquote>
+<p>设 ${a_n}<em>{n&#x3D;1}^{\infty}$ 是一个序列。试证：${a_n}</em>{n&#x3D;1}^{\infty}$ 的子序列的子序还是 ${a_n}_{n&#x3D;1}^{\infty}$ 的子序列。</p>
+</blockquote>
+<p>[证]</p>
+<p>取 $X$ 上一个序列 ${a_n}<em>{n&#x3D;1}^{\infty}$ ,取  $s&#x3D;{n_i}</em>{i&#x3D;1}^{\infty}$ 作为自然数序列的一个子序列,取  $r&#x3D;{m_s}_{s&#x3D;1}^{\infty}$ 作为 $s$ 序列的一个子序列</p>
+<p>此问题等价于证明: $r \circ s$ 是自然数序列的一个子序列</p>
+<p>验证定义即可:<br>$$<br>\forall i,j\in \mathbb{N},i \lt j,s(i)&lt;s(j)\Rightarrow r(s(i))&lt;r(s(j))<br>$$<br>证毕</p>
+<blockquote>
+<p>给出一个三元运算的例子。</p>
+<p>提示:注意 $n$ 元运算定义</p>
+</blockquote>
+<p>[解] 求三个正整数的最大公因数</p>
 
                 
               </div>
@@ -455,9 +703,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/14/%E5%85%B3%E4%BA%8E%E6%B6%A1%E6%B5%81%E6%8D%9F%E8%80%97%E7%9A%84%E6%8E%A8%E5%AF%BC/" title="关于涡流损耗的推导">
+                      <a href="/2024/12/10/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-3/" title="离散数学-3">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于涡流损耗的推导</span>
+                        <span class="hidden-mobile">离散数学-3</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
