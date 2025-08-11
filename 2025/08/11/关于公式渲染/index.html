@@ -19,27 +19,22 @@
   <meta name="author" content="Costannt">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最近在看梅晓榕老师的自动控制元件与线路(第五版),看到涡流损耗那里拼尽全力未能推出,四处检索未发现有人明确提及这个问题(或许是太简单了,又或者是我没看到). 花了不少时间后发现其实是磁场方向出了错误.为方便后来者遂写此篇.">
+    <meta name="description" content="我们有麻烦了...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于涡流损耗的推导">
-<meta property="og:url" content="http://costannt.icu/2025/07/14/%E5%85%B3%E4%BA%8E%E6%B6%A1%E6%B5%81%E6%8D%9F%E8%80%97%E7%9A%84%E6%8E%A8%E5%AF%BC/index.html">
+<meta property="og:title" content="关于公式渲染...">
+<meta property="og:url" content="http://costannt.icu/2025/08/11/%E5%85%B3%E4%BA%8E%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/index.html">
 <meta property="og:site_name" content="The Library">
-<meta property="og:description" content="最近在看梅晓榕老师的自动控制元件与线路(第五版),看到涡流损耗那里拼尽全力未能推出,四处检索未发现有人明确提及这个问题(或许是太简单了,又或者是我没看到). 花了不少时间后发现其实是磁场方向出了错误.为方便后来者遂写此篇.">
+<meta property="og:description" content="我们有麻烦了...">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://costannt.icu/2025/07/14/%E5%85%B3%E4%BA%8E%E6%B6%A1%E6%B5%81%E6%8D%9F%E8%80%97%E7%9A%84%E6%8E%A8%E5%AF%BC/picture1.png">
-<meta property="article:published_time" content="2025-07-14T08:29:38.000Z">
-<meta property="article:modified_time" content="2025-08-09T13:57:43.421Z">
+<meta property="article:published_time" content="2025-08-11T02:00:20.000Z">
+<meta property="article:modified_time" content="2025-08-11T02:13:58.858Z">
 <meta property="article:author" content="Costannt">
-<meta property="article:tag" content="学习">
-<meta property="article:tag" content="自动控制原理">
-<meta property="article:tag" content="电路">
-<meta property="article:tag" content="物理">
+<meta property="article:tag" content="杂项">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://costannt.icu/2025/07/14/%E5%85%B3%E4%BA%8E%E6%B6%A1%E6%B5%81%E6%8D%9F%E8%80%97%E7%9A%84%E6%8E%A8%E5%AF%BC/picture1.png">
   
   
   
-  <title>关于涡流损耗的推导 - The Library</title>
+  <title>关于公式渲染... - The Library</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于涡流损耗的推导"></span>
+            <span id="subtitle" data-typed-text="关于公式渲染..."></span>
           
         </div>
 
@@ -220,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-14 16:29" pubdate>
-          2025年7月14日 下午
+        <time datetime="2025-08-11 10:00" pubdate>
+          2025年8月11日 上午
         </time>
       </span>
     
@@ -232,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          430 字
+          395 字
         
       </span>
     
@@ -280,32 +275,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">关于涡流损耗的推导</h1>
+            <h1 id="seo-header">关于公式渲染...</h1>
             
             
               <div class="markdown-body">
                 
-                <p>最近在看梅晓榕老师的自动控制元件与线路(第五版),看到涡流损耗那里拼尽全力未能推出,四处检索未发现有人明确提及这个问题(或许是太简单了,又或者是我没看到).</p>
-<p>花了不少时间后发现其实是磁场方向出了错误.为方便后来者遂写此篇.</p>
-<span id="more"></span>
-<blockquote>
-<p>对一个由厚度为 $d$ 的带绝缘薄膜的薄钢片叠压而成的铁芯,取一片将其置于交变磁场$B=B_m \sin (\omega t)$中进行研究,则其由于涡流发热产生的损耗是多少?已知其质地均匀,电阻率为$\rho$,体积为$V$,$h \gg d$,$l \gg d$.(注意此处不能将$h,l$视为已知量).假设磁导率为常数,不考虑其他损耗.</p>
-</blockquote>
-<p><img src="picture1.png" srcset="/img/loading.gif" lazyload alt="黄色的回路为刻意选择"></p>
-<p>取如上图所示的黄色回路,容易有：</p>
-<p>$\Phi = \displaystyle BS=B_m\sin(\omega t)\cdot 2hx$</p>
-<p>这条回路的电阻$R$为:</p>
-<p>$\text{d}R=\displaystyle \rho \frac{2(h+2x)}{l \cdot \text{dx} }$,由$h\gg d \ge 2x$,略去分子上的$2x$,可得:</p>
-<p>$\text{d}R =\rho \displaystyle \frac{2h}{l \cdot \text{dx}}$</p>
-<p>这条回路上的电动势$\varepsilon$为:</p>
-<p>$\varepsilon = \displaystyle -\frac{\text{d}\Phi}{dt}=-2hx \omega B_m\cos(\omega t)$</p>
-<p>整块铁芯的功率$P$:</p>
-<p>$P= \displaystyle \int^{\frac{d}{2}}_0 \int^T_0 \frac{\varepsilon^2}{\text{d}R}\text{dt}$.</p>
-<p>内层积分是十分简单的.不愿亲自计算这个积分也可以使用有效值的知识来解决.</p>
-<p>总之,联立、化简有:</p>
-<p>$P=\displaystyle \frac{hlB_m^2\omega^2}{\rho}\int^{\frac{d}{2}}_0x^2\text{dx}=\frac{hld^3B_m^2\omega^2}{24\rho}=\frac{\pi^2f^2B_m^2d^2V}{6\rho}$</p>
-<p>此处需要提醒:$V=h\cdot l \cdot d$,$\omega = 2\pi f$</p>
-<p>可以看到这个结果与梅老师书上给出的结果一致.</p>
+                <h3 id="问题回顾"><a href="#问题回顾" class="headerlink" title="问题回顾"></a>问题回顾</h3><p>在 Mathjax 完成它光荣的第不知道多少次更新后,我的博客终于遇到了麻烦.</p>
+<p>近日的异空间波动给我造成不小困扰,但我在努力进行补档作业.</p>
+<p>补档过程中,我发现博客框架使用的公式渲染器开始摸鱼了:</p>
+<p>首先,对于复杂的,特别是那些多行公式,它完全不会渲染,一个例子:</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;align&#125;<span class="hljs-keyword">\frac</span>&#123;<span class="hljs-keyword">\text</span>&#123;d&#125;<span class="hljs-keyword">\hat</span>&#123;B&#125;&#125;&#123;<span class="hljs-keyword">\text</span>&#123;d&#125;x&#125;<span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;n+1&#125;&#125;&#123;n!&#125;x<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!(n-i)!&#125;x<span class="hljs-built_in">^</span>n<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!&#125;x<span class="hljs-built_in">^</span>i<span class="hljs-keyword">\cdot</span> <span class="hljs-keyword">\frac</span>&#123;x<span class="hljs-built_in">^</span>&#123;n-i&#125;&#125;&#123;(n-i)!&#125;<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\Rightarrow</span> <span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!&#125;x<span class="hljs-built_in">^</span>i<span class="hljs-keyword">\cdot</span> <span class="hljs-keyword">\frac</span>&#123;x<span class="hljs-built_in">^</span>&#123;n-i&#125;&#125;&#123;(n-i)!&#125;=<span class="hljs-keyword">\hat</span> &#123;B(x)&#125;<span class="hljs-keyword">\cdot</span> e<span class="hljs-built_in">^</span>x <span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></td></tr></table></figure>
+<p>对于渲染有冲突的公式,如</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span>...<span class="hljs-built_in">_</span>...<span class="hljs-built_in">_</span>...<span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
+<p>渲染时,markdown 引擎会先将 <code>_</code> 替换为 <code>&lt;em&gt;</code> ,然后顺手带走我的 LaTeX 公式,最后留下一地鸡毛给 Mathjax</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>我的解决方案是开摆,因为朋友正在召唤我捞薯条.</p>
+<p>如果有读者想要阅读这些答案的原文,可以向我的邮箱:</p>
+<p>Costannnt@gmail.com 发送邮件.</p>
 
                 
               </div>
@@ -324,15 +309,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/" class="category-chain-item">学校课程</a>
+  <a href="/categories/%E6%B2%A1%E4%BA%BA%E4%BC%9A%E7%9C%8B%E7%9A%84%E9%80%9A%E7%9F%A5/" class="category-chain-item">没人会看的通知</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%85%83%E4%BB%B6%E4%B8%8E%E7%BA%BF%E8%B7%AF/" class="category-chain-item">自动控制元件与线路</a>
-  
-  
-
   
 
       </span>
@@ -346,13 +324,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
-      
-        <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86/" class="print-no-link">#自动控制原理</a>
-      
-        <a href="/tags/%E7%94%B5%E8%B7%AF/" class="print-no-link">#电路</a>
-      
-        <a href="/tags/%E7%89%A9%E7%90%86/" class="print-no-link">#物理</a>
+        <a href="/tags/%E6%9D%82%E9%A1%B9/" class="print-no-link">#杂项</a>
       
     </div>
   
@@ -364,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于涡流损耗的推导</div>
-      <div>http://costannt.icu/2025/07/14/关于涡流损耗的推导/</div>
+      <div>关于公式渲染...</div>
+      <div>http://costannt.icu/2025/08/11/关于公式渲染/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月14日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
@@ -409,18 +381,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/01/2025-7%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%8E%A8%E8%8D%90/" title="2025.7轻小说推荐">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2025.7轻小说推荐</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/12/10/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6-3/" title="离散数学-3">
-                        <span class="hidden-mobile">离散数学-3</span>
+                      <a href="/2025/08/09/%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E/" title="一些说明">
+                        <span class="hidden-mobile">一些说明</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -27,7 +27,7 @@
 <meta property="og:description" content="记录了一些学习时感到困惑,甚至根本不理解的问题及其答案.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-10T07:16:22.000Z">
-<meta property="article:modified_time" content="2025-08-10T16:07:52.212Z">
+<meta property="article:modified_time" content="2025-08-10T16:18:30.465Z">
 <meta property="article:author" content="Costannt">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="数学">
@@ -87,7 +87,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -225,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.2k 字
+          4k 字
         
       </span>
     
@@ -236,7 +240,7 @@
         
         
         
-          35 分钟
+          34 分钟
         
       </span>
     
@@ -279,12 +283,12 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>设 $A$ 和 $B$ 是两个集合，$f: 2^A \to 2^B$。如果对 $A$ 的任何子集 $E$ 与 $F$ 有 $f(E \cup F) &#x3D; f(E) \cup f(F)$，则称 $f$ 是可加的。</p>
+<p>设 $A$ 和 $B$ 是两个集合，$f: 2^A \to 2^B$。如果对 $A$ 的任何子集 $E$ 与 $F$ 有 $f(E \cup F) = f(E) \cup f(F)$，则称 $f$ 是可加的。</p>
 <p>试证：一个从 $A$ 到 $B$ 的二元关系可定义为从 $2^A$ 到 $2^B$ 的一个可加映射。</p>
 </blockquote>
 <p>[证]</p>
 <p>考虑 $(x,y)\in R \subseteq A \times B$</p>
-<p>令 $f(E)&#x3D;{y|xRy,x\in E,E\subseteq A,y \in B}$ $f: 2^A \to 2^B ,$</p>
+<p>令 $f(E)=\{y|xRy,x\in E,E\subseteq A,y \in B\}$ $f: 2^A \to 2^B ,$</p>
 <p>令 $E \subseteq A,F \subseteq A$</p>
 <p>若 $y \in f(E\cup F)$</p>
 <p>则, $ x\in E \quad or \quad x \in F $</p>
@@ -292,42 +296,48 @@
 <li>$x\in E,y \in f(E)$</li>
 <li>$x\in F,y \in f(F)$</li>
 </ul>
-<p>即:<br>$$<br>\forall y\in f(E\cup F),y\in f(E) \cup f(F)\<br>f(E\cup F) \subseteq f(E) \cup f(F)<br>$$<br> 反之亦然.问题得证</p>
+<p>即:</p>
+<script type="math/tex; mode=display">
+\forall y\in f(E\cup F),y\in f(E) \cup f(F)\\
+f(E\cup F) \subseteq f(E) \cup f(F)</script><p> 反之亦然.问题得证</p>
 <blockquote>
-<p>设 $f: A \to B$，由 $f$ 定义 $A$ 上二元关系 $\text{Ker}(f)$ 如下：<br>$$<br>\text{Ker}(f) &#x3D; {(x, y) | (x, y) \in A \times A \text{ 且 } f(x) &#x3D; f(y)}.<br>$$<br>令 $g, h: A \to A$，</p>
-<p>证明：$\text{Ker}(g) \supseteq \text{Ker}(h)$ 当且仅当存在 $r: A \to A$ 使得 $g &#x3D; r \circ h$。</p>
+<p>设 $f: A \to B$，由 $f$ 定义 $A$ 上二元关系 $\text{Ker}(f)$ 如下：</p>
+<script type="math/tex; mode=display">
+\text{Ker}(f) = \{(x, y) | (x, y) \in A \times A \text{ 且 } f(x) = f(y)\}.</script><p>令 $g, h: A \to A$，</p>
+<p>证明：$\text{Ker}(g) \supseteq \text{Ker}(h)$ 当且仅当存在 $r: A \to A$ 使得 $g = r \circ h$。</p>
 </blockquote>
 <p>[证] </p>
-<p>$\Rightarrow$ 设 $\text{Ker}(h) \subseteq \text{Ker}(g)$。定义 $r: A \to A$ 如下：$\forall x \in h(A)$，则定义 $r(h(x)) &#x3D;g(x)$，若 $x \in A\setminus h(A) $ ,则 $r(x)&#x3D;h(x)$  于是，$r$ 已定义好。</p>
-<p>现在证明 $r$ 已定义好：由于 $\text{Ker}(h) \subseteq \text{Ker}(g)$，所以 if $(x, y) \in \text{Ker}(h)$，则 $(x, y) \in \text{Ker}(g)$，从而 $h(x) &#x3D; h(y) \Rightarrow g(x) &#x3D; g(y)$</p>
-<p>因此，$\forall x \in h(A)$.  $r(h(x)) &#x3D;g(x)$ 合理</p>
-<p>其次，$\forall x\in A \setminus h(A),r(x)&#x3D;x$，基于类似的原因,也是合理的</p>
-<p>$\Leftarrow$ 设 $g &#x3D; r \circ h$，往证 $\text{Ker}(h) \subseteq \text{Ker}(g)$。</p>
-<p>设 $(x, y) \in \text{Ker}(h)$，则 $h(x) &#x3D; h(y)$，于是<br>$$<br>g(x) &#x3D; r \circ h(x) &#x3D; r(h(x)) &#x3D; r(h(y)) &#x3D; r \circ h(y) &#x3D; g(y)<br>$$</p>
-<p>因此，$(x, y) \in \text{Ker}(g)$，故 $\text{Ker}(h) \subseteq \text{Ker}(g)$.</p>
-<p><em>提示:比较抽象,建议通过绘图直观理解. 若学习过 『3.6等价关系与集合的划分』 则本题更易理解 此处不妨这么想: 我们将 $\text{Ker}$ 集合按照像来划分为不同的部分,将所有经过映射后具有相同像的元素划入同一个部分记为 $E$ ,这样有 $\text{Ker}&#x3D;{E_1 \times E_1}\cup{E_2\times E_2}\cup \cdots {E_n\times E_n}$</em></p>
+<p>$\Rightarrow$ 设 $\text{Ker}(h) \subseteq \text{Ker}(g)$。定义 $r: A \to A$ 如下：$\forall x \in h(A)$，则定义 $r(h(x)) =g(x)$，若 $x \in A\setminus h(A) $ ,则 $r(x)=h(x)$  于是，$r$ 已定义好。</p>
+<p>现在证明 $r$ 已定义好：由于 $\text{Ker}(h) \subseteq \text{Ker}(g)$，所以 if $(x, y) \in \text{Ker}(h)$，则 $(x, y) \in \text{Ker}(g)$，从而 $h(x) = h(y) \Rightarrow g(x) = g(y)$</p>
+<p>因此，$\forall x \in h(A)$.  $r(h(x)) =g(x)$ 合理</p>
+<p>其次，$\forall x\in A \setminus h(A),r(x)=x$，基于类似的原因,也是合理的</p>
+<p>$\Leftarrow$ 设 $g = r \circ h$，往证 $\text{Ker}(h) \subseteq \text{Ker}(g)$。</p>
+<p>设 $(x, y) \in \text{Ker}(h)$，则 $h(x) = h(y)$，于是</p>
+<script type="math/tex; mode=display">
+g(x) = r \circ h(x) = r(h(x)) = r(h(y)) = r \circ h(y) = g(y)</script><p>因此，$(x, y) \in \text{Ker}(g)$，故 $\text{Ker}(h) \subseteq \text{Ker}(g)$.</p>
+<p><em>提示:比较抽象,建议通过绘图直观理解. 若学习过 『3.6等价关系与集合的划分』 则本题更易理解 此处不妨这么想: 我们将 $\text{Ker}$ 集合按照像来划分为不同的部分,将所有经过映射后具有相同像的元素划入同一个部分记为 $E$ ,这样有 $\text{Ker}=\{E_1 \times E_1\}\cup\{E_2\times E_2\}\cup \cdots \{E_n\times E_n\}$</em></p>
 <p><em>结合题目.$\text{Ker}(h) \subseteq \text{Ker}(g)$ 当且仅当 $N_h \gt N_g$ 其中 $N_h,N_g$ 分别为 $\text{Ker}(h),\text{Ker}(g)$ 的划分数,关于这个『当且仅当』的正确性请自行证明</em></p>
 <p><em>$\Rightarrow$ 考察 $g$ 的导出映射, 其正是将 $\text{Ker}$ 按上面的思路划分为若干个集合后,将这个由集合构成的集合作为自变量的映射.这样只要构造一个 $r$ 使得经过 $r$ 的作用,$h$ 的导出映射变为 $g$ 即可,若已知 $\text{Ker}(h) \subseteq \text{Ker}(g)$,则 $N_h \gt N_g$, 映射 $r$ 的存在性得到保证</em>.</p>
 <p><em>$\Leftarrow$ 十分简单,不再赘述.</em></p>
 <blockquote>
 <p>设 $f, g: A \to A$，</p>
-<p>证明：$|f(A)| \leq |g(A)|$ 当且仅当存在 $u, v: A \to A$，使得 $f &#x3D; u \circ g \circ v$。</p>
+<p>证明：$|f(A)| \leq |g(A)|$ 当且仅当存在 $u, v: A \to A$，使得 $f = u \circ g \circ v$。</p>
 <p>提示: 如无必要能力精力,不建议花费时间在此.本题需学习『3.6等价关系与集合的划分』 『3.7映射按等价关系分解』后才可理解部分符号和证明方法.</p>
 </blockquote>
-<p>[证] $\Leftarrow$ 设 $f &#x3D; u \circ g \circ v$，则 $f(A) &#x3D; u(g(v(A)))$，则 $|f(A)| \leq |g(v(A))| \leq |g(A)|$.</p>
-<p>$\Rightarrow$ 设 $|f(A)| \leq |g(A)|$，往证 $f &#x3D; u \circ g \circ v$，但证明较复杂.</p>
-<p>首先构造一个映射 $t: A \to A$ 使得 $\text{Ker}(t) &#x3D; \text{Ker}(f)$ 且 $t(A) \subseteq g(A)$：</p>
+<p>[证] $\Leftarrow$ 设 $f = u \circ g \circ v$，则 $f(A) = u(g(v(A)))$，则 $|f(A)| \leq |g(v(A))| \leq |g(A)|$.</p>
+<p>$\Rightarrow$ 设 $|f(A)| \leq |g(A)|$，往证 $f = u \circ g \circ v$，但证明较复杂.</p>
+<p>首先构造一个映射 $t: A \to A$ 使得 $\text{Ker}(t) = \text{Ker}(f)$ 且 $t(A) \subseteq g(A)$：</p>
 <p>因为 $|f(A)| \leq |g(A)|$，所以存在一个子集 $P \subseteq g(A)$ 使得 $f(A) \sim P$，设此一一对应为 $\varphi$。</p>
-<p>又因为 $A &#x2F; \text{Ker}(f) \sim f(A)$，所以不妨设此一一对应为 $\psi$，$\gamma$ 是 $A$ 到 $A &#x2F; \text{Ker}(f)$ 的自然映射。</p>
+<p>又因为 $A / \text{Ker}(f) \sim f(A)$，所以不妨设此一一对应为 $\psi$，$\gamma$ 是 $A$ 到 $A / \text{Ker}(f)$ 的自然映射。</p>
 <p>令 $t: A \to P$, $\forall x \in A$</p>
-<p>$$<br>t(x) &#x3D; \varphi \psi \gamma (x), \text{即 } t &#x3D; \varphi \psi \gamma &#x3D; \eta \gamma.<br>$$</p>
-<p>显然，$t(A) &#x3D; \varphi \psi \gamma (A) &#x3D; \varphi \psi (A &#x2F; \text{Ker}(f)) &#x3D; \varphi(f(A)) &#x3D; P \subseteq g(A)$. </p>
-<p>其次，证明 $\text{Ker}(t) &#x3D; \text{Ker}(f)$。实际上，$\forall (x, y) \in \text{Ker}(t)$ 有 $t(x) &#x3D; t(y)$，即 $\eta \gamma (x) &#x3D; \eta \gamma (y)$，由 $\eta$ 的单射性便有 $\gamma(x) &#x3D; \gamma(y)$</p>
-<p>从而有 $[x] &#x3D; [y]$，即 $f(x) &#x3D; f(y)$，所以 $(x, y) \in \text{Ker}(f)$，因此，$\text{Ker}(t) \subseteq \text{Ker}(f)$。</p>
-<p>其次，设 $(x, y) \in \text{Ker}(f)$，则 $f(x) &#x3D; f(y)$，故 $[x] &#x3D; [y]$。于是，$t(x) &#x3D; \eta \gamma (x) &#x3D; \eta([x]) &#x3D; \eta([y]) &#x3D; \eta \gamma (y) &#x3D; t(y)$，从而 $(x, y) \in \text{Ker}(t)$.</p>
-<p>即，$\text{Ker}(t) \supseteq \text{Ker}(f)$。因此，$\text{Ker}(t) &#x3D; \text{Ker}(f)$。</p>
-<p>由 $\text{Ker}(t) &#x3D; \text{Ker}(f)$ 及上题知存在 $u: A \to A$ 使得 $f &#x3D; u \circ t$。</p>
-<p>再由 $t(A) \subseteq g(A)$ 知存 $v: A \to A$ 使得 $t &#x3D; g \circ v$，从而 $f &#x3D; u \circ g \circ v$。</p>
+<script type="math/tex; mode=display">
+t(x) = \varphi \psi \gamma (x), \text{即 } t = \varphi \psi \gamma = \eta \gamma.</script><p>显然，$t(A) = \varphi \psi \gamma (A) = \varphi \psi (A / \text{Ker}(f)) = \varphi(f(A)) = P \subseteq g(A)$. </p>
+<p>其次，证明 $\text{Ker}(t) = \text{Ker}(f)$。实际上，$\forall (x, y) \in \text{Ker}(t)$ 有 $t(x) = t(y)$，即 $\eta \gamma (x) = \eta \gamma (y)$，由 $\eta$ 的单射性便有 $\gamma(x) = \gamma(y)$</p>
+<p>从而有 $[x] = [y]$，即 $f(x) = f(y)$，所以 $(x, y) \in \text{Ker}(f)$，因此，$\text{Ker}(t) \subseteq \text{Ker}(f)$。</p>
+<p>其次，设 $(x, y) \in \text{Ker}(f)$，则 $f(x) = f(y)$，故 $[x] = [y]$。于是，$t(x) = \eta \gamma (x) = \eta([x]) = \eta([y]) = \eta \gamma (y) = t(y)$，从而 $(x, y) \in \text{Ker}(t)$.</p>
+<p>即，$\text{Ker}(t) \supseteq \text{Ker}(f)$。因此，$\text{Ker}(t) = \text{Ker}(f)$。</p>
+<p>由 $\text{Ker}(t) = \text{Ker}(f)$ 及上题知存在 $u: A \to A$ 使得 $f = u \circ t$。</p>
+<p>再由 $t(A) \subseteq g(A)$ 知存 $v: A \to A$ 使得 $t = g \circ v$，从而 $f = u \circ g \circ v$。</p>
 <blockquote>
 <p>设 R 与 S 为 X 上的任两个集合，下列命题哪些为真？</p>
 <ul>
@@ -335,83 +345,90 @@
 <li>b) 若 R, S 都是对称的，则 $R \circ S$ 也是对称的。 </li>
 <li>c) 若 R, S 都是反自反的，则 $R \circ S$ 也是反自反的。 </li>
 <li>d) 若 R, S 都是反对称的，则 $R \circ S$ 也是反对称的。 </li>
-<li>e) 若 R, S 都是传递的，则 $R \circ S$ 也是传递的。</li>
+<li>e) 若 R, S 都是传递的，则 $R \circ S$ 也是传递的。 </li>
 </ul>
 </blockquote>
 <p>答案：真假假假假</p>
 <blockquote>
-<p>设 $R_1$ 是 A 到 B，$R_2$ 和 $R_3$ 是 B 到 C 的二元关系，则一般情况下     $$ R_1 \circ (R_2 \setminus R_3) \neq (R_1 \circ R_2) \setminus (R_1 \circ R_3) $$     但有人声称等号成立，他的证明如下：设 $(a, c) \in R_1 \circ (R_2 \setminus R_3)$，则 $\exists b \in X$，使得 $(a, b) \in R_1$ 且 $(b, c) \in R_2 \setminus R_3$。于是 $(b, c) \in R_2$ 且 $(b, c) \notin R_3$。从而 $(a, c) \in R_1 \circ R_2$ 且 $(b, c) \notin R_1 \circ R_3$，所以 $(a, c) \in (R_1 \circ R_2) \setminus (R_1 \circ R_3)$，即 $R_1 \circ (R_2 \setminus R_3) \subseteq (R_1 \circ R_2) \setminus (R_1 \circ R_3)$。同理可证相反的包含关系成立，故等式成立，这个证明错在什么地方？     </p>
+<p>设 $R_1$ 是 A 到 B，$R_2$ 和 $R_3$ 是 B 到 C 的二元关系，则一般情况下     <script type="math/tex">R_1 \circ (R_2 \setminus R_3) \neq (R_1 \circ R_2) \setminus (R_1 \circ R_3)</script>     但有人声称等号成立，他的证明如下：设 $(a, c) \in R_1 \circ (R_2 \setminus R_3)$，则 $\exists b \in X$，使得 $(a, b) \in R_1$ 且 $(b, c) \in R_2 \setminus R_3$。于是 $(b, c) \in R_2$ 且 $(b, c) \notin R_3$。从而 $(a, c) \in R_1 \circ R_2$ 且 $(b, c) \notin R_1 \circ R_3$，所以 $(a, c) \in (R_1 \circ R_2) \setminus (R_1 \circ R_3)$，即 $R_1 \circ (R_2 \setminus R_3) \subseteq (R_1 \circ R_2) \setminus (R_1 \circ R_3)$。同理可证相反的包含关系成立，故等式成立，这个证明错在什么地方？     </p>
 </blockquote>
 <p>[解] 由 $(a, c) \in R_1$，$(b, c) \in R_2$ 且 $(b, c) \notin R_3$，只能得到 $(a, b) \in R_1 \circ R_2$。但 $(a, c) \notin R_1 \circ R_3$ 不一定成立。     例如 $(a, a) \in R_1$，$(a, c) \in R_3$ 时，$(a, c) \in (R_1 \circ R_3)$     故这步推理错误</p>
 <blockquote>
-<p>设 $R$, $S$ 是 $X$ 上的满足 $R \circ S \subseteq S \circ R$ 的对称关系，证明 $R \circ S &#x3D; S \circ R$. </p>
+<p>设 $R$, $S$ 是 $X$ 上的满足 $R \circ S \subseteq S \circ R$ 的对称关系，证明 $R \circ S = S \circ R$. </p>
 </blockquote>
 <p>[证]</p>
-<p>证法1：设 $$(x, z) \in S \circ R$$，则 $$\exists y \in X$$，使得 $$(x, y) \in S$$ 且 $$(y, z) \in R$$。</p>
-<p>因为 $$ R $$，$$ S $$ 均对称，所以 $$ R &#x3D; R^{-1}, S &#x3D; S^{-1} $$</p>
-<p>于是 $$(y, x) \in S^{-1} &#x3D; S, (z, y) \in R^{-1} &#x3D; R$$</p>
-<p>从而 $$(z, x) \in R \circ S, (x, z) \in (R \circ S)^{-1} \subseteq (S \circ R)^{-1} &#x3D; R^{-1} \circ S^{-1} &#x3D; R \circ S$$</p>
-<p>因此 $$ S \circ R \subseteq R \circ S $$</p>
-<p>故 $$ S \circ R &#x3D; R \circ S $$</p>
-<p>证法2：$$ S \circ R &#x3D; S^{-1} \circ R^{-1} &#x3D; (R \circ S)^{-1} \subseteq (S \circ R)^{-1} &#x3D; R^{-1} \circ S^{-1} &#x3D; R \circ S $$，故 $$ S \circ R \subseteq R \circ S $$，于是 $$ R \circ S &#x3D; S \circ R $$</p>
+<p>证法1：设 <script type="math/tex">(x, z) \in S \circ R</script>，则 <script type="math/tex">\exists y \in X</script>，使得 <script type="math/tex">(x, y) \in S</script> 且 <script type="math/tex">(y, z) \in R</script>。</p>
+<p>因为 <script type="math/tex">R</script>，<script type="math/tex">S</script> 均对称，所以 <script type="math/tex">R = R^{-1}, S = S^{-1}</script></p>
+<p>于是 <script type="math/tex">(y, x) \in S^{-1} = S, (z, y) \in R^{-1} = R</script></p>
+<p>从而 <script type="math/tex">(z, x) \in R \circ S, (x, z) \in (R \circ S)^{-1} \subseteq (S \circ R)^{-1} = R^{-1} \circ S^{-1} = R \circ S</script></p>
+<p>因此 <script type="math/tex">S \circ R \subseteq R \circ S</script></p>
+<p>故 <script type="math/tex">S \circ R = R \circ S</script></p>
+<p>证法2：<script type="math/tex">S \circ R = S^{-1} \circ R^{-1} = (R \circ S)^{-1} \subseteq (S \circ R)^{-1} = R^{-1} \circ S^{-1} = R \circ S</script>，故 <script type="math/tex">S \circ R \subseteq R \circ S</script>，于是 <script type="math/tex">R \circ S = S \circ R</script></p>
 <blockquote>
-<p>设 $$ R $$ 为 $$ X $$ 上的对称关系，证明：$$\forall n \in N, R^n$$ 是对称关系。</p>
+<p>设 <script type="math/tex">R</script> 为 <script type="math/tex">X</script> 上的对称关系，证明：<script type="math/tex">\forall n \in N, R^n</script> 是对称关系。</p>
 </blockquote>
 <p>[证] </p>
-<p>证法1：$$ (R^n)^{-1} &#x3D; (R \circ R \circ \cdots \circ R)^{-1} &#x3D; R^{-1} \circ R^{-1} \circ \cdots \circ R^{-1} &#x3D; R \circ R \circ \cdots R &#x3D; R^n $$，故 $$ R $$ 对称。</p>
-<p>证法2：$$\forall (x, y) \in R^n$$，则 $$\exists y_1, y_2, \cdots, y_{n-1} \in X$$，使得<br>$$(x, y_1) \in R, (y_1, y_2) \in R, \cdots, (y_{n-1}, y) \in R。$$<br>因为 $$ R $$ 对称，所以<br>$$(y, y_{n-1}) \in R, (y_{n-1}, y_{n-2}) \in R, \cdots, (y_2, y_1) \in R, (y_1, x) \in R$$，因此 $$(y, x) \in R^n$$，故 $$ R $$ 对称。</p>
-<p>证法3：用数学归纳法对$$n$$进行归纳。  </p>
-<ul>
-<li>当 $$n&#x3D;1$$ 时，$$R^n&#x3D;R$$ 显然是对称的。  </li>
-<li>假设当 $$n&#x3D;k$$ 时，$$R^k$$ 对称。<br>当 $$n&#x3D;k+1$$ 时，$$R^{k+1}&#x3D;R^k \circ R&#x3D;R \circ R^k$$。<br>$$\forall (x,y) \in R^{k+1}$$，则 $$\exists z \in X$$，使得 $$(x,z) \in R^k, (z,y) \in R$$。<br>因为 $$R^k$$，$$R$$ 均是对称的，所以 $$(y,z) \in R, (z,x) \in R^k$$，于是<br>$$(y,x) \in R \circ R^k &#x3D; R^{k+1}$$。</li>
-</ul>
-<p>因此 $$R^{k+1}$$ 对称。<br>综上，$$R^n$$ 对 $$n \in N$$ 都是对称关系。</p>
-<blockquote>
-<p>设 $$R$$ 是 $$X$$ 上的二元关系，试证</p>
-<ul>
-<li>$(R^+)^+ &#x3D; R^+$,</li>
-<li>$(R^<em>)^</em> &#x3D; R^*$</li>
-<li>$R \circ R^* &#x3D; R^* \circ R &#x3D; R^+$</li>
-<li>$(R^+)^* &#x3D; (R^<em>)^+ &#x3D; R^</em>$</li>
-</ul>
-</blockquote>
-<p>[证]</p>
-<p>(1) 因为 $$R^+ \subseteq (R^+)$$ 显然成立。  </p>
-<p>其次，设 $$(a, b) \in (R^+)$$，因为 $$(R^+)^+$$ 是一切包含 $$R^+$$ 的传递关系的交，而 $$R^+ \subseteq R^+$$ 且 $$R^+$$ 是传递的，故 $$(a, b) \in R^+$$，即 $$(R^+)^+ \subseteq R^+$$。  </p>
-<p>因此 $$(R^+)^+ &#x3D; R^+$$  </p>
-<p>(2) 因为 $$R^* \subseteq (R^*)$$ 显然成立。  </p>
-<p>其次，设 $$(a, b) \in (R^<em>)$$，因为 $$(R^</em>)$$ 是一切包含 $$R^<em>$$ 的自反传递关系的交，而 $$R^</em>$$ 本身是自反的也是传递的且 $$R^* \subseteq (R^<em>)$$，故 $$(a, b) \in R^</em>$$，即 $$(R^<em>) \subseteq R^</em>$$，因此 $$(R^<em>) &#x3D; R^</em>$$  </p>
-<p>(3) $$R \circ R^* &#x3D; R \circ (R^0 \cup R \cup R^2 \cup \cdots ) &#x3D; R \cup R^2 \cup R^3 \cup \cdots &#x3D; R^+$$  </p>
-<p>$$R^* \circ R &#x3D; (R^0 \cup R \cup R^2 \cup \cdots ) \circ R &#x3D; R \cup R^2 \cup R^3 \cup \cdots &#x3D; R^+$$  </p>
-<p>(4) 先证 $$(R^+)^* &#x3D; R^*$$  </p>
-<p>$$(R^+)^* &#x3D; (R^+)^0 \cup (R^+)^+ &#x3D; I_X \cup R^+ &#x3D; R^*$$  </p>
-<p>再证 $$(R^<em>)^+ &#x3D; R^</em>$$  </p>
-<p>因为 $$(R^<em>)^+$$ 是包含 $$R^</em>$$ 的一切传递关系的交，又因为 $$R^* \subseteq (R^<em>)$$ 且 $$R^</em>$$ 是传递的，所以 $$(R^<em>)^+ &#x3D; R^</em>$$  </p>
-<p>因此 $$(R^+)^* &#x3D; (R^<em>)^+ &#x3D; R^</em>$$</p>
+<p>证法1：<script type="math/tex">(R^n)^{-1} = (R \circ R \circ \cdots \circ R)^{-1} = R^{-1} \circ R^{-1} \circ \cdots \circ R^{-1} = R \circ R \circ \cdots R = R^n</script>，故 <script type="math/tex">R</script> 对称。</p>
+<p>证法2：<script type="math/tex">\forall (x, y) \in R^n</script>，则 <script type="math/tex">\exists y_1, y_2, \cdots, y_{n-1} \in X</script>，使得  </p>
+<script type="math/tex; mode=display">(x, y_1) \in R, (y_1, y_2) \in R, \cdots, (y_{n-1}, y) \in R。</script><p>因为 <script type="math/tex">R</script> 对称，所以  </p>
+<script type="math/tex; mode=display">(y, y_{n-1}) \in R, (y_{n-1}, y_{n-2}) \in R, \cdots, (y_2, y_1) \in R, (y_1, x) \in R$$，因此 $$(y, x) \in R^n$$，故 $$ R $$ 对称。
+
+证法3：用数学归纳法对$$n$$进行归纳。  
+
+- 当 $$n=1$$ 时，$$R^n=R$$ 显然是对称的。  
+- 假设当 $$n=k$$ 时，$$R^k$$ 对称。  
+  当 $$n=k+1$$ 时，$$R^{k+1}=R^k \circ R=R \circ R^k$$。  
+  $$\forall (x,y) \in R^{k+1}$$，则 $$\exists z \in X$$，使得 $$(x,z) \in R^k, (z,y) \in R$$。  
+  因为 $$R^k$$，$$R$$ 均是对称的，所以 $$(y,z) \in R, (z,x) \in R^k$$，于是  
+  $$(y,x) \in R \circ R^k = R^{k+1}$$。  
+
+因此 $$R^{k+1}$$ 对称。  
+综上，$$R^n$$ 对 $$n \in N$$ 都是对称关系。
+
+> 设 $$R$$ 是 $$X$$ 上的二元关系，试证
+>
+> - $(R^+)^+ = R^+$,
+> - $(R^*)^* = R^*$
+> - $R \circ R^* = R^* \circ R = R^+$
+> - $(R^+)^* = (R^*)^+ = R^*$  
+
+[证]
+
+(1) 因为 $$R^+ \subseteq (R^+)$$ 显然成立。  
+
+其次，设 $$(a, b) \in (R^+)$$，因为 $$(R^+)^+$$ 是一切包含 $$R^+$$ 的传递关系的交，而 $$R^+ \subseteq R^+$$ 且 $$R^+$$ 是传递的，故 $$(a, b) \in R^+$$，即 $$(R^+)^+ \subseteq R^+$$。  
+
+因此 $$(R^+)^+ = R^+</script><p>(2) 因为 <script type="math/tex">R^* \subseteq (R^*)</script> 显然成立。  </p>
+<p>其次，设 <script type="math/tex">(a, b) \in (R^*)</script>，因为 <script type="math/tex">(R^*)</script> 是一切包含 <script type="math/tex">R^*</script> 的自反传递关系的交，而 <script type="math/tex">R^*</script> 本身是自反的也是传递的且 <script type="math/tex">R^* \subseteq (R^*)</script>，故 <script type="math/tex">(a, b) \in R^*</script>，即 <script type="math/tex">(R^*) \subseteq R^*</script>，因此 <script type="math/tex">(R^*) = R^*</script>  </p>
+<p>(3) <script type="math/tex">R \circ R^* = R \circ (R^0 \cup R \cup R^2 \cup \cdots ) = R \cup R^2 \cup R^3 \cup \cdots = R^+</script>  </p>
+<script type="math/tex; mode=display">R^* \circ R = (R^0 \cup R \cup R^2 \cup \cdots ) \circ R = R \cup R^2 \cup R^3 \cup \cdots = R^+</script><p>(4) 先证 <script type="math/tex">(R^+)^* = R^*</script>  </p>
+<script type="math/tex; mode=display">(R^+)^* = (R^+)^0 \cup (R^+)^+ = I_X \cup R^+ = R^*</script><p>再证 <script type="math/tex">(R^*)^+ = R^*</script>  </p>
+<p>因为 <script type="math/tex">(R^*)^+</script> 是包含 <script type="math/tex">R^*</script> 的一切传递关系的交，又因为 <script type="math/tex">R^* \subseteq (R^*)</script> 且 <script type="math/tex">R^*</script> 是传递的，所以 <script type="math/tex">(R^*)^+ = R^*</script>  </p>
+<p>因此 <script type="math/tex">(R^+)^* = (R^*)^+ = R^*</script></p>
 <blockquote>
 <p> 设 $R, S$ 为 $X$ 上的二元关系，试证：</p>
 <ul>
 <li>$(R \cup S)^+ \supseteq R^+ \cup S^+$</li>
-<li>$(R \cup S)^* \supseteq R^* \cup S^*$。</li>
+<li>$(R \cup S)^<em> \supseteq R^</em> \cup S^*$。</li>
 </ul>
 </blockquote>
 <p>[证]<br>(1) 因为 $R \subseteq R \cup S$, $S \subseteq R \cup S$，所以 $R^+ \subseteq (R \cup S)^+$, $S^+ \subseteq (R \cup S)^+$。因此 $R^+ \cup S^+ \subseteq (R \cup S)^+$。</p>
-<p>(2) 因为 $R \subseteq R \cup S$, $S \subseteq R \cup S$，所以 $R^* \subseteq (R \cup S)^<em>$, $S^</em> \subseteq (R \cup S)^<em>$。因此 $R^</em> \cup S^* \subseteq (R \cup S)^*$。</p>
+<p>(2) 因为 $R \subseteq R \cup S$, $S \subseteq R \cup S$，所以 $R^<em> \subseteq (R \cup S)^</em>$, $S^<em> \subseteq (R \cup S)^</em>$。因此 $R^<em> \cup S^</em> \subseteq (R \cup S)^*$。</p>
 <blockquote>
 <p>设 $R_1, R_2$ 是 $X$ 上的二元关系，证明：</p>
 <ul>
-<li>$r(R_1 \cup R_2) &#x3D; r(R_1) \cup r(R_2)$</li>
-<li>$s(R_1 \cup R_2) &#x3D; s(R_1) \cup s(R_2)$</li>
+<li>$r(R_1 \cup R_2) = r(R_1) \cup r(R_2)$</li>
+<li>$s(R_1 \cup R_2) = s(R_1) \cup s(R_2)$</li>
 <li>$t(R_1 \cup R_2) \supseteq t(R_1) \cup t(R_2)$</li>
 </ul>
 </blockquote>
 <p>[证]</p>
 <p>(1) 因为 $r(R_1)$ 和 $r(R_2)$ 都是 $A$ 上的自反关系，所以 $r(R_1) \cup r(R_2)$ 也是 $A$ 上的自反关系。</p>
 <p>由 $R_1 \subseteq r(R_1), R_2 \subseteq r(R_2)$，得 $R_1 \cup R_2 \subseteq r(R_1) \cup r(R_2)$，所以 $r(R_1) \cup r(R_2)$ 是包含 $R_1 \cup R_2$ 的自反关系。由自反闭包的定义可知：$r(R_1 \cup R_2) \subseteq r(R_1) \cup r(R_2)$</p>
-<p>又 $R_1 \subseteq R_1 \cup R_2, R_2 \subseteq R_1 \cup R_2$，故 $r(R_1) \subseteq r(R_1 \cup R_2)$，$r(R_2) \subseteq r(R_1 \cup R_2)$，因此 $r(R_1) \cup r(R_2) \subseteq r(R_1 \cup R_2)$。从而 $r(R_1 \cup R_2) &#x3D; r(R_1) \cup r(R_2)$</p>
+<p>又 $R_1 \subseteq R_1 \cup R_2, R_2 \subseteq R_1 \cup R_2$，故 $r(R_1) \subseteq r(R_1 \cup R_2)$，$r(R_2) \subseteq r(R_1 \cup R_2)$，因此 $r(R_1) \cup r(R_2) \subseteq r(R_1 \cup R_2)$。从而 $r(R_1 \cup R_2) = r(R_1) \cup r(R_2)$</p>
 <p>(2) 同 (1) 的证明。</p>
 <p>(3) 因为 $R_1 \subseteq R_1 \cup R_2, R_2 \subseteq R_1 \cup R_2$，故 $t(R_1) \subseteq t(R_1 \cup R_2), t(R_2) \subseteq t(R_1 \cup R_2)$，因此 $t(R_1) \cup t(R_2) \subseteq t(R_1 \cup R_2)$。</p>
-<p>例如：设 $X &#x3D; {a, b, c}$，$A$ 上的两个关系 $R_1 &#x3D; {(a, b)}, R_2 &#x3D; {(b, c)}$。于是<br>$t(R_1) &#x3D; {(a, b)}, t(R_2) &#x3D; {(b, c)}$，<br>故 $t(R_1) \cup t(R_2) &#x3D; {(a, b), (b, c)}$，但<br>$R_1 \cup R_2 &#x3D; {(a, b), (b, c)}, t(R_1 \cup R_2) &#x3D; {(a, b), (b, c), (a, c)}$。<br>因此 $t(R_1 \cup R_2) \supseteq t(R_1) \cup t(R_2)$。</p>
+<p>例如：设 $X = \{a, b, c\}$，$A$ 上的两个关系 $R_1 = \{(a, b)\}, R_2 = \{(b, c)\}$。于是<br>$t(R_1) = \{(a, b)\}, t(R_2) = \{(b, c)\}$，<br>故 $t(R_1) \cup t(R_2) = \{(a, b), (b, c)\}$，但<br>$R_1 \cup R_2 = \{(a, b), (b, c)\}, t(R_1 \cup R_2) = \{(a, b), (b, c), (a, c)\}$。<br>因此 $t(R_1 \cup R_2) \supseteq t(R_1) \cup t(R_2)$。</p>
 <blockquote>
 <p>设 $R$ 是 $X$ 上的二元关系. 证明: $R$ 的传递闭包 $R^+$ 可定义为:</p>
 <ul>
@@ -427,7 +444,7 @@
 <p>第三条表明 $R^+$ 是最小的</p>
 <p>完全等价于其定义</p>
 <blockquote>
-<p>设 $X$ 是一个集合，$|X| &#x3D; n$，试求：</p>
+<p>设 $X$ 是一个集合，$|X| = n$，试求：</p>
 <ul>
 <li>$X$ 上自反二元关系的个数为 $2^{n^2 - n}$  </li>
 <li>$X$ 上反自反二元关系的个数为 $2^{n^2 - n}$</li>
@@ -437,54 +454,82 @@
 </ul>
 </blockquote>
 <p>这里只讲解等价关系个数的求解. 其余关系的个数都可以用布尔矩阵方便地求解.</p>
-<p>如无必要精力和能提,请跳过本题.</p>
+<p>如无必要精力和能力,请跳过本题.</p>
 <p>在阅读正文前，建议观看:</p>
 <blockquote>
-<p>【【乐正垂星】母函数是可以被理解的？！】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QM411A73c/?share_source=copy_web&vd_source=ac1f9e5c6cd57e01779738d8c258dbf8">https://www.bilibili.com/video/BV1QM411A73c/?share_source=copy_web&amp;vd_source=ac1f9e5c6cd57e01779738d8c258dbf8</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QM411A73c/">【乐正垂星】母函数是可以被理解的？！</a></p>
 <p><a target="_blank" rel="noopener" href="https://oi-wiki.org/math/poly/egf/">指数生成函数 - OI Wiki</a></p>
-<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%9F%AF%E8%A5%BF%E4%B9%98%E7%A7%AF">柯西乘积 - 维基百科，自由的百科全书</a></p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/柯西乘积">柯西乘积 - 维基百科，自由的百科全书</a></p>
 </blockquote>
 <p>[解]</p>
 <p><em>结合第一个视频的讲解,不难发现指数生成函数本质上就是预先除以了全排列数以避免重复,进而通过多项式计算模拟了选择的过程</em></p>
 <p>现在考察 $X$ 中的划分数,不妨计为 $B_n$ ,立刻发现相当于对 $n-1$ 个元素增加一个元素 , 使用乘法法则即有.</p>
-<p>注意到这种递推特性,写出递推式:<br>$$<br>B_n&#x3D;\sum_{i&#x3D;0}^{n-1}C^i_{n-1}B_{i}<br>$$<br>初值: $B_0&#x3D;B_1&#x3D;1$</p>
+<p>注意到这种递推特性,写出递推式:</p>
+<script type="math/tex; mode=display">
+B_n=\sum_{i=0}^{n-1}C^i_{n-1}B_{i}</script><p>初值: $B_0=B_1=1$</p>
 <p>注意到组合数,联想指数生成函数的形式</p>
-<p>令:<br>$$<br>\hat{B}(x)&#x3D;\sum^{\infty}<em>{n&#x3D;0}\frac{B_n}{n!}x^n \<br>&#x3D;1+\sum^{\infty}</em>{n&#x3D;0}\frac{B_{n+1}}{(n+1)!}x^{n+1}<br>\<br>\frac{\text{d}\hat{B}}{\text{d}x}&#x3D;\sum^{\infty}<em>{n&#x3D;0}\frac{B</em>{n+1}}{n!}x^{n}<br>$$<br>由上面的递推公式:<br>$$<br>\frac{B_{n+1}}{n!}&#x3D;\sum_{i&#x3D;0}^{n}\frac{B_{i}}{i!(n-i)!}<br>$$<br>从而有:<br>$$<br>\frac{\text{d}\hat{B}}{\text{d}x}&#x3D;\sum^{\infty}<em>{n&#x3D;0}\frac{B</em>{n+1}}{n!}x^{n}&#x3D;\sum^{\infty}<em>{n&#x3D;0}\sum</em>{i&#x3D;0}^{n}\frac{B_{i}}{i!(n-i)!}x^n&#x3D;\sum^{\infty}<em>{n&#x3D;0}\sum</em>{i&#x3D;0}^{n}\frac{B_{i}}{i!}x^i\cdot \frac{x^{n-i}}{(n-i)!}\<br>\Rightarrow \sum^{\infty}<em>{n&#x3D;0}\sum</em>{i&#x3D;0}^{n}\frac{B_{i}}{i!}x^i\cdot \frac{x^{n-i}}{(n-i)!}&#x3D;\hat {B(x)}\cdot e^x<br>$$<br>这是一个一阶微分方程:<br>$$<br>\frac{\text{d}\hat{B}}{\hat{B}}&#x3D;e^x \cdot \text{d}x \<br>\Rightarrow \ln \hat{B}&#x3D;e^x+\mathbb{C}<br>$$<br>不妨带入初值,由前知:<br>$$<br>\hat{B(0)}&#x3D;\sum^{\infty}<em>{n&#x3D;0}\frac{B_n}{n!}x^n&#x3D;1+\sum^{\infty}</em>{n&#x3D;0}\frac{B_{n+1}}{(n+1)!}x^{n+1}&#x3D;1<br>$$</p>
-<p>求出常数 $\mathbb{C}&#x3D; -1$</p>
-<p>综上:<br>$$<br>\hat{B(x)}&#x3D;e^{e^x-1}<br>$$<br> 这样就可以给出 $B_n$ 的计算公式:<br>$$<br>\hat{B}&#x3D;\frac{1}{e}\sum^{\infty}<em>{j&#x3D;0} \frac{1}{j!}e^{jx}&#x3D;\frac{1}{e}\sum^{\infty}</em>{j&#x3D;0} \frac{1}{j!}\sum^{\infty}<em>{i&#x3D;0}\frac{(jx)^i}{i!}&#x3D;\sum^{\infty}</em>{n&#x3D;0}\frac{B_n}{n!}x^n\<br>\Rightarrow B_n&#x3D;\frac{1}{e}\sum^{\infty}_{j&#x3D;0} \frac{j^n}{j!}<br>$$</p>
-<blockquote>
-<p>设 $C$ 为全体复数所构成的集合，$R_0$ 为全体非负实数之集。令<br>$$ f: C \to R_0, $$<br>具体地，$\forall z \in C$，<br>$$ f(z) &#x3D; |z|_0. $$  </p>
-<p>$C$ 上的等价关系 $Ker(f)$ 的几何意义是什么？ </p>
+<p>令:</p>
+<script type="math/tex; mode=display">
+\hat{B}(x)=\sum^{\infty}_{n=0}\frac{B_n}{n!}x^n \\
+=1+\sum^{\infty}_{n=0}\frac{B_{n+1}}{(n+1)!}x^{n+1}
+\\
+\frac{\text{d}\hat{B}}{\text{d}x}=\sum^{\infty}_{n=0}\frac{B_{n+1}}{n!}x^{n}</script><p>由上面的递推公式:</p>
+<script type="math/tex; mode=display">
+\frac{B_{n+1}}{n!}=\sum_{i=0}^{n}\frac{B_{i}}{i!(n-i)!}</script><p>从而有:</p>
+<script type="math/tex; mode=display">
+\begin{align}\frac{\text{d}\hat{B}}{\text{d}x}&=\sum^{\infty}_{n=0}\frac{B_{n+1}}{n!}x^{n}\\
+&=\sum^{\infty}_{n=0}\sum_{i=0}^{n}\frac{B_{i}}{i!(n-i)!}x^n\\
+&=\sum^{\infty}_{n=0}\sum_{i=0}^{n}\frac{B_{i}}{i!}x^i\cdot \frac{x^{n-i}}{(n-i)!}\\
+&\Rightarrow \sum^{\infty}_{n=0}\sum_{i=0}^{n}\frac{B_{i}}{i!}x^i\cdot \frac{x^{n-i}}{(n-i)!}=\hat {B(x)}\cdot e^x \end{align}</script><p>这是一个一阶微分方程:</p>
+<script type="math/tex; mode=display">
+\begin{align}\frac{\text{d}\hat{B}}{\hat{B}}&=e^x \cdot \text{d}x \\
+&\Rightarrow \ln \hat{B}=e^x+\mathbb{C}\end{align}</script><p>不妨带入初值,由前知:</p>
+<script type="math/tex; mode=display">
+\begin{align}\hat{B(0)}&=\sum^{\infty}_{n=0}\frac{B_n}{n!}x^n\\&=1+\sum^{\infty}_{n=0}\frac{B_{n+1}}{(n+1)!}x^{n+1}=1 \end{align}</script><p>求出常数 $\mathbb{C}= -1$</p>
+<p>综上:</p>
+<script type="math/tex; mode=display">
+\hat{B(x)}=e^{e^x-1}=\exp(\exp(x)-1)</script><p> 这样就可以给出 $B_n$ 的计算公式:</p>
+<script type="math/tex; mode=display">
+\begin{align}\hat{B}&=\frac{1}{e}\sum^{\infty}_{j=0} \frac{1}{j!}e^{jx}\\
+&=\frac{1}{e}\sum^{\infty}_{j=0} \frac{1}{j!}\sum^{\infty}_{i=0}\frac{(jx)^i}{i!}\\
+&=\sum^{\infty}_{n=0}\frac{B_n}{n!}x^n\\
+&\Rightarrow B_n=\frac{1}{e}\sum^{\infty}_{j=0} \frac{j^n}{j!} \end{align}</script><blockquote>
+<p>设 $C$ 为全体复数所构成的集合，$R_0$ 为全体非负实数之集。令  </p>
+<script type="math/tex; mode=display">f: C \to R_0,</script><p>具体地，$\forall z \in C$，  </p>
+<script type="math/tex; mode=display">f(z) = |z|_0.</script><p>$C$ 上的等价关系 $Ker(f)$ 的几何意义是什么？ </p>
 </blockquote>
 <p>[解] </p>
 <p>以原点为圆心的同心圆环。</p>
 <p>顺带一提,其商集是所有可能的半径集合 即$\mathbb{R}$</p>
 <blockquote>
-<p>令 $g: C \setminus {0} \to C$，$\forall z \in C \setminus {0}$，<br>$$g(z) &#x3D; z |z|^{-1}$$  </p>
-<p>$C \setminus {0}$ 上的关系 $Ker(g)$ 的几何意义是什么？等价类是什么？商集<br>$(C \setminus {0})&#x2F;Ker(g)$ 是什么？  </p>
+<p>令 $g: C \setminus \{0\} \to C$，$\forall z \in C \setminus \{0\}$，  </p>
+<script type="math/tex; mode=display">g(z) = z |z|^{-1}</script><p>$C \setminus \{0\}$ 上的关系 $Ker(g)$ 的几何意义是什么？等价类是什么？商集<br>$(C \setminus \{0\})/Ker(g)$ 是什么？  </p>
 </blockquote>
 <p>[解]</p>
-<p>角度&#x2F;方向</p>
+<p>角度/方向</p>
 <p>以原点为端点但挖去原点的射线</p>
 <p>单位圆</p>
 <blockquote>
-<p>设 $[a,b]$ 是一个有限区间。令 $S$ 是区间 $[a,b]$ 上的有限划分的集合，$[a,b]$ 的一个划分 $\pi$ 是形如 $a &#x3D; x_1 &lt; x_2 &lt; \cdots &lt; x_n &#x3D; b, n \in N$ 的点的集合。在 $S$ 上定义二元关系 $R$ 如下：</p>
-<p>$$\forall \pi_1, \pi_2 \in S, \pi_1 R\pi_2 \iff \pi_2 \text{的每个分点也是 } \pi_1 \text{的分点。}$$</p>
-<p>证明：$R$ 是 $S$ 上的偏序关系（注意，这里的划分与等价关系中的划分不同）。</p>
+<p>设 $[a,b]$ 是一个有限区间。令 $S$ 是区间 $[a,b]$ 上的有限划分的集合，$[a,b]$ 的一个划分 $\pi$ 是形如 $a = x_1 &lt; x_2 &lt; \cdots &lt; x_n = b, n \in N$ 的点的集合。在 $S$ 上定义二元关系 $R$ 如下：</p>
+<script type="math/tex; mode=display">\forall \pi_1, \pi_2 \in S, \pi_1 R\pi_2 \iff \pi_2 \text{的每个分点也是 } \pi_1 \text{的分点。}</script><p>证明：$R$ 是 $S$ 上的偏序关系（注意，这里的划分与等价关系中的划分不同）。</p>
 </blockquote>
 <p>[证] </p>
 <p>$\forall \pi \in S, \pi$ 的每个分点也是 $\pi$ 的分点，故 $\pi R\pi$，因此 $R$ 是自反的；</p>
-<p>$\forall \pi_1, \pi_2 \in S$，若 $\pi_1 R\pi_2$ 且 $\pi_2 R\pi_1$，则 $\pi_2$ 的每个分点也是 $\pi_1$ 的分点且 $\pi_1$ 的每个分点也是 $\pi_2$ 的分点，故 $\pi_1 &#x3D; \pi_2$。因此 $R$ 是反对称的；</p>
+<p>$\forall \pi_1, \pi_2 \in S$，若 $\pi_1 R\pi_2$ 且 $\pi_2 R\pi_1$，则 $\pi_2$ 的每个分点也是 $\pi_1$ 的分点且 $\pi_1$ 的每个分点也是 $\pi_2$ 的分点，故 $\pi_1 = \pi_2$。因此 $R$ 是反对称的；</p>
 <p>$\forall \pi_1, \pi_2, \pi_3 \in S$，若 $\pi_1 R\pi_2$ 且 $\pi_2 R\pi_3$，则 $\pi_2$ 的每个分点是 $\pi_1$ 的分点，而且 $\pi_3$ 的每个分点也是 $\pi_2$ 的分点，因此 $\pi_3$ 的每个分点也是 $\pi_1$ 的分点，故 $\pi_1 R\pi_3$。因此 $R$ 是传递的。</p>
 <p>综上可知：$R$ 是 $S$ 上的偏序关系。</p>
 <blockquote>
-<p>设 $(S, \leq_1), (T, \leq_2)$ 是偏序集。在 $S \times T$ 上定义二元关系 $(S \times T, \leq_3)$ 如下：<br>$$<br>\forall (s, t), (s’, t’) \in S \times T, \quad (s, t) \leq_3 (s’, t’) \iff (s \leq_1 s’, t \leq_2 t’).<br>$$<br>证明：<br>（1）$\leq_3$ 是 $S \times T$ 上的偏序关系；<br>（2）若 $(s, t) \leq_3 (s’, t’) \iff s \leq_1 s’$ 或 $t \leq_2 t’$，则 $\leq_3$ 是 $S \times T$ 上的偏序关系吗？</p>
+<p>设 $(S, \leq_1), (T, \leq_2)$ 是偏序集。在 $S \times T$ 上定义二元关系 $(S \times T, \leq_3)$ 如下：</p>
+<script type="math/tex; mode=display">
+\forall (s, t), (s', t') \in S \times T, \quad (s, t) \leq_3 (s', t') \iff (s \leq_1 s', t \leq_2 t').</script><p>证明：<br>（1）$\leq_3$ 是 $S \times T$ 上的偏序关系；<br>（2）若 $(s, t) \leq_3 (s’, t’) \iff s \leq_1 s’$ 或 $t \leq_2 t’$，则 $\leq_3$ 是 $S \times T$ 上的偏序关系吗？</p>
 </blockquote>
 <p>[证]</p>
-<p>(1) $\forall (s, t) \in S \times T$，则 $s \in S, t \in T$。由于 $(S, \leq_1), (T, \leq_2)$ 是偏序集，故有<br>$$<br>s \le_1 s,t \le_2 t \iff (s,t) \le _3 (s,t)<br>$$<br>从而 $\leq_3$ 是自反的；</p>
+<p>(1) $\forall (s, t) \in S \times T$，则 $s \in S, t \in T$。由于 $(S, \leq_1), (T, \leq_2)$ 是偏序集，故有</p>
+<script type="math/tex; mode=display">
+s \le_1 s,t \le_2 t \iff (s,t) \le _3 (s,t)</script><p>从而 $\leq_3$ 是自反的；</p>
 <p>(2) $\forall (s_1, t_1), (s_2, t_2) \in S \times T$，若 $(s_1, t_1) \leq_3 (s_2, t_2)$ 且 $(s_2, t_2) \leq_3 (s_1, t_1)$，则  </p>
 <p>$(s_1 \leq_1 s_2$ 且 $s_2 \leq_1 s_1)$ 且 $(t_1 \leq_2 t_2$ 且 $t_2 \leq_2 t_1)$。</p>
-<p>由 $(S, \leq_1), (T, \leq_2)$ 是偏序集可知，$s_1 &#x3D; s_2$ 且 $t_1 &#x3D; t_2$，故 $(s_1, t_1) &#x3D; (s_2, t_2)$。</p>
+<p>由 $(S, \leq_1), (T, \leq_2)$ 是偏序集可知，$s_1 = s_2$ 且 $t_1 = t_2$，故 $(s_1, t_1) = (s_2, t_2)$。</p>
 <p>因此”$\leq_3$”是反对称的。</p>
 <p>(3) $\forall (s_1, t_1), (s_2, t_2), (s_3, t_3) \in S \times T$，若 $(s_1, t_1) \leq_3 (s_2, t_2)$ 且 $(s_2, t_2) \leq_3 (s_3, t_3)$，有<br>$(s_1 \leq_1 s_2, s_2 \leq_1 s_3)$ 且 $(t_1 \leq_2 t_2, t_2 \leq_2 t_3)$。</p>
 <p>由 $(S, \leq_1), (T, \leq_2)$ 是偏序集可知 $\leq_1$ 与 $\leq_2$ 是传递的，所以 $s_1 \leq_1 s_3$ 且 $t_1 \leq_2 t_3$。故 $(s_1, t_1) \leq_3 (s_3, t_3)$，因此 $\leq_3$ 是传递的。</p>
@@ -494,15 +539,15 @@
 </blockquote>
 <p>[解]</p>
 <p>存在。</p>
-<p>设 $X &#x3D; {i, 1, 2, 3, \cdots}$，其中 $i &#x3D; \sqrt{-1}$。在 $X$ 上定义的小于或等于关系”$\leq$”，则 $(X, \leq)$ 就是一个没有最大元素，但却有唯一极大元 $i$ 的偏序集。</p>
+<p>设 $X = \{i, 1, 2, 3, \cdots\}$，其中 $i = \sqrt{-1}$。在 $X$ 上定义的小于或等于关系”$\leq$”，则 $(X, \leq)$ 就是一个没有最大元素，但却有唯一极大元 $i$ 的偏序集。</p>
 <blockquote>
 <p>设 $R$ 是 $X$ 上的偏序关系，证明：</p>
-<p>$$R \text{ 是 } X \text{ 上的全序关系} \iff X \times X &#x3D; R \cup R^{-1}$$</p>
-</blockquote>
+<script type="math/tex; mode=display">R \text{ 是 } X \text{ 上的全序关系} \iff X \times X = R \cup R^{-1}</script></blockquote>
 <p>[证]</p>
 <p>$\Rightarrow$ $\forall (x, y) \in X \times X$，由于 $R$ 是 $X$ 上的全序关系，故 $(x, y) \in R$ 或 $(y, x) \in R^{-1}$ 必有一个成立。所以 $(x, y) \in R \cup R^{-1}$，即 $X \times X \subseteq R \cup R^{-1}$；</p>
-<p>反之，因为 $R$ 是 $X$ 上的关系，故 $R \subseteq X \times X$，$R^{-1} \subseteq X \times X$，所以<br>$$R \cup R^{-1} \subseteq X \times X$$<br>因此 $X \times X &#x3D; R \cup R^{-1}$。</p>
-<p>$\Leftarrow$ $\forall (x, y) \in X \times X &#x3D; R \cup R^{-1}$，有 $(x, y) \in R$ 或 $(x, y) \in R^{-1}$，即 $x Ry$ 与 $y Rx$ 必有一个成立，故 $R$ 是 $X$ 上的全序关系。</p>
+<p>反之，因为 $R$ 是 $X$ 上的关系，故 $R \subseteq X \times X$，$R^{-1} \subseteq X \times X$，所以</p>
+<script type="math/tex; mode=display">R \cup R^{-1} \subseteq X \times X</script><p>因此 $X \times X = R \cup R^{-1}$。</p>
+<p>$\Leftarrow$ $\forall (x, y) \in X \times X = R \cup R^{-1}$，有 $(x, y) \in R$ 或 $(x, y) \in R^{-1}$，即 $x Ry$ 与 $y Rx$ 必有一个成立，故 $R$ 是 $X$ 上的全序关系。</p>
 
                 
               </div>

@@ -87,7 +87,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -225,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.1k 字
         
       </span>
     
@@ -236,7 +240,7 @@
         
         
         
-          19 分钟
+          18 分钟
         
       </span>
     
@@ -280,35 +284,62 @@
                 
                 <blockquote>
 <p>设 $X$ 是一个非空集合,$A_n \subseteq X,A_{n+1} \subseteq A_n,n\in N^+$</p>
-<p>证明: $\forall n$, $\displaystyle A_n&#x3D;\bigcup^{\infty}<em>{m&#x3D;n}(A_m\bigcap A</em>{m+1}^c)\bigcup(\bigcap^{\infty}_{m&#x3D;n}A_m) $</p>
+<p>证明: $\forall n$, $\displaystyle A_n=\bigcup^{\infty}_{m=n}(A_m\bigcap A_{m+1}^c)\bigcup(\bigcap^{\infty}_{m=n}A_m) $</p>
 </blockquote>
 <p>[证明]</p>
-<p>由于 $A_{m+1} \subseteq A_m$，故 $A_m \cap A_{m+1}^c &#x3D; A_m \setminus A_{m+1}$</p>
-<p>因为 $m \geq n$，故 $A_m \subseteq A_n$，显然有<br>$$<br>\displaystyle \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m&#x3D;n}^\infty A_m \subseteq A_n<br>$$<br>对于 $\forall x \in A_n$，假设存在 $p(p \geq n)$，使得 $x \in A_p$，必可找到其中最小的值 $p_0$，使得 $x \in A_{p_0} \setminus A_{p_0+1}$<em>( $x$ 被丢掉,一定存在丢掉 $x$ 的时候)</em></p>
-<p>故<br>$$<br>\displaystyle \forall x \in A_n,x \in \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c)\subseteq   \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m&#x3D;n}^\infty A_m<br>$$<br> <em>(所有被丢掉的 $x$ 都属于这个集合.)</em></p>
-<p>假如不存在 $p$，则: $\displaystyle x \in \bigcap\limits_{m&#x3D;n}^\infty A_m$，故<br>$$<br>\displaystyle x \in \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m&#x3D;n}^\infty A_m<br>$$<br> <em>(没被丢掉的 $x$)</em></p>
-<p>综上可得：<br>$$<br>\displaystyle A_n \subseteq \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m&#x3D;n}^\infty A_m<br>$$<br>所以<br>$$<br>\displaystyle A_n &#x3D; \bigcup\limits_{m&#x3D;n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m&#x3D;n}^\infty A_m<br>$$</p>
-<blockquote>
-<p>设 $A_1, A_2, \cdots$ 为一集序列，记 $\overline{A}$ 为这样的元素的全体形成的集合：$x \in \overline{A}$ 当且仅当在序列 $A_1, A_2, \cdots$ 中有无穷多项 $A_n$ 含有 $x$。集合 $\overline{A}$ 称为集序列 $A_1, A_2, \cdots$ 的上极限，记为 $\displaystyle \varlimsup_{n \to \infty} A_n &#x3D; \overline{A}$。又记 $\underline{A}$ 为这样的元素全体形成的集合:序列 $A_1, A_2, \cdots$ 中只有有限项不含有这样的元素。称 $\underline{A}$ 为序列 $A_1, A_2, \cdots$ 的下极限，并记 $\displaystyle \varliminf_{n \to \infty} A_n &#x3D; \underline{A}$。</p>
-<p>证明；<br>$$<br>(1) \quad \varliminf_{n \to \infty} A_n &#x3D; \bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k \text{；}<br>$$<br>$$<br>(2) \quad \varlimsup_{n \to \infty} A_n &#x3D; \bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k \text{;}<br>$$<br>$$<br>(3)\quad \displaystyle \varliminf_{n \to \infty} A_n \subseteq \varlimsup_{n \to \infty} A_n \text{;}<br>$$</p>
-<p>$$<br>(4)设有单调上升集序列 A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots\证明：\varliminf_{n \to \infty} A_n &#x3D; \varlimsup_{n \to \infty} A_n。<br>$$</p>
-<p>$$<br>(5)\displaystyle \underline{A}^c &#x3D; \varliminf_{n \to \infty} A_n^c\quad\overline{A}^c &#x3D; \varlimsup_{n \to \infty} A_n^c。<br>$$</p>
-</blockquote>
-<p>[证] （1）$\forall x \in \varliminf_{n \to \infty} A_n$，在序列 $A_1, A_2, \cdots$ 中只有有限项不含 $x$，在不含 $x$ 的项中必可找到下标最大的一项 $A_{p-1}$（若各项均含 $x$，则令 $p&#x3D;0$），有 $x \in \bigcap_{k&#x3D;p}^{\infty} A_k$，故 $x \in \bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k$，即<br>$$<br>\varliminf_{n \to \infty} A_n \subseteq \bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k。<br>$$</p>
-<p>反之，$\forall x \in \bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k$，必 $\exists p$ 使得 $x \in \bigcap_{k&#x3D;p}^{\infty} A_k$，即 $\forall k \geq p$ 时，$x \in A_k$。而集合 $A_1, A_2, \cdots, A_{p-1}$ 中即使都不含有 $x$，但也仅有有限项不含 $x$，故 $x \in \varliminf_{n \to \infty} A_n$。因此</p>
-<p>$$<br>\bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k \subseteq \varliminf_{n \to \infty} A_n。<br>$$</p>
+<p>由于 $A_{m+1} \subseteq A_m$，故 $A_m \cap A_{m+1}^c = A_m \setminus A_{m+1}$</p>
+<p>因为 $m \geq n$，故 $A_m \subseteq A_n$，显然有</p>
+<script type="math/tex; mode=display">
+\displaystyle \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m=n}^\infty A_m \subseteq A_n</script><p>对于 $\forall x \in A_n$，假设存在 $p(p \geq n)$，使得 $x \in A_p$，必可找到其中最小的值 $p_0$，使得 $x \in A_{p_0} \setminus A_{p_0+1}$<em>( $x$ 被丢掉,一定存在丢掉 $x$ 的时候)</em></p>
+<p>故 </p>
+<script type="math/tex; mode=display">
+\displaystyle \forall x \in A_n,x \in \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c)\subseteq   \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m=n}^\infty A_m</script><p> <em>(所有被丢掉的 $x$ 都属于这个集合.)</em></p>
+<p>假如不存在 $p$，则: $\displaystyle x \in \bigcap\limits_{m=n}^\infty A_m$，故 </p>
+<script type="math/tex; mode=display">
+\displaystyle x \in \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m=n}^\infty A_m</script><p> <em>(没被丢掉的 $x$)</em></p>
 <p>综上可得：</p>
-<p>$$<br>\varliminf_{n \to \infty} A_n &#x3D; \bigcup_{n&#x3D;1}^{\infty} \bigcap_{k&#x3D;n}^{\infty} A_k。<br>$$<br>(2)$\forall x \in \varlimsup_{n \to \infty} A_n$，因为 $A_1, A_2, \cdots$ 中有无穷多项含有 $x$，故 $\exists N$，当 $n \geq N$ 时，$x \in A_n$，因此 $x \in \bigcup_{k&#x3D;n}^{\infty} A_k$，从而 $x \in \bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k$，即<br>$$<br>\varlimsup_{n \to \infty} A_n \subseteq \bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k。<br>$$</p>
-<p>反之，$\forall x \in \bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k$，则 $\forall n \geq 1, x \in \bigcup_{k&#x3D;n}^{\infty} A_k$，即 $A_1, A_2, \cdots$ 中有无穷多项多含 $x$，所以 $x \in \varlimsup_{n \to \infty} A_n$，即</p>
-<p>$$<br>\bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k \subseteq \varlimsup_{n \to \infty} A_n。<br>$$</p>
-<p>综上可得：</p>
-<p>$$<br>\varlimsup_{n \to \infty} A_n &#x3D; \bigcap_{n&#x3D;1}^{\infty} \bigcup_{k&#x3D;n}^{\infty} A_k。<br>$$<br>(3) $\forall x \in \varliminf_{n \to \infty} A_n$，由 $\varliminf_{n \to \infty} A_n$ 定义可知：序列 $A_1, A_2, \cdots$ 中只有有限项不含 $x$，故必可找到不含 $x$ 的下标最大的一项 $A_p$，可见此时 $A_{p+1}, A_{p+2}, \cdots$ 均含 $x$，即有无限项含 $x$，故 $x \in \varlimsup_{n \to \infty} A_n$。因此</p>
-<p>$$<br>\varliminf_{n \to \infty} A_n \subseteq \varlimsup_{n \to \infty} A_n。<br>$$<br>(4)  由(3)知<br>$$<br>\forall x \in \underline{A},x\in \overline{A}\Rightarrow \underline{A} \subseteq \overline{A}<br>$$<br>类似地:<br>$$<br>\forall x \in \varlimsup_{n \to \infty} A_n &#x3D; \overline{A}<br>$$</p>
-<p>因为:<br>$$<br>A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots<br>$$<br>所以有一个最大的 $p_0$:<br>$$<br>\exist p_0 \in N,\forall n\in N,n \ge p_0,x \in A_n<br>$$</p>
-<p>这样满足下极限定义,即有:<br>$$<br>\forall x \in \overline{A},x\in \underline{A}\Rightarrow \overline{A} \subseteq \underline{A}<br>$$<br>综上:<br>$$<br>\varliminf_{n \to \infty} A_n &#x3D; \varlimsup_{n \to \infty} A_n<br>$$<br>(5)</p>
+<script type="math/tex; mode=display">
+\displaystyle A_n \subseteq \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m=n}^\infty A_m</script><p>所以</p>
+<script type="math/tex; mode=display">
+\displaystyle A_n = \bigcup\limits_{m=n}^\infty (A_m \cap A_{m+1}^c) \cup \bigcap\limits_{m=n}^\infty A_m</script><blockquote>
+<p>设 $A_1, A_2, \cdots$ 为一集序列，记 $\overline{A}$ 为这样的元素的全体形成的集合：$x \in \overline{A}$ 当且仅当在序列 $A_1, A_2, \cdots$ 中有无穷多项 $A_n$ 含有 $x$。集合 $\overline{A}$ 称为集序列 $A_1, A_2, \cdots$ 的上极限，记为 $\displaystyle \varlimsup_{n \to \infty} A_n = \overline{A}$。又记 $\underline{A}$ 为这样的元素全体形成的集合:序列 $A_1, A_2, \cdots$ 中只有有限项不含有这样的元素。称 $\underline{A}$ 为序列 $A_1, A_2, \cdots$ 的下极限，并记 $\displaystyle \varliminf_{n \to \infty} A_n = \underline{A}$。</p>
+<p>证明；</p>
+<script type="math/tex; mode=display">
+(1) \quad \varliminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \text{；}</script><script type="math/tex; mode=display">
+(2) \quad \varlimsup_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k \text{;}</script><script type="math/tex; mode=display">
+(3)\quad \displaystyle \varliminf_{n \to \infty} A_n \subseteq \varlimsup_{n \to \infty} A_n \text{;}</script><script type="math/tex; mode=display">
+(4)设有单调上升集序列 A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots\\证明：\varliminf_{n \to \infty} A_n = \varlimsup_{n \to \infty} A_n。</script><script type="math/tex; mode=display">
+(5)\displaystyle \underline{A}^c = \varliminf_{n \to \infty} A_n^c\quad\overline{A}^c = \varlimsup_{n \to \infty} A_n^c。</script></blockquote>
+<p>[证] （1）$\forall x \in \varliminf_{n \to \infty} A_n$，在序列 $A_1, A_2, \cdots$ 中只有有限项不含 $x$，在不含 $x$ 的项中必可找到下标最大的一项 $A_{p-1}$（若各项均含 $x$，则令 $p=0$），有 $x \in \bigcap_{k=p}^{\infty} A_k$，故 $x \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$，即</p>
+<script type="math/tex; mode=display">
+\varliminf_{n \to \infty} A_n \subseteq \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k。</script><p>反之，$\forall x \in \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k$，必 $\exists p$ 使得 $x \in \bigcap_{k=p}^{\infty} A_k$，即 $\forall k \geq p$ 时，$x \in A_k$。而集合 $A_1, A_2, \cdots, A_{p-1}$ 中即使都不含有 $x$，但也仅有有限项不含 $x$，故 $x \in \varliminf_{n \to \infty} A_n$。因此</p>
+<script type="math/tex; mode=display">
+\bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k \subseteq \varliminf_{n \to \infty} A_n。</script><p>综上可得：</p>
+<script type="math/tex; mode=display">
+\varliminf_{n \to \infty} A_n = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} A_k。</script><p>(2)$\forall x \in \varlimsup_{n \to \infty} A_n$，因为 $A_1, A_2, \cdots$ 中有无穷多项含有 $x$，故 $\exists N$，当 $n \geq N$ 时，$x \in A_n$，因此 $x \in \bigcup_{k=n}^{\infty} A_k$，从而 $x \in \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k$，即</p>
+<script type="math/tex; mode=display">
+\varlimsup_{n \to \infty} A_n \subseteq \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k。</script><p>反之，$\forall x \in \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k$，则 $\forall n \geq 1, x \in \bigcup_{k=n}^{\infty} A_k$，即 $A_1, A_2, \cdots$ 中有无穷多项多含 $x$，所以 $x \in \varlimsup_{n \to \infty} A_n$，即</p>
+<script type="math/tex; mode=display">
+\bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k \subseteq \varlimsup_{n \to \infty} A_n。</script><p>综上可得：</p>
+<script type="math/tex; mode=display">
+\varlimsup_{n \to \infty} A_n = \bigcap_{n=1}^{\infty} \bigcup_{k=n}^{\infty} A_k。</script><p>(3) $\forall x \in \varliminf_{n \to \infty} A_n$，由 $\varliminf_{n \to \infty} A_n$ 定义可知：序列 $A_1, A_2, \cdots$ 中只有有限项不含 $x$，故必可找到不含 $x$ 的下标最大的一项 $A_p$，可见此时 $A_{p+1}, A_{p+2}, \cdots$ 均含 $x$，即有无限项含 $x$，故 $x \in \varlimsup_{n \to \infty} A_n$。因此</p>
+<script type="math/tex; mode=display">
+\varliminf_{n \to \infty} A_n \subseteq \varlimsup_{n \to \infty} A_n。</script><p>(4)  由(3)知</p>
+<script type="math/tex; mode=display">
+\forall x \in \underline{A},x\in \overline{A}\Rightarrow \underline{A} \subseteq \overline{A}</script><p>类似地:</p>
+<script type="math/tex; mode=display">
+\forall x \in \varlimsup_{n \to \infty} A_n = \overline{A}</script><p>因为:</p>
+<script type="math/tex; mode=display">
+A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots</script><p>所以有一个最大的 $p_0$:</p>
+<script type="math/tex; mode=display">
+\exist p_0 \in N,\forall n\in N,n \ge p_0,x \in A_n</script><p>这样满足下极限定义,即有:</p>
+<script type="math/tex; mode=display">
+\forall x \in \overline{A},x\in \underline{A}\Rightarrow \overline{A} \subseteq \underline{A}</script><p>综上:</p>
+<script type="math/tex; mode=display">
+\varliminf_{n \to \infty} A_n = \varlimsup_{n \to \infty} A_n</script><p>(5)</p>
 <p>对(1)(2)分别用德摩根定律即可.</p>
 <blockquote>
-<p>设 $A \subseteq X, B \subseteq Y$，试证：$(A \times B)^C &#x3D; (A^C \times B) \cup (A \times B^C) \cup (A^C \times B^C)$。</p>
+<p>设 $A \subseteq X, B \subseteq Y$，试证：$(A \times B)^C = (A^C \times B) \cup (A \times B^C) \cup (A^C \times B^C)$。</p>
 </blockquote>
 <p>[证] $\forall (x, y) \in (A \times B)^C$，则 $(x, y) \not\in (A \times B)$，故 $x \not\in A$ 或 $y \not\in B$。于是</p>
 <ol>
@@ -339,23 +370,40 @@
 <li>② 1.若把第$k$封信放入第1个信封中.则$1,k$的位置确定.剩下$n-2$封信.错排数为$D_{n-2}$<br>2.若不把第$k$封信放入第1个信封中.则1的位置确定,剩下$n-1$封信,错排数为$D_{n-1}$</li>
 </ul>
 <p>由加法原理和乘法原理,错排数</p>
-<p>$$<br>\begin{align*}<br>D_n - nD_{n-1} &amp;&#x3D; (n-1)(D_{n-1} + D_{n-2}) - nD_{n-1} \<br>&amp;&#x3D; -[D_{n-1} - (n-1)D_{n-2}] \<br>&amp;&#x3D; (-1)^2[D_{n-2} - (n-3)D_{n-3}] \<br>&amp;&#x3D; \cdots \<br>&amp;&#x3D; (-1)^{n-2} (D_2 - 2D_1) \<br>&amp;&#x3D; (-1)^n \ \<br>&amp;\Rightarrow D_n &#x3D; nD_{n-1} + (-1)^n<br>\end{align*}<br>$$<br>两边同时除以$n!$</p>
-<p>$$<br>\begin{align*}<br>\frac{D_n}{n!} &#x3D; \frac{D_{n-1}}{(n-1)!} + \frac{(-1)^n}{n!}\<br>\Rightarrow \frac{D_n}{n!} - \frac{D_{n-1}}{(n-1)!} &#x3D;  \frac{(-1)^n}{n!}<br>\end{align*}<br>$$</p>
-<p>累加有：</p>
-<p>$$<br>\begin{align*}<br>D_n &#x3D; n! \sum_{i&#x3D;0}^n \frac{(-1)^i}{i!}<br>\end{align*}<br>$$</p>
-<p>故装错所有n封信的概率<br>$$<br>\begin{align*}<br>P_n &#x3D; \sum_{i&#x3D;0}^n \frac{(-1)^i}{i!}<br>\end{align*}<br>$$</p>
-<p>由$e^x$的麦克劳林展开$\displaystyle \sum_{i&#x3D;0}^n \frac{(x)^i}{i!}$,可知在 $n$ 很大时,$P_n \approx e^{-1}$</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+D_n - nD_{n-1} &= (n-1)(D_{n-1} + D_{n-2}) - nD_{n-1} \\
+&= -[D_{n-1} - (n-1)D_{n-2}] \\
+&= (-1)^2[D_{n-2} - (n-3)D_{n-3}] \\
+&= \cdots \\
+&= (-1)^{n-2} (D_2 - 2D_1) \\
+&= (-1)^n \\ \\
+&\Rightarrow D_n = nD_{n-1} + (-1)^n
+\end{align*}</script><p>两边同时除以$n!$</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\frac{D_n}{n!} = \frac{D_{n-1}}{(n-1)!} + \frac{(-1)^n}{n!}\\
+\Rightarrow \frac{D_n}{n!} - \frac{D_{n-1}}{(n-1)!} =  \frac{(-1)^n}{n!}
+\end{align*}</script><p>累加有：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+D_n = n! \sum_{i=0}^n \frac{(-1)^i}{i!}
+\end{align*}</script><p>故装错所有n封信的概率</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P_n = \sum_{i=0}^n \frac{(-1)^i}{i!}
+\end{align*}</script><p>由$e^x$的麦克劳林展开$\displaystyle \sum_{i=0}^n \frac{(x)^i}{i!}$,可知在 $n$ 很大时,$P_n \approx e^{-1}$</p>
 <blockquote>
 <p>毕业舞会上，小伙子与姑娘跳舞，已知每个小伙子至少与一个姑娘跳过舞，但未能与所有姑娘跳过。同样地，每个姑娘也至少与一个小伙子跳舞，但也未能与所有的小伙子跳过舞。</p>
 <p>证明：在所有参加舞会的小伙与姑娘中，必可找到两个小伙子和两个姑娘，这两个小伙子中的每一个只与这两个姑娘中的一个跳过舞，而这两个姑娘中的每一个也只与这两个小伙中的一个跳过舞。</p>
 <p>提示:试着画个图吧.</p>
 </blockquote>
-<p>[证] 设 $F &#x3D; {f_1, f_2, \cdots, f_n}$ 是小伙的集合，$G &#x3D; {g_1, g_2, \cdots, g_m}$ 是姑娘的集合。</p>
+<p>[证] 设 $F = \{f_1, f_2, \cdots, f_n\}$ 是小伙的集合，$G = \{g_1, g_2, \cdots, g_m\}$ 是姑娘的集合。</p>
 <p>与 $f_1$ 跳舞的姑娘的集合用 $G_{f_1}$ 表示；</p>
 <p>与 $f_2$ 跳舞的姑娘的集合用 $G_{f_2}$ 表示；</p>
 <p>$\vdots \quad \vdots \quad \vdots$</p>
 <p>与 $f_n$ 跳舞的姑娘的集合用 $G_{f_n}$ 表示；</p>
-<p>于是，由题意：$G_{f_1} \cup G_{f_2} \cup \cdots \cup G_{f_n} &#x3D; G$ 且 $G_{f_i} \neq \emptyset$ 且 $G_{f_i} \neq G$，$i&#x3D;1,2,3,\cdots,n$。</p>
+<p>于是，由题意：$G_{f_1} \cup G_{f_2} \cup \cdots \cup G_{f_n} = G$ 且 $G_{f_i} \neq \emptyset$ 且 $G_{f_i} \neq G$，$i=1,2,3,\cdots,n$。</p>
 <p>若存在 $G_{f_i}, G_{f_j} (i \neq j)$，使得 $G_{f_i} \not\subseteq G_{f_j}$ 且 $G_{f_j} \not\subseteq G_{f_i}$，则结论成立。</p>
 <p>反证法：假设不存在 $G_{f_i}$ 和 $G_{f_j}$ 满足 $G_{f_i} \not\subseteq G_{f_j}$ 且 $G_{f_j} \not\subseteq G_{f_i}$。于是 $\forall i,j (i \neq j), G_{f_i}$ 与 $G_{f_j}$ 应满足：$G_{f_i} \subseteq G_{f_j}$ 或 $G_{f_j} \subseteq G_{f_i}$ 必有一个成立。</p>
 <p>因此把 $G_{f_1}, G_{f_2}, \cdots, G_{f_n}$ 重新排列有：$G_{f_{i_1}} \subseteq G_{f_{i_2}} \subseteq \cdots \subseteq G_{f_{i_n}}$。从而 $f_{i_n}$ 与所有的姑娘都跳过舞，矛盾。</p>
