@@ -68,37 +68,6 @@
   
   
   <entry>
-    <title>反馈连接的状态空间表达式</title>
-    <link href="/2025/10/06/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <url>/2025/10/06/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    
-    <content type="html"><![CDATA[<p>学校最近在讲现代控制理论，使用刘豹老师的教材。其中关于反馈连接状态空间表达式的推导语焉不详，遂自行推导。</p>考察初始状态空间表达式：<div><span class="math display">$$\left\{\begin{matrix}\dot{X_1 }=A_1  X_1+B_1u_1\\Y_1=C_1X_1+D_1u_1\\\dot{X_2 }=A_2  X_2+B_2u_2\\Y_2=C_2X_2+D_2u_2\\\end{matrix}\right.$$</span></div>其中：<div><span class="math display">$$\begin{align}&amp;\left\{\begin{aligned}&amp;u_1 = u - Y_2 \\&amp;u_2 = Y_1\end{aligned}\right.\end{align}$$</span></div>将其代入立刻有:<div><span class="math display">$$\begin{align}&amp;\left\{\begin{aligned}&amp;\dot{X_1 }=A_1  X_1+B_1(u-Y_2) \quad &amp;①\\&amp;Y_1=C_1X_1+D_1(u-Y_2)\quad &amp;②\\&amp;\dot{X_2 }=A_2  X_2+B_2Y_1\quad &amp;③\\&amp;Y_2=C_2X_2+D_2Y_1\quad &amp;④\\\end{aligned}\right.\end{align}$$</span></div><p>联立②,④:</p><div><span class="math display">$$\begin{align}Y_1&amp;=C_1X_1+D_1(u-C_2X_2-D_2Y_1)\\&amp;=C_1X_1-D_1C_2X_2-D_1D_2Y_1+D_1u \\    \end{align}$$</span></div><div><span class="math display">$$\Rightarrow (I+D_1D_2)Y_1=C_1X_1-D_1C_2X_2+D_1u \\\RightarrowY_1=(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u\tag{1}$$</span></div>将(1)代入④:<div><span class="math display">$$\begin{align}Y_2&amp;=C_2X_2+D_2Y_1\\&amp;=C_2X_2+D_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\&amp;=D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+D_2(I+D_1D_2)^{-1}D_1u\tag{2}\end{align}$$</span></div>将(2)代入①:<div><span class="math display">$$\begin{align}\dot{X_1 }&amp;=A_1  X_1+B_1(u-Y_2)\\=&amp;A_1  X_1+B_1u-B_1\{D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+\\&amp;D_2(I+D_1D_2)^{-1}D_1u\} \\=&amp;[A_1-B_1D_2(I+D_1D_2)^{-1}C_1]X_1+[B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2]X_2+\\&amp;[B_1-B_1D_2(I+D_1D_2)^{-1}D_1]u \end{align}\tag{3}$$</span></div><p>将(1)代入③:</p><div><span class="math display">$$\begin{align}\dot{X_2 }=&amp;A_2 X_2+B_2Y_1\\=&amp;A_2X_2+B_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\=&amp;B_2(I+D_1D_2)^{-1}C_1X_1+[A_2-B_2(I+D_1D_2)^{-1}D_1C_2]X_2+B_2(I+D_1D_2)^{-1}D_1u\tag{4}\end{align}$$</span></div><p>综上有:</p><div><span class="math display">$$\mathcal{A}=\begin{pmatrix}A_1-B_1D_2(I+D_1D_2)^{-1}C_1  &amp; B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2\\B_2(I+D_1D_2)^{-1}C_1 &amp; A_2-B_2(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}$$</span></div><div><span class="math display">$$\mathcal{B}=\begin{pmatrix}B_1-B_1D_2(I+D_1D_2)^{-1}D_1  \\  B_2(I+D_1D_2)^{-1}D_1\end{pmatrix}$$</span></div><div><span class="math display">$$\mathcal{C}=\begin{pmatrix}(I+D_1D_2)^{-1}C_1  &amp; -(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}$$</span></div><div><spanclass="math display">𝒟 = (<em>I</em> + <em>D</em><sub>1</sub><em>D</em><sub>2</sub>)<sup>−1</sup><em>D</em><sub>1</sub></span></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>学校课程</category>
-      
-      <category>现代控制理论</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>学习</tag>
-      
-      <tag>推导</tag>
-      
-      <tag>现代控制理论</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>2025-9轻小说推荐</title>
     <link href="/2025/10/03/2025-9%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%8E%A8%E8%8D%90/"/>
     <url>/2025/10/03/2025-9%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%8E%A8%E8%8D%90/</url>
@@ -120,6 +89,37 @@
       <tag>轻小说</tag>
       
       <tag>二次元</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>反馈连接的状态空间表达式</title>
+    <link href="/2025/09/16/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/2025/09/16/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<p>学校最近在讲现代控制理论，使用刘豹老师的教材。其中关于反馈连接状态空间表达式的推导语焉不详，遂自行推导。</p>考察初始状态空间表达式：<div><span class="math display">$$\left\{\begin{matrix}\dot{X_1 }=A_1  X_1+B_1u_1\\Y_1=C_1X_1+D_1u_1\\\dot{X_2 }=A_2  X_2+B_2u_2\\Y_2=C_2X_2+D_2u_2\\\end{matrix}\right.$$</span></div>其中：<div><span class="math display">$$\begin{align}&amp;\left\{\begin{aligned}&amp;u_1 = u - Y_2 \\&amp;u_2 = Y_1\end{aligned}\right.\end{align}$$</span></div>将其代入立刻有:<div><span class="math display">$$\begin{align}&amp;\left\{\begin{aligned}&amp;\dot{X_1 }=A_1  X_1+B_1(u-Y_2) \quad &amp;①\\&amp;Y_1=C_1X_1+D_1(u-Y_2)\quad &amp;②\\&amp;\dot{X_2 }=A_2  X_2+B_2Y_1\quad &amp;③\\&amp;Y_2=C_2X_2+D_2Y_1\quad &amp;④\\\end{aligned}\right.\end{align}$$</span></div><p>联立②,④:</p><div><span class="math display">$$\begin{align}Y_1&amp;=C_1X_1+D_1(u-C_2X_2-D_2Y_1)\\&amp;=C_1X_1-D_1C_2X_2-D_1D_2Y_1+D_1u \\    \end{align}$$</span></div><div><span class="math display">$$\Rightarrow (I+D_1D_2)Y_1=C_1X_1-D_1C_2X_2+D_1u \\\RightarrowY_1=(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u\tag{1}$$</span></div>将(1)代入④:<div><span class="math display">$$\begin{align}Y_2&amp;=C_2X_2+D_2Y_1\\&amp;=C_2X_2+D_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\&amp;=D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+D_2(I+D_1D_2)^{-1}D_1u\tag{2}\end{align}$$</span></div>将(2)代入①:<div><span class="math display">$$\begin{align}\dot{X_1 }&amp;=A_1  X_1+B_1(u-Y_2)\\=&amp;A_1  X_1+B_1u-B_1\{D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+\\&amp;D_2(I+D_1D_2)^{-1}D_1u\} \\=&amp;[A_1-B_1D_2(I+D_1D_2)^{-1}C_1]X_1+[B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2]X_2+\\&amp;[B_1-B_1D_2(I+D_1D_2)^{-1}D_1]u \end{align}\tag{3}$$</span></div><p>将(1)代入③:</p><div><span class="math display">$$\begin{align}\dot{X_2 }=&amp;A_2 X_2+B_2Y_1\\=&amp;A_2X_2+B_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\=&amp;B_2(I+D_1D_2)^{-1}C_1X_1+[A_2-B_2(I+D_1D_2)^{-1}D_1C_2]X_2+B_2(I+D_1D_2)^{-1}D_1u\tag{4}\end{align}$$</span></div><p>综上有:</p><div><span class="math display">$$\mathcal{A}=\begin{pmatrix}A_1-B_1D_2(I+D_1D_2)^{-1}C_1  &amp; B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2\\B_2(I+D_1D_2)^{-1}C_1 &amp; A_2-B_2(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}$$</span></div><div><span class="math display">$$\mathcal{B}=\begin{pmatrix}B_1-B_1D_2(I+D_1D_2)^{-1}D_1  \\  B_2(I+D_1D_2)^{-1}D_1\end{pmatrix}$$</span></div><div><span class="math display">$$\mathcal{C}=\begin{pmatrix}(I+D_1D_2)^{-1}C_1  &amp; -(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}$$</span></div><div><spanclass="math display">𝒟 = (<em>I</em> + <em>D</em><sub>1</sub><em>D</em><sub>2</sub>)<sup>−1</sup><em>D</em><sub>1</sub></span></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>学校课程</category>
+      
+      <category>现代控制理论</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>推导</tag>
+      
+      <tag>现代控制理论</tag>
       
     </tags>
     
