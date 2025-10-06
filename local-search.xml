@@ -4,6 +4,72 @@
   
   
   <entry>
+    <title>关于FOC(field-oriented-control,磁场定向控制)</title>
+    <link href="/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/"/>
+    <url>/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/</url>
+    
+    <content type="html"><![CDATA[<p>在学习这部分内容时遇到了巨大阻力：参考教材未提及、PPT语焉不详、缺少合理的可视化帮助理解。教学时数学推导被全部跳过，更导致了困惑。为加深自己理解，写下此文。</p><p>实际上，在了解过方波驱动的直流无刷电机基本原理及其优缺点后，引出正弦波驱动的交流伺服电机是自然的：联想此前的旋转磁场即可。下面给出一个来自<a href="https://ww2.mathworks.cn/discovery/bldc-motor-control.html">BLDC 电机控制 - MATLAB &amp; Simulink</a>的美观动图来直观感受一下:</p><p><img src="1757438378581.gif" alt="MATLAB 动画：比较 BLDC 电机和 PMSM 电机的运行。动画基于 Simscape Electrical 模型的仿真结果。"></p><p>接下来的问题是，既然要控制，应该控制哪些量，控制目标是什么？显然，我们希望通过控制三相电流达到控制电机电磁转矩的目的。控制目标是使三相电产生的旋转磁场全部产生力矩（提高能量利用效率）。</p><p>控制三相电是困难的事：PID难以控制交流信号（当然可以使用其他控制器，但PID便宜好用）；难以确认使力矩最大对应的控制目标。因此，开始考虑进行一定的变换，使问题得到简化。</p><p>查看下面这个三相电流的示意图：</p><p><img src="22501b25a57e30b8df7ff4c6f67a758a.gif" alt="img"></p><p>参考相量表示法，可将三相电流表示为三个相量。显然地，我们可以选择A相轴线为横轴(记作 $\alpha$ 轴)，垂直A相的轴为纵轴(记作$\beta$ 轴)，对B、C相的电流相量做正交分解。这种分解更类似一种归算，因此，要通过某种等价原则来判断是否等价，将各相的原绕组匝数等价为新绕组匝数，这将影响所谓的系数。此处等价的原则可选择：</p><ul><li>磁动势幅值相等</li><li>磁动势功率相等</li></ul><p>为了简单,我们首先把磁动势幅值相等作为等效原则，进行分解后列出如下：</p><script type="math/tex; mode=display">N'\begin{bmatrix}i_{\alpha} \\i_{\beta} \end{bmatrix}=N\begin{bmatrix}1  & -\frac{1}{2} &-\frac{1}{2} \\0  & \frac{\sqrt{3}}{2} & - \frac{\sqrt{3}}{2}\end{bmatrix}\begin{bmatrix}i_{A} \\i_{B} \\i_{C}\end{bmatrix} \tag{1}</script><p>其中$i_A=I_m\sin \omega t$ 简单代入,化简即可有：</p><script type="math/tex; mode=display">\displaystyle\left\{\begin{matrix} i_{\alpha}=\frac{N}{N'}\frac{3}{2}I_m\sin \omega t\\ i_{\beta}=\frac{N}{N'}\frac{3}{2}I_m\sin \omega t\end{matrix}\right.</script><p>要使幅值相等，显然希望$\displaystyle \frac{N}{N’}=\frac{2}{3}$。这就是这个系数的来源</p><p>下面简单推导功率相等的情况：</p><script type="math/tex; mode=display">N'\begin{bmatrix}U_{\alpha} \\U_{\beta} \end{bmatrix}=N\begin{bmatrix}1  & -\frac{1}{2} &-\frac{1}{2} \\0  & \frac{\sqrt{3}}{2} & - \frac{\sqrt{3}}{2}\end{bmatrix}\begin{bmatrix}U_{A} \\U_{B} \\U_{C}\end{bmatrix} \tag{2}</script><script type="math/tex; mode=display">i_A+i_B+i_C=0 \tag{3}</script><script type="math/tex; mode=display">P'=\begin{bmatrix}U_{\alpha}  & U_{\beta}\end{bmatrix} \cdot\begin{bmatrix}i_{\alpha}  \\ i_{\beta}\end{bmatrix}\\P=\begin{bmatrix}U_{A}  & U_{B} & U_{C}\end{bmatrix} \cdot\begin{bmatrix}i_{A}  \\ i_{B} \\i_{C}\end{bmatrix} \tag{4}</script><p>当然希望 $\displaystyle P’=P$，联立推得：</p><script type="math/tex; mode=display">\displaystyle P'= \left(\frac{N}{N'}\right)^2\frac{3}{2}P</script><p>显然希望$\displaystyle \frac{N}{N’}=\sqrt\frac{2}{3}$，这就是这个系数的来源。</p><p>等幅值变换后的示意图如下：</p><p><img src="9772e398d9ff4d6d004480ff883121ea.gif" alt="等幅值变换"></p><p>上面的变换就是所谓的Clarke变换，也叫 $\alpha-\beta$ 变换。</p><p>完成这一步变换后，已经大大简化了问题，但PID控制器难以控制交流电的问题仍然存在，是否能通过某种方式将其变换为直流电的控制问题呢？</p><p>答案是肯定的。既然我们的电相量正以角速度 $\omega$ 旋转，只要选择同样以角速度 $\omega$ 旋转的正交坐标系，二者便相对静止,能够被正交分解为若干分量。接下来分析这个坐标系的选取。</p><p>回顾前文，我们的控制目标之一是使得产生的力矩最大。这样,坐标系的选取就很明显了：沿转子磁场的方向称为直轴（direct，d），垂直于此方向称为交轴（quatrature，q），则此时建立了dq坐标系。要使力矩最大，应该使定子磁场强弱不变的情况下，直轴上的磁场尽可能弱，交轴上的磁场尽可能强。此处应该指出，在同步电机的工作点上，同步转速=转子转速=旋转磁场转速=dq坐标系转速。至于转速尚未同步的阶段，并非本文研究的内容，请参考“无感启动”相关内容。总之，这样选择的dq坐标系是合理的。</p><p><img src="30d7fcd9efe9b10e507ed4dab0e907cc.gif" alt="dq坐标系"></p><p>参考线性代数中的旋转矩阵，立刻有：</p><script type="math/tex; mode=display">\begin{bmatrix}i_{d} \\i_{q} \end{bmatrix}=\begin{bmatrix} \cos  \theta  &\sin \theta  \\- \sin \theta  & \cos \theta \end{bmatrix}\begin{bmatrix}i_{\alpha } \\i_{\beta } \end{bmatrix} \tag{5}</script><p>显然，我们的控制目标是：</p><script type="math/tex; mode=display">|i_d|=0,|i_q|=\sqrt{i^2_{\alpha}+i^2_{\beta}}</script><p>当然应该指出的是，此处 $\theta=\omega t+\theta_0$ 是 $t$ 时刻d 与 $\alpha$轴所夹角。</p><p>下面给出一张<a href="https://ww2.mathworks.cn/discovery/field-oriented-control.html">磁场定向控制 - MATLAB &amp; Simulink</a>提供的示意图。注意观察其中变换、逆变换，控制量、误差量的关系。</p><p><img src="1758283914273.jpg" alt="磁场定向控制的模块图。"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学校课程</category>
+      
+      <category>自动控制实践</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>推导</tag>
+      
+      <tag>自动控制元件</tag>
+      
+      <tag>自动控制实践</tag>
+      
+      <tag>电机学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>反馈连接的状态空间表达式</title>
+    <link href="/2025/10/06/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/2025/10/06/%E5%8F%8D%E9%A6%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<p>学校最近在讲现代控制理论，使用刘豹老师的教材。其中关于反馈连接状态空间表达式的推导语焉不详，遂自行推导。</p><p>考察初始状态空间表达式：</p><script type="math/tex; mode=display">\left\{\begin{matrix}\dot{X_1 }=A_1  X_1+B_1u_1\\Y_1=C_1X_1+D_1u_1\\\dot{X_2 }=A_2  X_2+B_2u_2\\Y_2=C_2X_2+D_2u_2\\\end{matrix}\right.</script><p>其中：</p><script type="math/tex; mode=display">\begin{align}&\left\{\begin{aligned}&u_1 = u - Y_2 \\&u_2 = Y_1\end{aligned}\right.\end{align}</script><p>将其代入立刻有:</p><script type="math/tex; mode=display">\begin{align}&\left\{\begin{aligned} &\dot{X_1 }=A_1  X_1+B_1(u-Y_2) \quad &①\\&Y_1=C_1X_1+D_1(u-Y_2)\quad &②\\&\dot{X_2 }=A_2  X_2+B_2Y_1\quad &③\\&Y_2=C_2X_2+D_2Y_1\quad &④\\\end{aligned}\right.\end{align}</script><p>联立②,④:</p><script type="math/tex; mode=display">\begin{align}Y_1&=C_1X_1+D_1(u-C_2X_2-D_2Y_1)\\&=C_1X_1-D_1C_2X_2-D_1D_2Y_1+D_1u \\\end{align}</script><script type="math/tex; mode=display">\Rightarrow (I+D_1D_2)Y_1=C_1X_1-D_1C_2X_2+D_1u \\\Rightarrow Y_1=(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u \tag{1}</script><p>将(1)代入④:</p><script type="math/tex; mode=display">\begin{align}Y_2&=C_2X_2+D_2Y_1\\&=C_2X_2+D_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\&=D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+D_2(I+D_1D_2)^{-1}D_1u \tag{2}\end{align}</script><p>将(2)代入①:</p><script type="math/tex; mode=display">\begin{align}\dot{X_1 }&=A_1  X_1+B_1(u-Y_2)\\=&A_1  X_1+B_1u-B_1\{D_2(I+D_1D_2)^{-1}C_1X_1+[C_2-D_2(I+D_1D_2)^{-1}D_1C_2]X_2+\\&D_2(I+D_1D_2)^{-1}D_1u\} \\=&[A_1-B_1D_2(I+D_1D_2)^{-1}C_1]X_1+[B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2]X_2+\\&[B_1-B_1D_2(I+D_1D_2)^{-1}D_1]u \tag{3}\end{align}</script><p>将(1)代入③:</p><script type="math/tex; mode=display">\begin{align}\dot{X_2 }=&A_2 X_2+B_2Y_1\\=&A_2 X_2+B_2[(I+D_1D_2)^{-1}C_1X_1-(I+D_1D_2)^{-1}D_1C_2X_2+(I+D_1D_2)^{-1}D_1u]\\=&B_2(I+D_1D_2)^{-1}C_1X_1+[A_2-B_2(I+D_1D_2)^{-1}D_1C_2]X_2+B_2(I+D_1D_2)^{-1}D_1u \tag{4}\end{align}</script><p>综上有:</p><script type="math/tex; mode=display">\mathcal{A}=\begin{pmatrix}A_1-B_1D_2(I+D_1D_2)^{-1}C_1  & B_1D_2(I+D_1D_2)^{-1}D_1C_2-B_1C_2\\ B_2(I+D_1D_2)^{-1}C_1 & A_2-B_2(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}</script><script type="math/tex; mode=display">\mathcal{B}=\begin{pmatrix} B_1-B_1D_2(I+D_1D_2)^{-1}D_1  \\  B_2(I+D_1D_2)^{-1}D_1\end{pmatrix}</script><script type="math/tex; mode=display">\mathcal{C}=\begin{pmatrix}(I+D_1D_2)^{-1}C_1  & -(I+D_1D_2)^{-1}D_1C_2\end{pmatrix}</script><script type="math/tex; mode=display">\mathcal{D}= (I+D_1D_2)^{-1}D_1</script>]]></content>
+    
+    
+    <categories>
+      
+      <category>学校课程</category>
+      
+      <category>现代控制理论</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>推导</tag>
+      
+      <tag>现代控制理论</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于公式渲染...</title>
     <link href="/2025/08/11/%E5%85%B3%E4%BA%8E%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/"/>
     <url>/2025/08/11/%E5%85%B3%E4%BA%8E%E5%85%AC%E5%BC%8F%E6%B8%B2%E6%9F%93/</url>
@@ -108,6 +174,8 @@
       <tag>电路</tag>
       
       <tag>物理</tag>
+      
+      <tag>推导</tag>
       
     </tags>
     
