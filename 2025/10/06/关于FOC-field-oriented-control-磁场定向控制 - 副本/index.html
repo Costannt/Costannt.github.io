@@ -22,15 +22,12 @@
     <meta name="description" content="在学习这部分内容时遇到了巨大阻力：参考教材未提及、PPT语焉不详、缺少合理的可视化帮助理解。教学时数学推导被全部跳过，更导致了困惑。为加深自己理解，写下此文。 实际上，在了解过方波驱动的直流无刷电机基本原理及其优缺点后，引出正弦波驱动的交流伺服电机是自然的：联想此前的旋转磁场即可。下面给出一个来自BLDC 电机控制 - MATLAB &amp; Simulink的美观动图来直观感受一下:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于FOC(field-oriented-control,磁场定向控制)">
-<meta property="og:url" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/index.html">
+<meta property="og:url" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6%20-%20%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="The Library">
 <meta property="og:description" content="在学习这部分内容时遇到了巨大阻力：参考教材未提及、PPT语焉不详、缺少合理的可视化帮助理解。教学时数学推导被全部跳过，更导致了困惑。为加深自己理解，写下此文。 实际上，在了解过方波驱动的直流无刷电机基本原理及其优缺点后，引出正弦波驱动的交流伺服电机是自然的：联想此前的旋转磁场即可。下面给出一个来自BLDC 电机控制 - MATLAB &amp; Simulink的美观动图来直观感受一下:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1757438378581.gif">
-<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/22501b25a57e30b8df7ff4c6f67a758a.gif">
-<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/9772e398d9ff4d6d004480ff883121ea.gif">
-<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/30d7fcd9efe9b10e507ed4dab0e907cc.gif">
-<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1758283914273.jpg">
+<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6%20-%20%E5%89%AF%E6%9C%AC/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1757438378581.gif">
+<meta property="og:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6%20-%20%E5%89%AF%E6%9C%AC/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1758283914273.jpg">
 <meta property="article:published_time" content="2025-10-06T03:31:14.000Z">
 <meta property="article:modified_time" content="2025-10-06T08:45:10.030Z">
 <meta property="article:author" content="Costannt">
@@ -40,7 +37,7 @@
 <meta property="article:tag" content="自动控制实践">
 <meta property="article:tag" content="电机学">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1757438378581.gif">
+<meta name="twitter:image" content="http://costannt.icu/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6%20-%20%E5%89%AF%E6%9C%AC/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/1757438378581.gif">
   
   
   
@@ -295,7 +292,7 @@
 target="_blank" rel="noopener" href="https://ww2.mathworks.cn/discovery/bldc-motor-control.html">BLDC
 电机控制 - MATLAB &amp; Simulink</a>的美观动图来直观感受一下:</p>
 <figure>
-<img src="1757438378581.gif" srcset="/img/loading.gif" lazyload
+<img src="关于FOC-field-oriented-control-磁场定向控制/1757438378581.gif" srcset="/img/loading.gif" lazyload
 alt="MATLAB 动画：比较 BLDC 电机和 PMSM 电机的运行。动画基于 Simscape Electrical 模型的仿真结果。" />
 <figcaption aria-hidden="true">MATLAB 动画：比较 BLDC 电机和 PMSM
 电机的运行。动画基于 Simscape Electrical 模型的仿真结果。</figcaption>
@@ -304,7 +301,9 @@ alt="MATLAB 动画：比较 BLDC 电机和 PMSM 电机的运行。动画基于 S
 <p>控制三相电是困难的事：PID难以控制交流信号（当然可以使用其他控制器，但PID便宜好用）；难以确认使力矩最大对应的控制目标。因此，开始考虑进行一定的变换，使问题得到简化。</p>
 <p>查看下面这个三相电流的示意图：</p>
 <figure>
-<img src="22501b25a57e30b8df7ff4c6f67a758a.gif" srcset="/img/loading.gif" lazyload alt="img" />
+<img
+src="关于FOC-field-oriented-control-磁场定向控制/22501b25a57e30b8df7ff4c6f67a758a.gif" srcset="/img/loading.gif" lazyload
+alt="img" />
 <figcaption aria-hidden="true">img</figcaption>
 </figure>
 <p>参考相量表示法，可将三相电流表示为三个相量。显然地，我们可以选择A相轴线为横轴(记作
@@ -373,7 +372,9 @@ $$</span> 显然希望<span class="math inline">$\displaystyle
 \frac{N}{N'}=\sqrt\frac{2}{3}$</span>，这就是这个系数的来源。</p>
 <p>等幅值变换后的示意图如下：</p>
 <figure>
-<img src="9772e398d9ff4d6d004480ff883121ea.gif" srcset="/img/loading.gif" lazyload alt="等幅值变换" />
+<img
+src="关于FOC-field-oriented-control-磁场定向控制/9772e398d9ff4d6d004480ff883121ea.gif" srcset="/img/loading.gif" lazyload
+alt="等幅值变换" />
 <figcaption aria-hidden="true">等幅值变换</figcaption>
 </figure>
 <p>上面的变换就是所谓的Clarke变换，也叫 <span
@@ -385,7 +386,9 @@ class="math inline"><em>ω</em></span>
 旋转的正交坐标系，二者便相对静止,能够被正交分解为若干分量。接下来分析这个坐标系的选取。</p>
 <p>回顾前文，我们的控制目标之一是使得产生的力矩最大。这样,坐标系的选取就很明显了：沿转子磁场的方向称为直轴（direct，d），垂直于此方向称为交轴（quatrature，q），则此时建立了dq坐标系。要使力矩最大，应该使定子磁场强弱不变的情况下，直轴上的磁场尽可能弱，交轴上的磁场尽可能强。此处应该指出，在同步电机的工作点上，同步转速=转子转速=旋转磁场转速=dq坐标系转速。至于转速尚未同步的阶段，并非本文研究的内容，请参考“无感启动”相关内容。总之，这样选择的dq坐标系是合理的。</p>
 <figure>
-<img src="30d7fcd9efe9b10e507ed4dab0e907cc.gif" srcset="/img/loading.gif" lazyload alt="dq坐标系" />
+<img
+src="关于FOC-field-oriented-control-磁场定向控制/30d7fcd9efe9b10e507ed4dab0e907cc.gif" srcset="/img/loading.gif" lazyload
+alt="dq坐标系" />
 <figcaption aria-hidden="true">dq坐标系</figcaption>
 </figure>
 <p>参考线性代数中的旋转矩阵，立刻有： <span class="math display">$$
@@ -410,7 +413,8 @@ target="_blank" rel="noopener" href="https://ww2.mathworks.cn/discovery/field-or
 - MATLAB &amp;
 Simulink</a>提供的示意图。注意观察其中变换、逆变换，控制量、误差量的关系。</p>
 <figure>
-<img src="1758283914273.jpg" srcset="/img/loading.gif" lazyload alt="磁场定向控制的模块图。" />
+<img src="关于FOC-field-oriented-control-磁场定向控制/1758283914273.jpg" srcset="/img/loading.gif" lazyload
+alt="磁场定向控制的模块图。" />
 <figcaption aria-hidden="true">磁场定向控制的模块图。</figcaption>
 </figure>
 
@@ -474,7 +478,7 @@ Simulink</a>提供的示意图。注意观察其中变换、逆变换，控制�
   <div class="license-box my-3">
     <div class="license-title">
       <div>关于FOC(field-oriented-control,磁场定向控制)</div>
-      <div>http://costannt.icu/2025/10/06/关于FOC-field-oriented-control-磁场定向控制/</div>
+      <div>http://costannt.icu/2025/10/06/关于FOC-field-oriented-control-磁场定向控制 - 副本/</div>
     </div>
     <div class="license-meta">
       
@@ -518,9 +522,9 @@ Simulink</a>提供的示意图。注意观察其中变换、逆变换，控制�
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/10/06/%E5%B7%B2%E6%8E%A8%E8%8D%90%E8%BF%87%E7%9A%84%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%B1%87%E6%80%BB/" title="已推荐过的轻小说汇总">
+                      <a href="/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6/" title="关于FOC(field-oriented-control,磁场定向控制)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">已推荐过的轻小说汇总</span>
+                        <span class="hidden-mobile">关于FOC(field-oriented-control,磁场定向控制)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -528,8 +532,8 @@ Simulink</a>提供的示意图。注意观察其中变换、逆变换，控制�
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/10/06/%E5%85%B3%E4%BA%8EFOC-field-oriented-control-%E7%A3%81%E5%9C%BA%E5%AE%9A%E5%90%91%E6%8E%A7%E5%88%B6%20-%20%E5%89%AF%E6%9C%AC/" title="关于FOC(field-oriented-control,磁场定向控制)">
-                        <span class="hidden-mobile">关于FOC(field-oriented-control,磁场定向控制)</span>
+                      <a href="/2025/10/03/2025-9%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%8E%A8%E8%8D%90/" title="2025-9轻小说推荐">
+                        <span class="hidden-mobile">2025-9轻小说推荐</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
