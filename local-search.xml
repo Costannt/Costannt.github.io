@@ -70,6 +70,41 @@
   
   
   <entry>
+    <title>关于Bode积分定理</title>
+    <link href="/2025/11/09/%E5%85%B3%E4%BA%8EBode%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86/"/>
+    <url>/2025/11/09/%E5%85%B3%E4%BA%8EBode%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<p>近日学习至此。这个定理的证明实际并不太容易，但王广雄老师《控制系统设计》上已经给出比较好的证明思路，我们可以考虑在此基础上开展工作。</p><p>下面首先给出这个定理的描述：</p><blockquote><p>设开环传递函数<spanclass="math inline"><em>L</em>(<em>s</em>)</span>有<spanclass="math inline"><em>N</em></span>个不稳定极点<spanclass="math inline"><em>p</em><sub>1</sub>, <em>p</em><sub>2</sub>, ⋯, <em>p</em><sub><em>N</em></sub></span>，开环传递函数的相对阶为<spanclass="math inline"><em>ν</em> = <em>n</em> − <em>m</em></span>，并设闭环系统稳定，则系统的灵敏度函数满足下列关系式：<span class="math display">$$\int_0^{\infty}\ln|S(j\omega)|\text{d}\omega=\pi\sum^N_{i=1}\text{Re}(p_i),\nu&gt;1\tag{1}\\$$</span></p><p><span class="math display">$$\int_0^{\infty}\ln|S(j\omega)|\text{d}\omega=-\gamma\frac \pi 2 +\pi\sum^N_{i=1}\text{Re}(p_i),\nu=1 \tag{2}\\$$</span></p><p>其中<span class="math inline"><em>n</em></span>为传递函数<spanclass="math inline"><em>L</em>(<em>s</em>)</span>分母的阶次，<spanclass="math inline"><em>m</em></span>为分子的阶次，<spanclass="math inline"><em>γ</em> = lim<sub><em>s</em> → ∞</sub><em>s</em><em>L</em>(<em>s</em>)</span></p></blockquote><p>观察这个形式容易发现，实际上只要证明(2)式正确，则(1)显然成立，这个相对阶约束是不必要的。</p><p>研究前应该指出的是务必注意复对数与实对数有着本质区别，如多值性、分支点等。</p><p><strong>请注意</strong>：接下来的证明使用 <spanclass="math inline">log </span> 表示复自然对数，<spanclass="math inline">ln </span> 表示实自然对数。</p><p>观察会发现，开环传递函数的极点 <spanclass="math inline"><em>p</em></span> 变为了灵敏度函数 <spanclass="math inline"><em>S</em></span> 的零点，这将导致 <spanclass="math inline">ln |<em>S</em>(<em>s</em>)|</span>在右半平面不解析，为了避免这一点，我们构造： <spanclass="math display">$$\tilde{S}(s)=S(s)\prod_{p\in P} \frac{s+p}{s-p}$$</span> 来抵消其零点，其中 <span class="math inline"><em>P</em></span>是开环传递函数右半平面极点构成的集合。这就保证了 <spanclass="math inline">ln <em>S̃</em></span>在右半平面的解析性。下面对其进行积分。我们自然地考虑选择一个简单闭曲线<spanclass="math inline"><em>C</em></span>，它在<spanclass="math inline"><em>y</em></span>轴上，从<spanclass="math inline">−∞</span>到<spanclass="math inline">∞</span>，再从右半平面无穷远顺时针画一个半圆回来：<span class="math display">$$\begin{align}\underbrace{\oint_C\log\tilde{S}(s)\text{d}s}_{柯西又救了我们}&amp;=2j\underbrace{\int_0^{+\infty}\ln|S(j\omega)|\text{d}\omega}_{想算这个}+\underbrace{\oint_{\text{RHP}}\log\prod_{p\inP}\frac{s+p}{s-p}\text{d}s}_{不得不算的右侧第二个积分}+\underbrace{\int_{C_{\infty}}\logS(s)\text{d}s}_{不得不算的右侧第三个积分}\end{align}$$</span>根据柯西积分定理，上式等号左侧为0，右侧第一个积分是我们想求解的内容，因此重点求解第2、3个积分。先来看第二个积分：<span class="math display">$$\oint_{\text{RHP}}\log\prod_{p\in P}\frac{s+p}{s-p}\text{d}s$$</span>请注意：这里不能简单地使用留数定理来求解，这是因为此处包含对数，函数在任何一个<span class="math inline"><em>p</em> ∈ <em>P</em></span>的邻域中都不是单值的。我们不得不将其拆解为虚轴和无穷远半圆并求解： <spanclass="math display">$$\begin{align}    \oint_{\text{RHP}}\log\prod_{p\inP}\frac{s+p}{s-p}\text{d}s&amp;=j\int_{-\infty}^{+\infty}\log\prod_{p\inP}\frac{j\omega+p}{j\omega-p}\text{d}\omega+\int_{C_{\infty}}\log\prod_{p\inP}\frac{s+p}{s-p}\text{d}s\\\end{align}$$</span> 实际上很容易看出<spanclass="math inline">$j\int_{-\infty}^{+\infty}\log\prod_{p\inP}\frac{j\omega+p}{j\omega-p}\text{d}\omega=0$</span>，简单说明原因：将对数作用后，拆解为求和，交换求和和积分的顺序，研究对一个极点的积分，发现<spanclass="math inline">$|\frac{j\omega+p}{j\omega-p}|\equiv1$</span>，又知其相角在正负频段共轭，因此这个积分为0。</p><p>也许有些抽象(实则是我也不知道对不对)。总之我们还是计算一下： <spanclass="math display">$$\begin{align}j\int_{-\infty}^{+\infty}\log\prod_{p\inP}\frac{j\omega+p}{j\omega-p}\text{d}\omega&amp;=j\int_{-\infty}^{+\infty}\sum_{p\inP}\log\frac{j\omega+p}{j\omega-p}\text{d}\omega\\&amp;=j\int_{-\infty}^{+\infty}\sum_{p\inP}\left[\ln|\frac{j\omega+p}{j\omega-p}|+j\arg(\frac{j\omega+p}{j\omega-p})\right]\text{d}\omega\\&amp;=0\end{align}$$</span> 也许这一步跳的有点多。此处的重点是函数 <spanclass="math inline">$f(\omega)=\arg(\frac{j\omega+p}{j\omega-p})$</span>是一个奇函数，使用几何直观很容易理解。但鉴于笔者低下的直观能力，不妨验证一下。</p><p><spanclass="math inline">$f(-\omega)=\arg(\frac{-j\omega+p}{-j\omega-p})=\arg(\frac{j\omega-p}{j\omega+p})=\arg(\frac{1}{\frac{j\omega+p}{j\omega-p}})=-\arg(\frac{j\omega+p}{j\omega-p})=-f(\omega)$</span></p><p>真是件好事，我们现在可以欣喜且信心十足地认为这个积分为0了。现在我们来处理无穷远半圆上的积分。<span class="math display">$$\begin{align}\int_{C_{\infty}}\log\prod_{p\inP}\frac{s+p}{s-p}\text{d}s&amp;=\int_{C_{\infty}}\sum_{p \inP}\log\frac{s+p}{s-p}\text{d}s\\&amp;=\int_{C_{\infty}}\sum_{p \inP}\left[\log(1+\frac{p}{s})-\log(1-\frac{p}{s})\right]\text{d}s\\&amp;=\lim_{R\rightarrow+\infty}\int_{\frac{\pi}{2}}^{-\frac{\pi}{2}}\sum_{p\inP}\left[\log(1+\frac{p}{Re^{j\theta}})-\log(1-\frac{p}{Re^{j\theta}})\right]jRe^{j\theta}\text{d}\theta\\&amp;=\int_{\frac{\pi}{2}}^{-\frac{\pi}{2}}\sum_{p \in P}2\text{}pj\text{d}\theta=-\sum_{p \in P}2\pi jp\end{align}$$</span>这里我要指出：最后一步的交换只在不稳定极点个数有限时成立，请不要滥用交换。细节决定成败，在上面的研究中，你应该知道：</p><ul><li><spanclass="math inline">lim<sub><em>x</em> → 0</sub>ln (1 + <em>x</em>) = <em>x</em></span></li><li>积分路径的方向</li></ul><p>终于，我们可以来研究 <spanclass="math inline">∫<sub><em>C</em><sub>∞</sub></sub>log <em>S</em>(<em>s</em>)d<em>s</em></span>了。记开环传递函数为<span class="math inline"><em>L</em>(<em>s</em>)</span>，我们有： <spanclass="math display">$$\begin{align}\int_{C_{\infty}}\logS(s)\text{d}s&amp;=\int_{C_{\infty}}-\log(1+L(s))\text{d}s\\&amp;=\lim_{R\rightarrow\infty}\int_{\frac{\pi}{2}}^{-\frac{\pi}{2}}-\log(1+L(Re^{j\theta}))jRe^{j\theta}\text{d}\theta\end{align}$$</span> 在相对阶 <spanclass="math inline"><em>ν</em> ≥ 2</span>时，<spanclass="math inline">lim<sub><em>R</em> → ∞</sub><em>L</em>(<em>R</em><em>e</em><sup><em>j</em><em>θ</em></sup>) = 0</span>，<spanclass="math inline">∫<sub><em>C</em><sub>∞</sub></sub>log <em>S</em>(<em>s</em>)d<em>s</em> = 0</span>是明显的。</p><p>在相对阶 <span class="math inline"><em>ν</em> = 1</span>时，设此时有<spanclass="math inline">lim<sub><em>s</em> → ∞</sub><em>s</em><em>L</em>(<em>s</em>) = <em>γ</em></span>，有：$$ <spanclass="math display"><em>整</em><em>理</em><em>一</em><em>下</em><em>成</em><em>果</em>：</span>$$ 其中 <span class="math inline"><em>δ</em></span>是Kronecker函数。这正是Bode积分定理的内容。</p><p>请注意，上面的证明过程不需掌握，只需记忆结论即可。（2025秋及以前情况，不构成复习建议）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学校课程</category>
+      
+      <category>自动控制实践</category>
+      
+      <category>未来技术学院</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>智能控制系统实践</tag>
+      
+      <tag>2025秋</tag>
+      
+      <tag>学校课程</tag>
+      
+      <tag>未来技术学院</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>已推荐过的轻小说汇总</title>
     <link href="/2025/10/06/%E5%B7%B2%E6%8E%A8%E8%8D%90%E8%BF%87%E7%9A%84%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%B1%87%E6%80%BB/"/>
     <url>/2025/10/06/%E5%B7%B2%E6%8E%A8%E8%8D%90%E8%BF%87%E7%9A%84%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%B1%87%E6%80%BB/</url>
