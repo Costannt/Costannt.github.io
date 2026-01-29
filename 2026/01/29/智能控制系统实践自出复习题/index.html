@@ -1,0 +1,1031 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Costannt">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="电机的定义是什么？有何基本功能？ 电机定转子的级数有什么关系，为什么？ 直流电机的结构是怎样的？包含哪些元件？各有什么作用？ 按定子磁场产生方式分，直流电机有哪些种类？ 按照励磁方式分，直流电机有哪些种类？ 电枢绕组分类？ 单叠绕组的结构数量关系？ 直流电机中，为了使旋转的各线圈能不断依次改变电流方向（即换向），必须做什么？ 极距怎么定义的？ 单波绕组的结构数量关系？有什么特">
+<meta property="og:type" content="article">
+<meta property="og:title" content="智能控制系统实践自出复习题">
+<meta property="og:url" content="http://costannt.icu/2026/01/29/%E6%99%BA%E8%83%BD%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5%E8%87%AA%E5%87%BA%E5%A4%8D%E4%B9%A0%E9%A2%98/index.html">
+<meta property="og:site_name" content="The Library">
+<meta property="og:description" content="电机的定义是什么？有何基本功能？ 电机定转子的级数有什么关系，为什么？ 直流电机的结构是怎样的？包含哪些元件？各有什么作用？ 按定子磁场产生方式分，直流电机有哪些种类？ 按照励磁方式分，直流电机有哪些种类？ 电枢绕组分类？ 单叠绕组的结构数量关系？ 直流电机中，为了使旋转的各线圈能不断依次改变电流方向（即换向），必须做什么？ 极距怎么定义的？ 单波绕组的结构数量关系？有什么特">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-29T10:26:09.000Z">
+<meta property="article:modified_time" content="2026-01-29T11:38:08.049Z">
+<meta property="article:author" content="Costannt">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="自动控制元件">
+<meta property="article:tag" content="自动控制实践">
+<meta property="article:tag" content="电机学">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>智能控制系统实践自出复习题 - The Library</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"costannt.icu","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Costannt’s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于我</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background/67308965_p0.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="智能控制系统实践自出复习题"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-29 18:26" pubdate>
+          2026年1月29日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          39 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">智能控制系统实践自出复习题</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <ol type="1">
+<li>电机的定义是什么？有何基本功能？</li>
+<li>电机定转子的级数有什么关系，为什么？</li>
+<li>直流电机的结构是怎样的？包含哪些元件？各有什么作用？</li>
+<li>按定子磁场产生方式分，直流电机有哪些种类？</li>
+<li>按照励磁方式分，直流电机有哪些种类？</li>
+<li>电枢绕组分类？</li>
+<li>单叠绕组的结构数量关系？</li>
+<li>直流电机中，为了使旋转的各线圈能不断依次改变电流方向（即换向），必须做什么？</li>
+<li>极距怎么定义的？</li>
+<li>单波绕组的结构数量关系？有什么特殊之处？为什么？</li>
+<li>空载磁场指什么？又称为什么？</li>
+<li>主磁通和漏磁通分别指的是什么？有什么作用、数量关系？</li>
+<li>主磁极下气隙磁通密度的分布在什么条件下取决于什么？</li>
+<li>空载时主磁极磁通是什么波？</li>
+<li>假定电枢上有无穷多元件分布，负载时电枢磁动势呈什么波，对应的磁通密度是什么波？</li>
+<li>一般的电机和变压器在额定运行时额定磁通在什么位置？为什么？</li>
+<li>电枢反应是什么？</li>
+<li>电枢反应的特点？</li>
+<li>换向是什么？有什么特点？有什么危害？如何解决？</li>
+<li>电动机力矩、电流由谁决定？转速由谁决定？电机选型的根本参数、电机设计最重要的参数是谁？</li>
+<li>运动控制的根本是什么？</li>
+<li>直流电机的可逆性是什么？</li>
+<li>直流电机的调速是什么意思？有哪些主要方法？各有什么特点？</li>
+<li>直流电机的四象限运行有哪些部分？</li>
+<li>齿轮减速比如何折算到电机侧？</li>
+<li>电机的选用需要考虑哪些因素？</li>
+<li>给定一个物理过程，如何计算其最小额定力矩？</li>
+<li>直流伺服电机相对于普通直流电机的特点？</li>
+<li>交流电动机工作的基础是什么？有哪些产生方式？</li>
+<li>相数、极对数如何定义？</li>
+<li>单相绕组通交流电产生何种磁动势？多相对称绕组通多相对称交流电呢？</li>
+<li>同步转速是什么？</li>
+<li>磁场的转向与什么有关？</li>
+<li>如何改变磁场转向？</li>
+<li>旋转磁场的瞬时位置如何确定？</li>
+<li>旋转磁场本身就在旋转，这种说法对吗？为什么？</li>
+<li>异步电机以供电来说，是什么电机，有什么优点？</li>
+<li>异步电机的结构？</li>
+<li>异步电机有几种运行状态？有何特点？</li>
+<li>转子磁动势在空间中的转速是多少？这有什么好处？</li>
+<li>圆形旋转磁场时的电磁转矩表达式？</li>
+<li>具有对称绕组的异步电动机，其电磁转矩的参数表达式？</li>
+<li>临界转差率是指？</li>
+<li>最大转矩表达式？</li>
+<li>异步电机的机械特性中，过载倍数的要求？启动转矩的表达式？</li>
+<li>异步电机调速方法有哪些？各有什么特点？</li>
+<li>同步电动机分哪两类？有何特点？</li>
+<li>无刷直流电机系统和直流电机系统在运行、控制特性上有什么关系？</li>
+<li>无刷直流电机换向过程中存在什么问题？为什么？</li>
+<li>永磁同步电机如何简化控制？主要控制方法有哪些？</li>
+<li>磁同步电机的优、缺点？</li>
+<li>步进电动机是什么？角位移、角速度取决于什么？</li>
+<li>步进电机的组成和工作原理？</li>
+<li>步进电机采取何种工作方式？</li>
+<li>齿距角、步距角、转速公式？</li>
+<li>不同形式步进电机的特点？</li>
+<li>应用最为广泛的步进电机？</li>
+<li>步进电机旋转的根本原因是什么？</li>
+<li>步进电机优点？缺点？</li>
+<li>步进电机的主要性能指标是什么？有什么意义？</li>
+<li>控制中有哪四类元件？各有何用途？</li>
+<li>测量元件的定义、组成和分类？</li>
+<li>理想特性、静态特性、动态特性？</li>
+<li>变换函数是什么？如何得到其结构和形式？</li>
+<li>灵敏度、线性度是什么？</li>
+<li>滞环、重复性误差、静态误差是什么？</li>
+<li>测量范围和量程、分辨率和分辨力、稳定性、漂移是什么？</li>
+<li>测量元件的动特性有哪些指标？</li>
+<li>测量元件的选型有哪些要求？原则是什么？</li>
+<li>旋转变压器的定义、组成，有什么用途？</li>
+<li>旋转变压器负载运行时为什么会产生误差？如何补偿？</li>
+<li>旋转变压器使用时如何连线？优缺点？</li>
+<li>旋转变压器误差产生原因？改进措施？应用要点？</li>
+<li>感应同步器的定义、组成，有什么用途？</li>
+<li>感应同步器工作原理？</li>
+<li>感应同步器的信号处理有哪些方式？</li>
+<li>感应同步器的优缺点？</li>
+<li>感应同步器应用要点？</li>
+<li>光电编码器的定义、组成，有什么用途？</li>
+<li>增量式编码器工作原理？有什么问题？</li>
+<li>增量式编码器的优缺点？</li>
+<li>绝对式编码器工作原理？有什么问题？</li>
+<li>绝对式编码器的优缺点？</li>
+<li>混合式编码器工作原理？有什么问题？</li>
+<li>控制系统的设计流程？</li>
+<li>需求分析包括什么？</li>
+<li>方案设计包括什么？</li>
+<li>数学建模（简化和处理）包括什么？</li>
+<li>控制器设计包括什么？</li>
+<li>数字控制方案有哪些？如何抉择？</li>
+<li>系统调试包括什么？</li>
+<li>系统测试包括什么？</li>
+<li>为什么要进行输入信号分析？</li>
+<li>分析典型输入信号的作用？</li>
+<li>如何确定典型输入信号，有什么要点？</li>
+<li>有些典型信号是测得的，并没有解析表达式，如何处理进行分析？</li>
+<li>输入信号分析的意义？</li>
+<li>傅里叶的两个最主要的贡献？</li>
+<li>引入复数和负频率是为了什么？</li>
+<li>Direchlet条件是什么？</li>
+<li>由什么信号作用下的系统输出可以获得系统的频率特性？</li>
+<li>两类实际脉冲信号的形式？</li>
+<li>阶跃信号只能用于测量系统的什么频段？为什么？</li>
+<li>实际信号的特点？如何解决？</li>
+<li>DFT/FFT的复数乘法和复数复杂度？</li>
+<li>如何区分暂态/瞬态误差和稳态误差，静态误差和动态误差？</li>
+<li>什么是原理性稳态误差？附加稳态误差？</li>
+<li>偏差和误差的区别？</li>
+<li>计算稳态误差的前提？</li>
+<li>静态误差与哪些因素有关？</li>
+<li>静态误差系数适用条件？</li>
+<li>对稳态误差的要求往往与系统的稳定性和动态特性有什么关系？</li>
+<li>滞后环节对减小静态误差的作用？注意事项？</li>
+<li>复合控制对消除误差的作用？注意事项？</li>
+<li>减小静态误差的方法有哪些？注意事项？</li>
+<li>动态误差系数的定义？</li>
+<li>动态误差系数的求解有哪些方法？有何利弊？</li>
+<li>卷积法通过系统的误差脉冲响应求解跟踪误差？</li>
+<li>如果没有模型的解析表达式，动态误差系数法如何应用？跟踪误差计算的其它用途？</li>
+<li>卷积法跟踪误差计算的优缺点？动态误差系数法的优缺点？</li>
+<li>噪声是什么？</li>
+<li>随机过程是什么？</li>
+<li>典型随机过程有哪些？</li>
+<li>遍历性与平稳性的关系？</li>
+<li>相关函数的特点？</li>
+<li><figure>
+<img
+src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251223111052801.png" srcset="/img/loading.gif" lazyload
+alt="image-20251223111052801" />
+<figcaption aria-hidden="true">image-20251223111052801</figcaption>
+</figure></li>
+<li>自相关函数最本质的性质？</li>
+<li>谱密度的定义？</li>
+<li>谱密度与相关函数？</li>
+<li>可以把什么样的噪声近似为白噪声处理？</li>
+<li>线性系统对平稳随机过程的响应？</li>
+<li>处理输入和噪声引起的均方误差的原则？</li>
+<li>等效噪声带宽的定义？</li>
+<li>扰动和噪声的区别？</li>
+<li>扰动分析的目的？主要内容？</li>
+<li>减小扰动作用下误差的方法？需要满足什么条件？有何利弊？</li>
+<li>干扰观测器的基本思想？</li>
+<li>干扰观测器的低通滤波器带宽的确定？低通滤波器的设计原则？</li>
+<li>干扰观测器能产生哪些影响？</li>
+<li>灵敏度定义？</li>
+<li>闭环反馈控制系统最根本的优点？</li>
+<li>灵敏度函数表征了什么？灵敏度函数最大值范围？</li>
+<li>灵敏度函数要受到什么的制约？</li>
+<li>Bode积分定理的适用范围？</li>
+<li>不确定性的定义？</li>
+<li>对象的不确定产生的原因？</li>
+<li>鲁棒稳定性的定义？</li>
+<li>鲁棒控制系统的定义？</li>
+<li>给出加性、乘性不确定性的鲁棒稳定性条件。</li>
+<li>控制系统的设计约束？</li>
+<li>二型系统的问题？如何解决？</li>
+<li>为什么伺服系统需要校正？</li>
+<li>信号相关函数和谱密度函数的定义？</li>
+<li>分析本图所示的串级控制系统，给出所有环节、变量。<img
+src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251225192817016.png" srcset="/img/loading.gif" lazyload
+alt="image-20251225192817016" /></li>
+<li>为什么说bode积分定理看似是很弱的约束，但实则不是如此？</li>
+<li>可以用有限项动态误差系数达到很高精度的原因是？</li>
+<li>控制系统的性能主要是指什么？</li>
+<li>比较一下BLDC和有刷直流电机，交流感应电机。</li>
+<li>永磁同步电机的电磁力矩表达式？</li>
+<li><span
+class="math inline"><em>S</em><sub><em>H</em></sub><sup><em>T</em></sup></span>等于多少?为什么说保持反馈部分的参数稳定很重要?</li>
+<li>例3：小功率随动系统的设计中,为什么第一个转折频率被选择为电机时间常数确定的频率?</li>
+<li>无刷直流电机是如何换向的？</li>
+<li>实际系统中扰动观测器的实现存在哪些问题？</li>
+<li>没有问题，记住本图内容。<img
+src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/c0c96c55552535e757b134bfcc49dcc3.png" srcset="/img/loading.gif" lazyload
+alt="c0c96c55552535e757b134bfcc49dcc3" /></li>
+<li>扰动分析的内容？</li>
+<li>卷积法、动态误差系数法的优缺点？</li>
+<li>静态误差系数、动态误差系数的关系？</li>
+<li>输入引起的误差如何抑制？</li>
+<li>为什么阶跃信号只能用于测试系统低频模型？</li>
+<li>模糊控制的特点？</li>
+<li>如何提出合理的闭环带宽要求？过窄过宽会怎么样？</li>
+<li>谱密度积分、谱密度的大小反映了什么？</li>
+<li>PID控制器的作用？</li>
+<li>直流电机电枢绕组的两个特点？</li>
+<li>滞后校正和反馈校正在伺服系统控制中的作用异同？</li>
+<li>反馈特性是由反馈校正引入的特性，反映了？</li>
+<li>反馈特性好的前提是？</li>
+<li>控制系统带宽的设计原则？</li>
+<li>从一定意义上说，什么反映了控制系统设计的水平？</li>
+<li>带宽的拓展受到哪些限制？如何处理？</li>
+<li>伺服系统频带拓展的一个主要瓶颈是什么？如何解决？</li>
+<li>谐振有什么危害？为什么要抑制谐振？</li>
+<li>谐振频率与带宽有什么关系？</li>
+<li>什么时候谐振频率不能被忽略？</li>
+<li>什么时候固有频率<span class="math inline">$\omega_m=\sqrt \frac K
+J$</span>可以用来近似表征对象的谐振特性?为什么?</li>
+<li>什么时候需要按照自由转子模型来考虑?</li>
+<li>应用陷波滤波器一定会降低系统的相位裕度吗?为什么?</li>
+<li>陷波滤波器的设计有什么要点?</li>
+<li>谐振抑制只需要抑制一次吗?为什么?</li>
+<li>开环系统的带宽（剪切频率）属于什么控制应该考虑的内容?</li>
+<li>若对象自身带宽较宽,应该怎么办?为什么?举几个实际的方法.</li>
+<li>对象自身带宽很窄,应该怎么办?为什么?举几个实际的方法,并指出需要注意的内容.</li>
+<li>使用超前校正时,有什么值得注意的?</li>
+<li>如果剪切频率已经提高到极限了但闭环系统带宽指标仍不满足要求,怎么办?</li>
+<li>相对稳定性是指什么?什么能真正反应它?它属于什么特性?</li>
+<li>相对稳定性在时?</li>
+<li>干扰观测器被引入进伺服转台系统设计中,因为什么需要引起注意?</li>
+<li>执行器的极限是指什么?</li>
+<li>执行器饱和的时间里,反馈回路怎么了?</li>
+<li>从控制的角度来说,什么样的被控对象是稳定的,什么样的被控对象是不稳定的?</li>
+<li>控制中使用积分器消除稳态误差的前提是什么?</li>
+<li>Windup现象是什么?</li>
+<li>积分器的Windup现象会造成什么影响?</li>
+<li>怎么解决windup问题?有哪些方法,各有何利弊.</li>
+<li>Anti-Windup设计策略是什么?</li>
+<li>基本结构的Anti-Windup有什么要求?</li>
+<li>Anti-Windup的思想是什么?</li>
+<li>期望误差信号选取的原则是什么?</li>
+<li>Anti-Windup的特点是什么?</li>
+<li>是否存在无限制条件的Anti-Windup结构?</li>
+<li>有一种经验的Anti-Windup设计方法是?</li>
+<li>伺服系统的定义?一般有什么要求?</li>
+<li>伺服系统的特点?</li>
+<li>基本一型系统的定义?其归一化增益取值范围?</li>
+<li>基本一型系统等效噪声带宽与谁有关?</li>
+<li>为什么纯积分被控对象应该引入惯性环节使之成成为基本一型系统?</li>
+<li>基本一型系统等效噪声带宽只与开环增益有关，为什么还要改变<span
+class="math inline"><em>ω</em><sub>1</sub></span>使之变小?</li>
+<li>基本一型系统的问题是什么?如何改进?</li>
+<li>改进一型系统的优点是什么?</li>
+<li>性能界函数是什么样的?.</li>
+<li>反馈校正的特点?</li>
+<li>基本二型系统的定义?归一化增益取值范围?</li>
+<li>基本二型系统的等效噪声带宽何时最小?</li>
+<li>基本二型系统应用在何种场合?</li>
+<li>选型的真正依据?</li>
+<li>为什么基本二型系统存在齿隙自振荡?</li>
+<li>齿隙自振荡如何解决?</li>
+<li>伺服系统设计思想是什么?有什么好处?</li>
+<li>校正的概念是伺服系统特有的吗?</li>
+<li>I型和II型系统的特性是最基本的特性吗?实际系统就是I型和II型系统吗?</li>
+<li>滞后校正有什么作用,利与弊?条件稳定是指什么?</li>
+<li>反馈校正可以取代系统局部结构吗?</li>
+<li>反馈系统中,满足什么条件有<span
+class="math inline"><em>T</em> = <em>G</em></span>,<span
+class="math inline"><em>T</em> = 1/<em>H</em></span></li>
+<li>反馈校正有什么好处?</li>
+<li>反馈校正有哪些其他作用?</li>
+<li>调节系统的定义?特点?</li>
+<li>调节系统的控制规律?</li>
+<li>PID控制有什么优点?</li>
+<li>纯微分控制有什么缺点?加入一个惯性环节是为什么?</li>
+<li>微分控制可以通过测速发电机或类似的元件实现吗?</li>
+<li>调节系统的类型有哪些,分别按什么设计?</li>
+<li>典型调节系统对象特性是对象的真实特性吗?</li>
+<li>积分加一阶模型,如何通过阶跃响应图辨识?</li>
+<li>一阶加时间滞后,如何通过阶跃响应图辨识?</li>
+<li>调节系统的阻尼系数用什么控制?考虑相角裕度，提高系统精度又用什么控制?</li>
+<li>调节系统PID控制设计中,积分控制的原则是?</li>
+<li>调节系统的什么特点具有普遍性?</li>
+<li>电流回路整定中的调制器及MOSFET电路就是纯比例环节,对吗?</li>
+<li>过程控制系统的定义?对任务的要求?</li>
+<li>过程控制的对象特性?</li>
+<li>过程控制的设计特点?</li>
+<li>比例微分项?</li>
+<li>整定的含义?</li>
+<li>整定方法有哪些?</li>
+<li>系统在负实轴附近的特性主要由PID中的谁决定？</li>
+<li>如图的系统1、2分别应该考虑什么裕度？<img
+src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251223093004621.png" srcset="/img/loading.gif" lazyload
+alt="image-20251223093004621" /></li>
+<li>临界比例度法是按照什么特性进行整定的方法？</li>
+<li>自整定是什么原理？大致描述一下。</li>
+<li>单回路系统设计中有哪些局限性？</li>
+<li>多回路系统中，内回路外回路的作用？</li>
+<li>多回路系统设计时，内外回路的大致设计流程？</li>
+<li>内外回路的带宽要求？</li>
+<li>如果采用具有保守性的考虑，跟踪误差和噪声误差引起的总误差不能满足要求，应该怎么办？采取什么方法？</li>
+<li>多回路系统设计的特点？</li>
+<li>什么是串级调节系统？串级调节系统的特点？</li>
+<li>串级调节系统的结构组成？有两类扰动？分别是什么含义？</li>
+<li>串级调节系统主副回路工作特点？</li>
+<li>串级调节系统的特点？</li>
+<li>多回路系统与串级调节系统的区别是什么？</li>
+<li>为什么要引入复合控制系统？复合控制系统的构成和特点？</li>
+<li>复合校正能做到什么？</li>
+<li>顺馈补偿在实现中有什么问题？如何解决？</li>
+<li>为什么前面章节中的反馈校正具有多回路的形式，但本质上属于单回路设计的思想？</li>
+<li>传统控制理论的不足在于什么？为什么？</li>
+<li>专家控制技术是什么？有什么好处？关键在什么？</li>
+<li>专家系统与传统的计算机程序最本质的区别在什么？</li>
+<li>专家系统的主要功能取决于什么？</li>
+<li>专家系统的主要结构是什么？各有什么功能？</li>
+<li>神经网络知识表示法的优点？</li>
+<li>推理是指什么？核心是什么？推理的本质是什么？</li>
+<li>知识推理方法有哪些？</li>
+<li>专家控制的结构有哪些？</li>
+<li>专家控制的功能有哪些？</li>
+<li>专家控制的特殊性？</li>
+<li>直接型专家控制的作用和特点？</li>
+<li>间接型专家控制的作用和特点？</li>
+<li>专家PID控制属于什么类型的专家控制？有什么特点？</li>
+<li>操作人员的实践经验具有什么特点？</li>
+<li>模糊控制设计的内容有哪些？</li>
+<li>模糊控制器的输出为对象的控制输入，而模糊控制器的输入信号决定了模糊控制器的维数。模糊控制器的维数高低如何影响控制效果和实现难度？最常使用几维的模糊控制器？</li>
+<li>论域的选择需要什么？</li>
+<li>量化是什么？</li>
+<li>模糊化是什么？语言变量的取值称为什么？</li>
+<li>模糊控制器设计的核心是什么？获取的途径有哪些？</li>
+<li>设计模糊控制器的关键是什么？有什么区别？能否改进？</li>
+<li>量化因子与比例因子是做什么的？</li>
+<li>一般来说激活的模糊规则多好还是少好？</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/" class="category-chain-item">学校课程</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/" class="category-chain-item">自动控制实践</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%85%83%E4%BB%B6/" class="print-no-link">#自动控制元件</a>
+      
+        <a href="/tags/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/" class="print-no-link">#自动控制实践</a>
+      
+        <a href="/tags/%E7%94%B5%E6%9C%BA%E5%AD%A6/" class="print-no-link">#电机学</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>智能控制系统实践自出复习题</div>
+      <div>http://costannt.icu/2026/01/29/智能控制系统实践自出复习题/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Costannt</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年1月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/01/29/%E6%99%BA%E8%83%BD%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%B7%B5%E8%87%AA%E5%87%BA%E5%A4%8D%E4%B9%A0%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/" title="智能控制系统实践自出复习题参考答案">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">智能控制系统实践自出复习题参考答案</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/10/06/%E5%B7%B2%E6%8E%A8%E8%8D%90%E8%BF%87%E7%9A%84%E8%BD%BB%E5%B0%8F%E8%AF%B4%E6%B1%87%E6%80%BB/" title="已推荐过的轻小说汇总">
+                        <span class="hidden-mobile">已推荐过的轻小说汇总</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
