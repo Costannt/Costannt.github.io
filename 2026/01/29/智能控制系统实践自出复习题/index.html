@@ -26,6 +26,10 @@
 <meta property="og:site_name" content="The Library">
 <meta property="og:description" content="基于25秋课程教授内容出的复习题...">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251223111052801.png">
+<meta property="og:image" content="d:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251225192817016.png">
+<meta property="og:image" content="d:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/c0c96c55552535e757b134bfcc49dcc3.png">
+<meta property="og:image" content="d:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251223093004621.png">
 <meta property="article:published_time" content="2026-01-29T10:26:09.000Z">
 <meta property="article:modified_time" content="2026-01-29T11:43:53.536Z">
 <meta property="article:author" content="Costannt">
@@ -35,6 +39,7 @@
 <meta property="article:tag" content="自动控制实践">
 <meta property="article:tag" content="电机学">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251223111052801.png">
   
   
   
@@ -49,6 +54,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -284,320 +291,907 @@
             
               <div class="markdown-body">
                 
-                <ol type="1">
-<li>电机的定义是什么？有何基本功能？</li>
-<li>电机定转子的级数有什么关系，为什么？</li>
-<li>直流电机的结构是怎样的？包含哪些元件？各有什么作用？</li>
-<li>按定子磁场产生方式分，直流电机有哪些种类？</li>
-<li>按照励磁方式分，直流电机有哪些种类？</li>
-<li>电枢绕组分类？</li>
-<li>单叠绕组的结构数量关系？</li>
-<li>直流电机中，为了使旋转的各线圈能不断依次改变电流方向（即换向），必须做什么？</li>
-<li>极距怎么定义的？</li>
-<li>单波绕组的结构数量关系？有什么特殊之处？为什么？</li>
-<li>空载磁场指什么？又称为什么？</li>
-<li>主磁通和漏磁通分别指的是什么？有什么作用、数量关系？</li>
-<li>主磁极下气隙磁通密度的分布在什么条件下取决于什么？</li>
-<li>空载时主磁极磁通是什么波？</li>
-<li>假定电枢上有无穷多元件分布，负载时电枢磁动势呈什么波，对应的磁通密度是什么波？</li>
-<li>一般的电机和变压器在额定运行时额定磁通在什么位置？为什么？</li>
-<li>电枢反应是什么？</li>
-<li>电枢反应的特点？</li>
-<li>换向是什么？有什么特点？有什么危害？如何解决？</li>
-<li>电动机力矩、电流由谁决定？转速由谁决定？电机选型的根本参数、电机设计最重要的参数是谁？</li>
-<li>运动控制的根本是什么？</li>
-<li>直流电机的可逆性是什么？</li>
-<li>直流电机的调速是什么意思？有哪些主要方法？各有什么特点？</li>
-<li>直流电机的四象限运行有哪些部分？</li>
-<li>齿轮减速比如何折算到电机侧？</li>
-<li>电机的选用需要考虑哪些因素？</li>
-<li>给定一个物理过程，如何计算其最小额定力矩？</li>
-<li>直流伺服电机相对于普通直流电机的特点？</li>
-<li>交流电动机工作的基础是什么？有哪些产生方式？</li>
-<li>相数、极对数如何定义？</li>
-<li>单相绕组通交流电产生何种磁动势？多相对称绕组通多相对称交流电呢？</li>
-<li>同步转速是什么？</li>
-<li>磁场的转向与什么有关？</li>
-<li>如何改变磁场转向？</li>
-<li>旋转磁场的瞬时位置如何确定？</li>
-<li>旋转磁场本身就在旋转，这种说法对吗？为什么？</li>
-<li>异步电机以供电来说，是什么电机，有什么优点？</li>
-<li>异步电机的结构？</li>
-<li>异步电机有几种运行状态？有何特点？</li>
-<li>转子磁动势在空间中的转速是多少？这有什么好处？</li>
-<li>圆形旋转磁场时的电磁转矩表达式？</li>
-<li>具有对称绕组的异步电动机，其电磁转矩的参数表达式？</li>
-<li>临界转差率是指？</li>
-<li>最大转矩表达式？</li>
-<li>异步电机的机械特性中，过载倍数的要求？启动转矩的表达式？</li>
-<li>异步电机调速方法有哪些？各有什么特点？</li>
-<li>同步电动机分哪两类？有何特点？</li>
-<li>无刷直流电机系统和直流电机系统在运行、控制特性上有什么关系？</li>
-<li>无刷直流电机换向过程中存在什么问题？为什么？</li>
-<li>永磁同步电机如何简化控制？主要控制方法有哪些？</li>
-<li>磁同步电机的优、缺点？</li>
-<li>步进电动机是什么？角位移、角速度取决于什么？</li>
-<li>步进电机的组成和工作原理？</li>
-<li>步进电机采取何种工作方式？</li>
-<li>齿距角、步距角、转速公式？</li>
-<li>不同形式步进电机的特点？</li>
-<li>应用最为广泛的步进电机？</li>
-<li>步进电机旋转的根本原因是什么？</li>
-<li>步进电机优点？缺点？</li>
-<li>步进电机的主要性能指标是什么？有什么意义？</li>
-<li>控制中有哪四类元件？各有何用途？</li>
-<li>测量元件的定义、组成和分类？</li>
-<li>理想特性、静态特性、动态特性？</li>
-<li>变换函数是什么？如何得到其结构和形式？</li>
-<li>灵敏度、线性度是什么？</li>
-<li>滞环、重复性误差、静态误差是什么？</li>
-<li>测量范围和量程、分辨率和分辨力、稳定性、漂移是什么？</li>
-<li>测量元件的动特性有哪些指标？</li>
-<li>测量元件的选型有哪些要求？原则是什么？</li>
-<li>旋转变压器的定义、组成，有什么用途？</li>
-<li>旋转变压器负载运行时为什么会产生误差？如何补偿？</li>
-<li>旋转变压器使用时如何连线？优缺点？</li>
-<li>旋转变压器误差产生原因？改进措施？应用要点？</li>
-<li>感应同步器的定义、组成，有什么用途？</li>
-<li>感应同步器工作原理？</li>
-<li>感应同步器的信号处理有哪些方式？</li>
-<li>感应同步器的优缺点？</li>
-<li>感应同步器应用要点？</li>
-<li>光电编码器的定义、组成，有什么用途？</li>
-<li>增量式编码器工作原理？有什么问题？</li>
-<li>增量式编码器的优缺点？</li>
-<li>绝对式编码器工作原理？有什么问题？</li>
-<li>绝对式编码器的优缺点？</li>
-<li>混合式编码器工作原理？有什么问题？</li>
-<li>控制系统的设计流程？</li>
-<li>需求分析包括什么？</li>
-<li>方案设计包括什么？</li>
-<li>数学建模（简化和处理）包括什么？</li>
-<li>控制器设计包括什么？</li>
-<li>数字控制方案有哪些？如何抉择？</li>
-<li>系统调试包括什么？</li>
-<li>系统测试包括什么？</li>
-<li>为什么要进行输入信号分析？</li>
-<li>分析典型输入信号的作用？</li>
-<li>如何确定典型输入信号，有什么要点？</li>
-<li>有些典型信号是测得的，并没有解析表达式，如何处理进行分析？</li>
-<li>输入信号分析的意义？</li>
-<li>傅里叶的两个最主要的贡献？</li>
-<li>引入复数和负频率是为了什么？</li>
-<li>Direchlet条件是什么？</li>
-<li>由什么信号作用下的系统输出可以获得系统的频率特性？</li>
-<li>两类实际脉冲信号的形式？</li>
-<li>阶跃信号只能用于测量系统的什么频段？为什么？</li>
-<li>实际信号的特点？如何解决？</li>
-<li>DFT/FFT的复数乘法和复数复杂度？</li>
-<li>如何区分暂态/瞬态误差和稳态误差，静态误差和动态误差？</li>
-<li>什么是原理性稳态误差？附加稳态误差？</li>
-<li>偏差和误差的区别？</li>
-<li>计算稳态误差的前提？</li>
-<li>静态误差与哪些因素有关？</li>
-<li>静态误差系数适用条件？</li>
-<li>对稳态误差的要求往往与系统的稳定性和动态特性有什么关系？</li>
-<li>滞后环节对减小静态误差的作用？注意事项？</li>
-<li>复合控制对消除误差的作用？注意事项？</li>
-<li>减小静态误差的方法有哪些？注意事项？</li>
-<li>动态误差系数的定义？</li>
-<li>动态误差系数的求解有哪些方法？有何利弊？</li>
-<li>卷积法通过系统的误差脉冲响应求解跟踪误差？</li>
-<li>如果没有模型的解析表达式，动态误差系数法如何应用？跟踪误差计算的其它用途？</li>
-<li>卷积法跟踪误差计算的优缺点？动态误差系数法的优缺点？</li>
-<li>噪声是什么？</li>
-<li>随机过程是什么？</li>
-<li>典型随机过程有哪些？</li>
-<li>遍历性与平稳性的关系？</li>
-<li>相关函数的特点？</li>
-<li><figure>
-<img
-src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251223111052801.png" srcset="/img/loading.gif" lazyload
-alt="image-20251223111052801" />
-<figcaption aria-hidden="true">image-20251223111052801</figcaption>
-</figure></li>
-<li>自相关函数最本质的性质？</li>
-<li>谱密度的定义？</li>
-<li>谱密度与相关函数？</li>
-<li>可以把什么样的噪声近似为白噪声处理？</li>
-<li>线性系统对平稳随机过程的响应？</li>
-<li>处理输入和噪声引起的均方误差的原则？</li>
-<li>等效噪声带宽的定义？</li>
-<li>扰动和噪声的区别？</li>
-<li>扰动分析的目的？主要内容？</li>
-<li>减小扰动作用下误差的方法？需要满足什么条件？有何利弊？</li>
-<li>干扰观测器的基本思想？</li>
-<li>干扰观测器的低通滤波器带宽的确定？低通滤波器的设计原则？</li>
-<li>干扰观测器能产生哪些影响？</li>
-<li>灵敏度定义？</li>
-<li>闭环反馈控制系统最根本的优点？</li>
-<li>灵敏度函数表征了什么？灵敏度函数最大值范围？</li>
-<li>灵敏度函数要受到什么的制约？</li>
-<li>Bode积分定理的适用范围？</li>
-<li>不确定性的定义？</li>
-<li>对象的不确定产生的原因？</li>
-<li>鲁棒稳定性的定义？</li>
-<li>鲁棒控制系统的定义？</li>
-<li>给出加性、乘性不确定性的鲁棒稳定性条件。</li>
-<li>控制系统的设计约束？</li>
-<li>二型系统的问题？如何解决？</li>
-<li>为什么伺服系统需要校正？</li>
-<li>信号相关函数和谱密度函数的定义？</li>
-<li>分析本图所示的串级控制系统，给出所有环节、变量。<img
-src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251225192817016.png" srcset="/img/loading.gif" lazyload
-alt="image-20251225192817016" /></li>
-<li>为什么说bode积分定理看似是很弱的约束，但实则不是如此？</li>
-<li>可以用有限项动态误差系数达到很高精度的原因是？</li>
-<li>控制系统的性能主要是指什么？</li>
-<li>比较一下BLDC和有刷直流电机，交流感应电机。</li>
-<li>永磁同步电机的电磁力矩表达式？</li>
-<li><span
-class="math inline"><em>S</em><sub><em>H</em></sub><sup><em>T</em></sup></span>等于多少?为什么说保持反馈部分的参数稳定很重要?</li>
-<li>例3：小功率随动系统的设计中,为什么第一个转折频率被选择为电机时间常数确定的频率?</li>
-<li>无刷直流电机是如何换向的？</li>
-<li>实际系统中扰动观测器的实现存在哪些问题？</li>
-<li>没有问题，记住本图内容。<img
-src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/c0c96c55552535e757b134bfcc49dcc3.png" srcset="/img/loading.gif" lazyload
-alt="c0c96c55552535e757b134bfcc49dcc3" /></li>
-<li>扰动分析的内容？</li>
-<li>卷积法、动态误差系数法的优缺点？</li>
-<li>静态误差系数、动态误差系数的关系？</li>
-<li>输入引起的误差如何抑制？</li>
-<li>为什么阶跃信号只能用于测试系统低频模型？</li>
-<li>模糊控制的特点？</li>
-<li>如何提出合理的闭环带宽要求？过窄过宽会怎么样？</li>
-<li>谱密度积分、谱密度的大小反映了什么？</li>
-<li>PID控制器的作用？</li>
-<li>直流电机电枢绕组的两个特点？</li>
-<li>滞后校正和反馈校正在伺服系统控制中的作用异同？</li>
-<li>反馈特性是由反馈校正引入的特性，反映了？</li>
-<li>反馈特性好的前提是？</li>
-<li>控制系统带宽的设计原则？</li>
-<li>从一定意义上说，什么反映了控制系统设计的水平？</li>
-<li>带宽的拓展受到哪些限制？如何处理？</li>
-<li>伺服系统频带拓展的一个主要瓶颈是什么？如何解决？</li>
-<li>谐振有什么危害？为什么要抑制谐振？</li>
-<li>谐振频率与带宽有什么关系？</li>
-<li>什么时候谐振频率不能被忽略？</li>
-<li>什么时候固有频率<span class="math inline">$\omega_m=\sqrt \frac K
-J$</span>可以用来近似表征对象的谐振特性?为什么?</li>
-<li>什么时候需要按照自由转子模型来考虑?</li>
-<li>应用陷波滤波器一定会降低系统的相位裕度吗?为什么?</li>
-<li>陷波滤波器的设计有什么要点?</li>
-<li>谐振抑制只需要抑制一次吗?为什么?</li>
-<li>开环系统的带宽（剪切频率）属于什么控制应该考虑的内容?</li>
-<li>若对象自身带宽较宽,应该怎么办?为什么?举几个实际的方法.</li>
-<li>对象自身带宽很窄,应该怎么办?为什么?举几个实际的方法,并指出需要注意的内容.</li>
-<li>使用超前校正时,有什么值得注意的?</li>
-<li>如果剪切频率已经提高到极限了但闭环系统带宽指标仍不满足要求,怎么办?</li>
-<li>相对稳定性是指什么?什么能真正反应它?它属于什么特性?</li>
-<li>相对稳定性在时?</li>
-<li>干扰观测器被引入进伺服转台系统设计中,因为什么需要引起注意?</li>
-<li>执行器的极限是指什么?</li>
-<li>执行器饱和的时间里,反馈回路怎么了?</li>
-<li>从控制的角度来说,什么样的被控对象是稳定的,什么样的被控对象是不稳定的?</li>
-<li>控制中使用积分器消除稳态误差的前提是什么?</li>
-<li>Windup现象是什么?</li>
-<li>积分器的Windup现象会造成什么影响?</li>
-<li>怎么解决windup问题?有哪些方法,各有何利弊.</li>
-<li>Anti-Windup设计策略是什么?</li>
-<li>基本结构的Anti-Windup有什么要求?</li>
-<li>Anti-Windup的思想是什么?</li>
-<li>期望误差信号选取的原则是什么?</li>
-<li>Anti-Windup的特点是什么?</li>
-<li>是否存在无限制条件的Anti-Windup结构?</li>
-<li>有一种经验的Anti-Windup设计方法是?</li>
-<li>伺服系统的定义?一般有什么要求?</li>
-<li>伺服系统的特点?</li>
-<li>基本一型系统的定义?其归一化增益取值范围?</li>
-<li>基本一型系统等效噪声带宽与谁有关?</li>
-<li>为什么纯积分被控对象应该引入惯性环节使之成成为基本一型系统?</li>
-<li>基本一型系统等效噪声带宽只与开环增益有关，为什么还要改变<span
-class="math inline"><em>ω</em><sub>1</sub></span>使之变小?</li>
-<li>基本一型系统的问题是什么?如何改进?</li>
-<li>改进一型系统的优点是什么?</li>
-<li>性能界函数是什么样的?.</li>
-<li>反馈校正的特点?</li>
-<li>基本二型系统的定义?归一化增益取值范围?</li>
-<li>基本二型系统的等效噪声带宽何时最小?</li>
-<li>基本二型系统应用在何种场合?</li>
-<li>选型的真正依据?</li>
-<li>为什么基本二型系统存在齿隙自振荡?</li>
-<li>齿隙自振荡如何解决?</li>
-<li>伺服系统设计思想是什么?有什么好处?</li>
-<li>校正的概念是伺服系统特有的吗?</li>
-<li>I型和II型系统的特性是最基本的特性吗?实际系统就是I型和II型系统吗?</li>
-<li>滞后校正有什么作用,利与弊?条件稳定是指什么?</li>
-<li>反馈校正可以取代系统局部结构吗?</li>
-<li>反馈系统中,满足什么条件有<span
-class="math inline"><em>T</em> = <em>G</em></span>,<span
-class="math inline"><em>T</em> = 1/<em>H</em></span></li>
-<li>反馈校正有什么好处?</li>
-<li>反馈校正有哪些其他作用?</li>
-<li>调节系统的定义?特点?</li>
-<li>调节系统的控制规律?</li>
-<li>PID控制有什么优点?</li>
-<li>纯微分控制有什么缺点?加入一个惯性环节是为什么?</li>
-<li>微分控制可以通过测速发电机或类似的元件实现吗?</li>
-<li>调节系统的类型有哪些,分别按什么设计?</li>
-<li>典型调节系统对象特性是对象的真实特性吗?</li>
-<li>积分加一阶模型,如何通过阶跃响应图辨识?</li>
-<li>一阶加时间滞后,如何通过阶跃响应图辨识?</li>
-<li>调节系统的阻尼系数用什么控制?考虑相角裕度，提高系统精度又用什么控制?</li>
-<li>调节系统PID控制设计中,积分控制的原则是?</li>
-<li>调节系统的什么特点具有普遍性?</li>
-<li>电流回路整定中的调制器及MOSFET电路就是纯比例环节,对吗?</li>
-<li>过程控制系统的定义?对任务的要求?</li>
-<li>过程控制的对象特性?</li>
-<li>过程控制的设计特点?</li>
-<li>比例微分项?</li>
-<li>整定的含义?</li>
-<li>整定方法有哪些?</li>
-<li>系统在负实轴附近的特性主要由PID中的谁决定？</li>
-<li>如图的系统1、2分别应该考虑什么裕度？<img
-src="D:/Libirary/Learn/大学/大学考试课/文件资源/智能系统控制实践/笔记/Costannt/大背诵/image-20251223093004621.png" srcset="/img/loading.gif" lazyload
-alt="image-20251223093004621" /></li>
-<li>临界比例度法是按照什么特性进行整定的方法？</li>
-<li>自整定是什么原理？大致描述一下。</li>
-<li>单回路系统设计中有哪些局限性？</li>
-<li>多回路系统中，内回路外回路的作用？</li>
-<li>多回路系统设计时，内外回路的大致设计流程？</li>
-<li>内外回路的带宽要求？</li>
-<li>如果采用具有保守性的考虑，跟踪误差和噪声误差引起的总误差不能满足要求，应该怎么办？采取什么方法？</li>
-<li>多回路系统设计的特点？</li>
-<li>什么是串级调节系统？串级调节系统的特点？</li>
-<li>串级调节系统的结构组成？有两类扰动？分别是什么含义？</li>
-<li>串级调节系统主副回路工作特点？</li>
-<li>串级调节系统的特点？</li>
-<li>多回路系统与串级调节系统的区别是什么？</li>
-<li>为什么要引入复合控制系统？复合控制系统的构成和特点？</li>
-<li>复合校正能做到什么？</li>
-<li>顺馈补偿在实现中有什么问题？如何解决？</li>
-<li>为什么前面章节中的反馈校正具有多回路的形式，但本质上属于单回路设计的思想？</li>
-<li>传统控制理论的不足在于什么？为什么？</li>
-<li>专家控制技术是什么？有什么好处？关键在什么？</li>
-<li>专家系统与传统的计算机程序最本质的区别在什么？</li>
-<li>专家系统的主要功能取决于什么？</li>
-<li>专家系统的主要结构是什么？各有什么功能？</li>
-<li>神经网络知识表示法的优点？</li>
-<li>推理是指什么？核心是什么？推理的本质是什么？</li>
-<li>知识推理方法有哪些？</li>
-<li>专家控制的结构有哪些？</li>
-<li>专家控制的功能有哪些？</li>
-<li>专家控制的特殊性？</li>
-<li>直接型专家控制的作用和特点？</li>
-<li>间接型专家控制的作用和特点？</li>
-<li>专家PID控制属于什么类型的专家控制？有什么特点？</li>
-<li>操作人员的实践经验具有什么特点？</li>
-<li>模糊控制设计的内容有哪些？</li>
-<li>模糊控制器的输出为对象的控制输入，而模糊控制器的输入信号决定了模糊控制器的维数。模糊控制器的维数高低如何影响控制效果和实现难度？最常使用几维的模糊控制器？</li>
-<li>论域的选择需要什么？</li>
-<li>量化是什么？</li>
-<li>模糊化是什么？语言变量的取值称为什么？</li>
-<li>模糊控制器设计的核心是什么？获取的途径有哪些？</li>
-<li>设计模糊控制器的关键是什么？有什么区别？能否改进？</li>
-<li>量化因子与比例因子是做什么的？</li>
-<li>一般来说激活的模糊规则多好还是少好？</li>
+                <ol>
+<li class="lvl-3">
+<p>电机的定义是什么？有何基本功能？</p>
+</li>
+<li class="lvl-3">
+<p>电机定转子的级数有什么关系，为什么？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机的结构是怎样的？包含哪些元件？各有什么作用？</p>
+</li>
+<li class="lvl-3">
+<p>按定子磁场产生方式分，直流电机有哪些种类？</p>
+</li>
+<li class="lvl-3">
+<p>按照励磁方式分，直流电机有哪些种类？</p>
+</li>
+<li class="lvl-3">
+<p>电枢绕组分类？</p>
+</li>
+<li class="lvl-3">
+<p>单叠绕组的结构数量关系？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机中，为了使旋转的各线圈能不断依次改变电流方向（即换向），必须做什么？</p>
+</li>
+<li class="lvl-3">
+<p>极距怎么定义的？</p>
+</li>
+<li class="lvl-3">
+<p>单波绕组的结构数量关系？有什么特殊之处？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>空载磁场指什么？又称为什么？</p>
+</li>
+<li class="lvl-3">
+<p>主磁通和漏磁通分别指的是什么？有什么作用、数量关系？</p>
+</li>
+<li class="lvl-3">
+<p>主磁极下气隙磁通密度的分布在什么条件下取决于什么？</p>
+</li>
+<li class="lvl-3">
+<p>空载时主磁极磁通是什么波？</p>
+</li>
+<li class="lvl-3">
+<p>假定电枢上有无穷多元件分布，负载时电枢磁动势呈什么波，对应的磁通密度是什么波？</p>
+</li>
+<li class="lvl-3">
+<p>一般的电机和变压器在额定运行时额定磁通在什么位置？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>电枢反应是什么？</p>
+</li>
+<li class="lvl-3">
+<p>电枢反应的特点？</p>
+</li>
+<li class="lvl-3">
+<p>换向是什么？有什么特点？有什么危害？如何解决？</p>
+</li>
+<li class="lvl-3">
+<p>电动机力矩、电流由谁决定？转速由谁决定？电机选型的根本参数、电机设计最重要的参数是谁？</p>
+</li>
+<li class="lvl-3">
+<p>运动控制的根本是什么？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机的可逆性是什么？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机的调速是什么意思？有哪些主要方法？各有什么特点？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机的四象限运行有哪些部分？</p>
+</li>
+<li class="lvl-3">
+<p>齿轮减速比如何折算到电机侧？</p>
+</li>
+<li class="lvl-3">
+<p>电机的选用需要考虑哪些因素？</p>
+</li>
+<li class="lvl-3">
+<p>给定一个物理过程，如何计算其最小额定力矩？</p>
+</li>
+<li class="lvl-3">
+<p>直流伺服电机相对于普通直流电机的特点？</p>
+</li>
+<li class="lvl-3">
+<p>交流电动机工作的基础是什么？有哪些产生方式？</p>
+</li>
+<li class="lvl-3">
+<p>相数、极对数如何定义？</p>
+</li>
+<li class="lvl-3">
+<p>单相绕组通交流电产生何种磁动势？多相对称绕组通多相对称交流电呢？</p>
+</li>
+<li class="lvl-3">
+<p>同步转速是什么？</p>
+</li>
+<li class="lvl-3">
+<p>磁场的转向与什么有关？</p>
+</li>
+<li class="lvl-3">
+<p>如何改变磁场转向？</p>
+</li>
+<li class="lvl-3">
+<p>旋转磁场的瞬时位置如何确定？</p>
+</li>
+<li class="lvl-3">
+<p>旋转磁场本身就在旋转，这种说法对吗？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>异步电机以供电来说，是什么电机，有什么优点？</p>
+</li>
+<li class="lvl-3">
+<p>异步电机的结构？</p>
+</li>
+<li class="lvl-3">
+<p>异步电机有几种运行状态？有何特点？</p>
+</li>
+<li class="lvl-3">
+<p>转子磁动势在空间中的转速是多少？这有什么好处？</p>
+</li>
+<li class="lvl-3">
+<p>圆形旋转磁场时的电磁转矩表达式？</p>
+</li>
+<li class="lvl-3">
+<p>具有对称绕组的异步电动机，其电磁转矩的参数表达式？</p>
+</li>
+<li class="lvl-3">
+<p>临界转差率是指？</p>
+</li>
+<li class="lvl-3">
+<p>最大转矩表达式？</p>
+</li>
+<li class="lvl-3">
+<p>异步电机的机械特性中，过载倍数的要求？启动转矩的表达式？</p>
+</li>
+<li class="lvl-3">
+<p>异步电机调速方法有哪些？各有什么特点？</p>
+</li>
+<li class="lvl-3">
+<p>同步电动机分哪两类？有何特点？</p>
+</li>
+<li class="lvl-3">
+<p>无刷直流电机系统和直流电机系统在运行、控制特性上有什么关系？</p>
+</li>
+<li class="lvl-3">
+<p>无刷直流电机换向过程中存在什么问题？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>永磁同步电机如何简化控制？主要控制方法有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>磁同步电机的优、缺点？</p>
+</li>
+<li class="lvl-3">
+<p>步进电动机是什么？角位移、角速度取决于什么？</p>
+</li>
+<li class="lvl-3">
+<p>步进电机的组成和工作原理？</p>
+</li>
+<li class="lvl-3">
+<p>步进电机采取何种工作方式？</p>
+</li>
+<li class="lvl-3">
+<p>齿距角、步距角、转速公式？</p>
+</li>
+<li class="lvl-3">
+<p>不同形式步进电机的特点？</p>
+</li>
+<li class="lvl-3">
+<p>应用最为广泛的步进电机？</p>
+</li>
+<li class="lvl-3">
+<p>步进电机旋转的根本原因是什么？</p>
+</li>
+<li class="lvl-3">
+<p>步进电机优点？缺点？</p>
+</li>
+<li class="lvl-3">
+<p>步进电机的主要性能指标是什么？有什么意义？</p>
+</li>
+<li class="lvl-3">
+<p>控制中有哪四类元件？各有何用途？</p>
+</li>
+<li class="lvl-3">
+<p>测量元件的定义、组成和分类？</p>
+</li>
+<li class="lvl-3">
+<p>理想特性、静态特性、动态特性？</p>
+</li>
+<li class="lvl-3">
+<p>变换函数是什么？如何得到其结构和形式？</p>
+</li>
+<li class="lvl-3">
+<p>灵敏度、线性度是什么？</p>
+</li>
+<li class="lvl-3">
+<p>滞环、重复性误差、静态误差是什么？</p>
+</li>
+<li class="lvl-3">
+<p>测量范围和量程、分辨率和分辨力、稳定性、漂移是什么？</p>
+</li>
+<li class="lvl-3">
+<p>测量元件的动特性有哪些指标？</p>
+</li>
+<li class="lvl-3">
+<p>测量元件的选型有哪些要求？原则是什么？</p>
+</li>
+<li class="lvl-3">
+<p>旋转变压器的定义、组成，有什么用途？</p>
+</li>
+<li class="lvl-3">
+<p>旋转变压器负载运行时为什么会产生误差？如何补偿？</p>
+</li>
+<li class="lvl-3">
+<p>旋转变压器使用时如何连线？优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>旋转变压器误差产生原因？改进措施？应用要点？</p>
+</li>
+<li class="lvl-3">
+<p>感应同步器的定义、组成，有什么用途？</p>
+</li>
+<li class="lvl-3">
+<p>感应同步器工作原理？</p>
+</li>
+<li class="lvl-3">
+<p>感应同步器的信号处理有哪些方式？</p>
+</li>
+<li class="lvl-3">
+<p>感应同步器的优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>感应同步器应用要点？</p>
+</li>
+<li class="lvl-3">
+<p>光电编码器的定义、组成，有什么用途？</p>
+</li>
+<li class="lvl-3">
+<p>增量式编码器工作原理？有什么问题？</p>
+</li>
+<li class="lvl-3">
+<p>增量式编码器的优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>绝对式编码器工作原理？有什么问题？</p>
+</li>
+<li class="lvl-3">
+<p>绝对式编码器的优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>混合式编码器工作原理？有什么问题？</p>
+</li>
+<li class="lvl-3">
+<p>控制系统的设计流程？</p>
+</li>
+<li class="lvl-3">
+<p>需求分析包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>方案设计包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>数学建模（简化和处理）包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>控制器设计包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>数字控制方案有哪些？如何抉择？</p>
+</li>
+<li class="lvl-3">
+<p>系统调试包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>系统测试包括什么？</p>
+</li>
+<li class="lvl-3">
+<p>为什么要进行输入信号分析？</p>
+</li>
+<li class="lvl-3">
+<p>分析典型输入信号的作用？</p>
+</li>
+<li class="lvl-3">
+<p>如何确定典型输入信号，有什么要点？</p>
+</li>
+<li class="lvl-3">
+<p>有些典型信号是测得的，并没有解析表达式，如何处理进行分析？</p>
+</li>
+<li class="lvl-3">
+<p>输入信号分析的意义？</p>
+</li>
+<li class="lvl-3">
+<p>傅里叶的两个最主要的贡献？</p>
+</li>
+<li class="lvl-3">
+<p>引入复数和负频率是为了什么？</p>
+</li>
+<li class="lvl-3">
+<p>Direchlet条件是什么？</p>
+</li>
+<li class="lvl-3">
+<p>由什么信号作用下的系统输出可以获得系统的频率特性？</p>
+</li>
+<li class="lvl-3">
+<p>两类实际脉冲信号的形式？</p>
+</li>
+<li class="lvl-3">
+<p>阶跃信号只能用于测量系统的什么频段？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>实际信号的特点？如何解决？</p>
+</li>
+<li class="lvl-3">
+<p>DFT/FFT的复数乘法和复数复杂度？</p>
+</li>
+<li class="lvl-3">
+<p>如何区分暂态/瞬态误差和稳态误差，静态误差和动态误差？</p>
+</li>
+<li class="lvl-3">
+<p>什么是原理性稳态误差？附加稳态误差？</p>
+</li>
+<li class="lvl-3">
+<p>偏差和误差的区别？</p>
+</li>
+<li class="lvl-3">
+<p>计算稳态误差的前提？</p>
+</li>
+<li class="lvl-3">
+<p>静态误差与哪些因素有关？</p>
+</li>
+<li class="lvl-3">
+<p>静态误差系数适用条件？</p>
+</li>
+<li class="lvl-3">
+<p>对稳态误差的要求往往与系统的稳定性和动态特性有什么关系？</p>
+</li>
+<li class="lvl-3">
+<p>滞后环节对减小静态误差的作用？注意事项？</p>
+</li>
+<li class="lvl-3">
+<p>复合控制对消除误差的作用？注意事项？</p>
+</li>
+<li class="lvl-3">
+<p>减小静态误差的方法有哪些？注意事项？</p>
+</li>
+<li class="lvl-3">
+<p>动态误差系数的定义？</p>
+</li>
+<li class="lvl-3">
+<p>动态误差系数的求解有哪些方法？有何利弊？</p>
+</li>
+<li class="lvl-3">
+<p>卷积法通过系统的误差脉冲响应求解跟踪误差？</p>
+</li>
+<li class="lvl-3">
+<p>如果没有模型的解析表达式，动态误差系数法如何应用？跟踪误差计算的其它用途？</p>
+</li>
+<li class="lvl-3">
+<p>卷积法跟踪误差计算的优缺点？动态误差系数法的优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>噪声是什么？</p>
+</li>
+<li class="lvl-3">
+<p>随机过程是什么？</p>
+</li>
+<li class="lvl-3">
+<p>典型随机过程有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>遍历性与平稳性的关系？</p>
+</li>
+<li class="lvl-3">
+<p>相关函数的特点？</p>
+</li>
+<li class="lvl-3">
+<p><img src="D:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251223111052801.png" srcset="/img/loading.gif" lazyload alt="image-20251223111052801"></p>
+</li>
+<li class="lvl-3">
+<p>自相关函数最本质的性质？</p>
+</li>
+<li class="lvl-3">
+<p>谱密度的定义？</p>
+</li>
+<li class="lvl-3">
+<p>谱密度与相关函数？</p>
+</li>
+<li class="lvl-3">
+<p>可以把什么样的噪声近似为白噪声处理？</p>
+</li>
+<li class="lvl-3">
+<p>线性系统对平稳随机过程的响应？</p>
+</li>
+<li class="lvl-3">
+<p>处理输入和噪声引起的均方误差的原则？</p>
+</li>
+<li class="lvl-3">
+<p>等效噪声带宽的定义？</p>
+</li>
+<li class="lvl-3">
+<p>扰动和噪声的区别？</p>
+</li>
+<li class="lvl-3">
+<p>扰动分析的目的？主要内容？</p>
+</li>
+<li class="lvl-3">
+<p>减小扰动作用下误差的方法？需要满足什么条件？有何利弊？</p>
+</li>
+<li class="lvl-3">
+<p>干扰观测器的基本思想？</p>
+</li>
+<li class="lvl-3">
+<p>干扰观测器的低通滤波器带宽的确定？低通滤波器的设计原则？</p>
+</li>
+<li class="lvl-3">
+<p>干扰观测器能产生哪些影响？</p>
+</li>
+<li class="lvl-3">
+<p>灵敏度定义？</p>
+</li>
+<li class="lvl-3">
+<p>闭环反馈控制系统最根本的优点？</p>
+</li>
+<li class="lvl-3">
+<p>灵敏度函数表征了什么？灵敏度函数最大值范围？</p>
+</li>
+<li class="lvl-3">
+<p>灵敏度函数要受到什么的制约？</p>
+</li>
+<li class="lvl-3">
+<p>Bode积分定理的适用范围？</p>
+</li>
+<li class="lvl-3">
+<p>不确定性的定义？</p>
+</li>
+<li class="lvl-3">
+<p>对象的不确定产生的原因？</p>
+</li>
+<li class="lvl-3">
+<p>鲁棒稳定性的定义？</p>
+</li>
+<li class="lvl-3">
+<p>鲁棒控制系统的定义？</p>
+</li>
+<li class="lvl-3">
+<p>给出加性、乘性不确定性的鲁棒稳定性条件。</p>
+</li>
+<li class="lvl-3">
+<p>控制系统的设计约束？</p>
+</li>
+<li class="lvl-3">
+<p>二型系统的问题？如何解决？</p>
+</li>
+<li class="lvl-3">
+<p>为什么伺服系统需要校正？</p>
+</li>
+<li class="lvl-3">
+<p>信号相关函数和谱密度函数的定义？</p>
+</li>
+<li class="lvl-3">
+<p>分析本图所示的串级控制系统，给出所有环节、变量。<img src="D:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251225192817016.png" srcset="/img/loading.gif" lazyload alt="image-20251225192817016"></p>
+</li>
+<li class="lvl-3">
+<p>为什么说bode积分定理看似是很弱的约束，但实则不是如此？</p>
+</li>
+<li class="lvl-3">
+<p>可以用有限项动态误差系数达到很高精度的原因是？</p>
+</li>
+<li class="lvl-3">
+<p>控制系统的性能主要是指什么？</p>
+</li>
+<li class="lvl-3">
+<p>比较一下BLDC和有刷直流电机，交流感应电机。</p>
+</li>
+<li class="lvl-3">
+<p>永磁同步电机的电磁力矩表达式？</p>
+</li>
+<li class="lvl-3">
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>S</mi><mi>H</mi><mi>T</mi></msubsup></mrow><annotation encoding="application/x-tex">S^T_H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1167em;vertical-align:-0.2753em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-2.4247em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span></span></span></span>等于多少?为什么说保持反馈部分的参数稳定很重要?</p>
+</li>
+<li class="lvl-3">
+<p>例3：小功率随动系统的设计中,为什么第一个转折频率被选择为电机时间常数确定的频率?</p>
+</li>
+<li class="lvl-3">
+<p>无刷直流电机是如何换向的？</p>
+</li>
+<li class="lvl-3">
+<p>实际系统中扰动观测器的实现存在哪些问题？</p>
+</li>
+<li class="lvl-3">
+<p>没有问题，记住本图内容。<img src="D:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/c0c96c55552535e757b134bfcc49dcc3.png" srcset="/img/loading.gif" lazyload alt="c0c96c55552535e757b134bfcc49dcc3"></p>
+</li>
+<li class="lvl-3">
+<p>扰动分析的内容？</p>
+</li>
+<li class="lvl-3">
+<p>卷积法、动态误差系数法的优缺点？</p>
+</li>
+<li class="lvl-3">
+<p>静态误差系数、动态误差系数的关系？</p>
+</li>
+<li class="lvl-3">
+<p>输入引起的误差如何抑制？</p>
+</li>
+<li class="lvl-3">
+<p>为什么阶跃信号只能用于测试系统低频模型？</p>
+</li>
+<li class="lvl-3">
+<p>模糊控制的特点？</p>
+</li>
+<li class="lvl-3">
+<p>如何提出合理的闭环带宽要求？过窄过宽会怎么样？</p>
+</li>
+<li class="lvl-3">
+<p>谱密度积分、谱密度的大小反映了什么？</p>
+</li>
+<li class="lvl-3">
+<p>PID控制器的作用？</p>
+</li>
+<li class="lvl-3">
+<p>直流电机电枢绕组的两个特点？</p>
+</li>
+<li class="lvl-3">
+<p>滞后校正和反馈校正在伺服系统控制中的作用异同？</p>
+</li>
+<li class="lvl-3">
+<p>反馈特性是由反馈校正引入的特性，反映了？</p>
+</li>
+<li class="lvl-3">
+<p>反馈特性好的前提是？</p>
+</li>
+<li class="lvl-3">
+<p>控制系统带宽的设计原则？</p>
+</li>
+<li class="lvl-3">
+<p>从一定意义上说，什么反映了控制系统设计的水平？</p>
+</li>
+<li class="lvl-3">
+<p>带宽的拓展受到哪些限制？如何处理？</p>
+</li>
+<li class="lvl-3">
+<p>伺服系统频带拓展的一个主要瓶颈是什么？如何解决？</p>
+</li>
+<li class="lvl-3">
+<p>谐振有什么危害？为什么要抑制谐振？</p>
+</li>
+<li class="lvl-3">
+<p>谐振频率与带宽有什么关系？</p>
+</li>
+<li class="lvl-3">
+<p>什么时候谐振频率不能被忽略？</p>
+</li>
+<li class="lvl-3">
+<p>什么时候固有频率<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>m</mi></msub><mo>=</mo><msqrt><mfrac><mi>K</mi><mi>J</mi></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\omega_m=\sqrt \frac K J</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.5913em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2487em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.09618em;">J</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span style="top:-3.2087em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.88em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.88em" viewBox="0 0 400000 1944" preserveAspectRatio="xMinYMin slice"><path d="M983 90
+l0 -0
+c4,-6.7,10,-10,18,-10 H400000v40
+H1013.1s-83.4,268,-264.1,840c-180.7,572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7
+s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744
+c-10,12,-21,25,-33,39s-32,39,-32,39c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30
+c26.7,-32.7,52,-63,76,-91s52,-60,52,-60s208,722,208,722
+c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,-658.5
+c53.7,-170.3,84.5,-266.8,92.5,-289.5z
+M1001 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5913em;"><span></span></span></span></span></span></span></span></span>可以用来近似表征对象的谐振特性?为什么?</p>
+</li>
+<li class="lvl-3">
+<p>什么时候需要按照自由转子模型来考虑?</p>
+</li>
+<li class="lvl-3">
+<p>应用陷波滤波器一定会降低系统的相位裕度吗?为什么?</p>
+</li>
+<li class="lvl-3">
+<p>陷波滤波器的设计有什么要点?</p>
+</li>
+<li class="lvl-3">
+<p>谐振抑制只需要抑制一次吗?为什么?</p>
+</li>
+<li class="lvl-3">
+<p>开环系统的带宽（剪切频率）属于什么控制应该考虑的内容?</p>
+</li>
+<li class="lvl-3">
+<p>若对象自身带宽较宽,应该怎么办?为什么?举几个实际的方法.</p>
+</li>
+<li class="lvl-3">
+<p>对象自身带宽很窄,应该怎么办?为什么?举几个实际的方法,并指出需要注意的内容.</p>
+</li>
+<li class="lvl-3">
+<p>使用超前校正时,有什么值得注意的?</p>
+</li>
+<li class="lvl-3">
+<p>如果剪切频率已经提高到极限了但闭环系统带宽指标仍不满足要求,怎么办?</p>
+</li>
+<li class="lvl-3">
+<p>相对稳定性是指什么?什么能真正反应它?它属于什么特性?</p>
+</li>
+<li class="lvl-3">
+<p>相对稳定性在时\频域有哪些指标?</p>
+</li>
+<li class="lvl-3">
+<p>干扰观测器被引入进伺服转台系统设计中,因为什么需要引起注意?</p>
+</li>
+<li class="lvl-3">
+<p>执行器的极限是指什么?</p>
+</li>
+<li class="lvl-3">
+<p>执行器饱和的时间里,反馈回路怎么了?</p>
+</li>
+<li class="lvl-3">
+<p>从控制的角度来说,什么样的被控对象是稳定的,什么样的被控对象是不稳定的?</p>
+</li>
+<li class="lvl-3">
+<p>控制中使用积分器消除稳态误差的前提是什么?</p>
+</li>
+<li class="lvl-3">
+<p>Windup现象是什么?</p>
+</li>
+<li class="lvl-3">
+<p>积分器的Windup现象会造成什么影响?</p>
+</li>
+<li class="lvl-3">
+<p>怎么解决windup问题?有哪些方法,各有何利弊.</p>
+</li>
+<li class="lvl-3">
+<p>Anti-Windup设计策略是什么?</p>
+</li>
+<li class="lvl-3">
+<p>基本结构的Anti-Windup有什么要求?</p>
+</li>
+<li class="lvl-3">
+<p>Anti-Windup的思想是什么?</p>
+</li>
+<li class="lvl-3">
+<p>期望误差信号选取的原则是什么?</p>
+</li>
+<li class="lvl-3">
+<p>Anti-Windup的特点是什么?</p>
+</li>
+<li class="lvl-3">
+<p>是否存在无限制条件的Anti-Windup结构?</p>
+</li>
+<li class="lvl-3">
+<p>有一种经验的Anti-Windup设计方法是?</p>
+</li>
+<li class="lvl-3">
+<p>伺服系统的定义?一般有什么要求?</p>
+</li>
+<li class="lvl-3">
+<p>伺服系统的特点?</p>
+</li>
+<li class="lvl-3">
+<p>基本一型系统的定义?其归一化增益取值范围?</p>
+</li>
+<li class="lvl-3">
+<p>基本一型系统等效噪声带宽与谁有关?</p>
+</li>
+<li class="lvl-3">
+<p>为什么纯积分被控对象应该引入惯性环节使之成成为基本一型系统?</p>
+</li>
+<li class="lvl-3">
+<p>基本一型系统等效噪声带宽只与开环增益有关，为什么还要改变<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>使之变小?</p>
+</li>
+<li class="lvl-3">
+<p>基本一型系统的问题是什么?如何改进?</p>
+</li>
+<li class="lvl-3">
+<p>改进一型系统的优点是什么?</p>
+</li>
+<li class="lvl-3">
+<p>性能界函数是什么样的?.</p>
+</li>
+<li class="lvl-3">
+<p>反馈校正的特点?</p>
+</li>
+<li class="lvl-3">
+<p>基本二型系统的定义?归一化增益取值范围?</p>
+</li>
+<li class="lvl-3">
+<p>基本二型系统的等效噪声带宽何时最小?</p>
+</li>
+<li class="lvl-3">
+<p>基本二型系统应用在何种场合?</p>
+</li>
+<li class="lvl-3">
+<p>选型的真正依据?</p>
+</li>
+<li class="lvl-3">
+<p>为什么基本二型系统存在齿隙自振荡?</p>
+</li>
+<li class="lvl-3">
+<p>齿隙自振荡如何解决?</p>
+</li>
+<li class="lvl-3">
+<p>伺服系统设计思想是什么?有什么好处?</p>
+</li>
+<li class="lvl-3">
+<p>校正的概念是伺服系统特有的吗?</p>
+</li>
+<li class="lvl-3">
+<p>I型和II型系统的特性是最基本的特性吗?实际系统就是I型和II型系统吗?</p>
+</li>
+<li class="lvl-3">
+<p>滞后校正有什么作用,利与弊?条件稳定是指什么?</p>
+</li>
+<li class="lvl-3">
+<p>反馈校正可以取代系统局部结构吗?</p>
+</li>
+<li class="lvl-3">
+<p>反馈系统中,满足什么条件有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">T=G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">T=1/H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span></p>
+</li>
+<li class="lvl-3">
+<p>反馈校正有什么好处?</p>
+</li>
+<li class="lvl-3">
+<p>反馈校正有哪些其他作用?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统的定义?特点?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统的控制规律?</p>
+</li>
+<li class="lvl-3">
+<p>PID控制有什么优点?</p>
+</li>
+<li class="lvl-3">
+<p>纯微分控制有什么缺点?加入一个惯性环节是为什么?</p>
+</li>
+<li class="lvl-3">
+<p>微分控制可以通过测速发电机或类似的元件实现吗?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统的类型有哪些,分别按什么设计?</p>
+</li>
+<li class="lvl-3">
+<p>典型调节系统对象特性是对象的真实特性吗?</p>
+</li>
+<li class="lvl-3">
+<p>积分加一阶模型,如何通过阶跃响应图辨识?</p>
+</li>
+<li class="lvl-3">
+<p>一阶加时间滞后,如何通过阶跃响应图辨识?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统的阻尼系数用什么控制?考虑相角裕度，提高系统精度又用什么控制?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统PID控制设计中,积分控制的原则是?</p>
+</li>
+<li class="lvl-3">
+<p>调节系统的什么特点具有普遍性?</p>
+</li>
+<li class="lvl-3">
+<p>电流回路整定中的调制器及MOSFET电路就是纯比例环节,对吗?</p>
+</li>
+<li class="lvl-3">
+<p>过程控制系统的定义?对任务的要求?</p>
+</li>
+<li class="lvl-3">
+<p>过程控制的对象特性?</p>
+</li>
+<li class="lvl-3">
+<p>过程控制的设计特点?</p>
+</li>
+<li class="lvl-3">
+<p>比例微分项\比例积分项的转折频率要求?</p>
+</li>
+<li class="lvl-3">
+<p>整定的含义?</p>
+</li>
+<li class="lvl-3">
+<p>整定方法有哪些?</p>
+</li>
+<li class="lvl-3">
+<p>系统在负实轴附近的特性主要由PID中的谁决定？</p>
+</li>
+<li class="lvl-3">
+<p>如图的系统1、2分别应该考虑什么裕度？<img src="D:/Libirary/Learn/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E5%AD%A6%E8%80%83%E8%AF%95%E8%AF%BE/%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90/%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%AE%9E%E8%B7%B5/%E7%AC%94%E8%AE%B0/Costannt/%E5%A4%A7%E8%83%8C%E8%AF%B5/image-20251223093004621.png" srcset="/img/loading.gif" lazyload alt="image-20251223093004621"></p>
+</li>
+<li class="lvl-3">
+<p>临界比例度法是按照什么特性进行整定的方法？</p>
+</li>
+<li class="lvl-3">
+<p>自整定是什么原理？大致描述一下。</p>
+</li>
+<li class="lvl-3">
+<p>单回路系统设计中有哪些局限性？</p>
+</li>
+<li class="lvl-3">
+<p>多回路系统中，内回路外回路的作用？</p>
+</li>
+<li class="lvl-3">
+<p>多回路系统设计时，内外回路的大致设计流程？</p>
+</li>
+<li class="lvl-3">
+<p>内外回路的带宽要求？</p>
+</li>
+<li class="lvl-3">
+<p>如果采用具有保守性的考虑，跟踪误差和噪声误差引起的总误差不能满足要求，应该怎么办？采取什么方法？</p>
+</li>
+<li class="lvl-3">
+<p>多回路系统设计的特点？</p>
+</li>
+<li class="lvl-3">
+<p>什么是串级调节系统？串级调节系统的特点？</p>
+</li>
+<li class="lvl-3">
+<p>串级调节系统的结构组成？有两类扰动？分别是什么含义？</p>
+</li>
+<li class="lvl-3">
+<p>串级调节系统主副回路工作特点？</p>
+</li>
+<li class="lvl-3">
+<p>串级调节系统的特点？</p>
+</li>
+<li class="lvl-3">
+<p>多回路系统与串级调节系统的区别是什么？</p>
+</li>
+<li class="lvl-3">
+<p>为什么要引入复合控制系统？复合控制系统的构成和特点？</p>
+</li>
+<li class="lvl-3">
+<p>复合校正能做到什么？</p>
+</li>
+<li class="lvl-3">
+<p>顺馈补偿在实现中有什么问题？如何解决？</p>
+</li>
+<li class="lvl-3">
+<p>为什么前面章节中的反馈校正具有多回路的形式，但本质上属于单回路设计的思想？</p>
+</li>
+<li class="lvl-3">
+<p>传统控制理论的不足在于什么？为什么？</p>
+</li>
+<li class="lvl-3">
+<p>专家控制技术是什么？有什么好处？关键在什么？</p>
+</li>
+<li class="lvl-3">
+<p>专家系统与传统的计算机程序最本质的区别在什么？</p>
+</li>
+<li class="lvl-3">
+<p>专家系统的主要功能取决于什么？</p>
+</li>
+<li class="lvl-3">
+<p>专家系统的主要结构是什么？各有什么功能？</p>
+</li>
+<li class="lvl-3">
+<p>神经网络知识表示法的优点？</p>
+</li>
+<li class="lvl-3">
+<p>推理是指什么？核心是什么？推理的本质是什么？</p>
+</li>
+<li class="lvl-3">
+<p>知识推理方法有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>专家控制的结构有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>专家控制的功能有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>专家控制的特殊性？</p>
+</li>
+<li class="lvl-3">
+<p>直接型专家控制的作用和特点？</p>
+</li>
+<li class="lvl-3">
+<p>间接型专家控制的作用和特点？</p>
+</li>
+<li class="lvl-3">
+<p>专家PID控制属于什么类型的专家控制？有什么特点？</p>
+</li>
+<li class="lvl-3">
+<p>操作人员的实践经验具有什么特点？</p>
+</li>
+<li class="lvl-3">
+<p>模糊控制设计的内容有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>模糊控制器的输出为对象的控制输入，而模糊控制器的输入信号决定了模糊控制器的维数。模糊控制器的维数高低如何影响控制效果和实现难度？最常使用几维的模糊控制器？</p>
+</li>
+<li class="lvl-3">
+<p>论域的选择需要什么？</p>
+</li>
+<li class="lvl-3">
+<p>量化是什么？</p>
+</li>
+<li class="lvl-3">
+<p>模糊化是什么？语言变量的取值称为什么？</p>
+</li>
+<li class="lvl-3">
+<p>模糊控制器设计的核心是什么？获取的途径有哪些？</p>
+</li>
+<li class="lvl-3">
+<p>设计模糊控制器的关键是什么？有什么区别？能否改进？</p>
+</li>
+<li class="lvl-3">
+<p>量化因子与比例因子是做什么的？</p>
+</li>
+<li class="lvl-3">
+<p>一般来说激活的模糊规则多好还是少好？</p>
+</li>
 </ol>
 
                 
@@ -791,7 +1385,6 @@ alt="image-20251223093004621" /></li>
 
 
 
-
     
 
     
@@ -831,7 +1424,7 @@ alt="image-20251223093004621" /></li>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -977,49 +1570,6 @@ alt="image-20251223093004621" /></li>
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -281,21 +283,18 @@
               <div class="markdown-body">
                 
                 <h3 id="问题回顾">问题回顾</h3>
-<p>在 Mathjax
-完成它光荣的第不知道多少次更新后,我的博客终于遇到了麻烦.</p>
+<p>在 Mathjax 完成它光荣的第不知道多少次更新后,我的博客终于遇到了麻烦.</p>
 <p>近日的异空间波动给我造成不小困扰,但我在努力进行补档作业.</p>
 <p>补档过程中,我发现博客框架使用的公式渲染器开始摸鱼了:</p>
 <p>首先,对于复杂的,特别是那些多行公式,它完全不会渲染,一个例子:</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\begin</span>&#123;align&#125;<span class="hljs-keyword">\frac</span>&#123;<span class="hljs-keyword">\text</span>&#123;d&#125;<span class="hljs-keyword">\hat</span>&#123;B&#125;&#125;&#123;<span class="hljs-keyword">\text</span>&#123;d&#125;x&#125;<span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;n+1&#125;&#125;&#123;n!&#125;x<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!(n-i)!&#125;x<span class="hljs-built_in">^</span>n<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span>=<span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!&#125;x<span class="hljs-built_in">^</span>i<span class="hljs-keyword">\cdot</span> <span class="hljs-keyword">\frac</span>&#123;x<span class="hljs-built_in">^</span>&#123;n-i&#125;&#125;&#123;(n-i)!&#125;<span class="hljs-keyword">\\</span><br><span class="hljs-built_in">&amp;</span><span class="hljs-keyword">\Rightarrow</span> <span class="hljs-keyword">\sum</span><span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\infty</span>&#125;<span class="hljs-built_in">_</span>&#123;n=0&#125;<span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>&#123;i=0&#125;<span class="hljs-built_in">^</span>&#123;n&#125;<span class="hljs-keyword">\frac</span>&#123;B<span class="hljs-built_in">_</span>&#123;i&#125;&#125;&#123;i!&#125;x<span class="hljs-built_in">^</span>i<span class="hljs-keyword">\cdot</span> <span class="hljs-keyword">\frac</span>&#123;x<span class="hljs-built_in">^</span>&#123;n-i&#125;&#125;&#123;(n-i)!&#125;=<span class="hljs-keyword">\hat</span> &#123;B(x)&#125;<span class="hljs-keyword">\cdot</span> e<span class="hljs-built_in">^</span>x <span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></td></tr></table></figure>
 <p>对于渲染有冲突的公式,如</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span>...<span class="hljs-built_in">_</span>...<span class="hljs-built_in">_</span>...<span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
-<p>渲染时,markdown 引擎会先将 <code>_</code> 替换为
-<code>&lt;em&gt;</code> ,然后顺手带走我的 LaTeX 公式,最后留下一地鸡毛给
-Mathjax</p>
+<p>渲染时,markdown 引擎会先将 <code>_</code> 替换为 <code>&lt;em&gt;</code> ,然后顺手带走我的 LaTeX 公式,最后留下一地鸡毛给 Mathjax</p>
 <h3 id="解决方案">解决方案</h3>
 <p>我的解决方案是开摆,因为朋友正在召唤我捞薯条.</p>
 <p>如果有读者想要阅读这些答案的原文,可以向我的邮箱:</p>
-<p>Costannnt@gmail.com 发送邮件.</p>
+<p><a href="mailto:Costannnt@gmail.com">Costannnt@gmail.com</a> 发送邮件.</p>
 
                 
               </div>
@@ -466,7 +465,6 @@ Mathjax</p>
 
 
 
-
     
 
     
@@ -506,7 +504,7 @@ Mathjax</p>
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -652,49 +650,6 @@ Mathjax</p>
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
